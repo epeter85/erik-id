@@ -1,0 +1,30 @@
+// _font.scss
+// =================
+
+@font-face {
+    font-family: 'wacky_font';
+    src: url('../webfonts/wacky_font.eot');
+    src: url('../webfonts/wacky_font.woff') format('woff'),
+         url('../webfonts/wacky_font.ttf') format('truetype'),
+         url('../webfonts/wacky_font.svg#wacky_font') format('svg');
+    font-weight: bold;
+    font-style: bold;
+
+}
+
+@font-face {
+    font-family: 'AvenirNextLTPro-HeavyCnIt';
+    src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.eot');
+    src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.woff') format('woff'),
+         url('../webfonts/AvenirNextLTPro-HeavyCnIt.ttf') format('truetype'),
+         url('../webfonts/AvenirNextLTPro-HeavyCnIt.svg#wacky_font') format('svg');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+
+
+$wackyTitle: #eead2e;
+ 
+$headFont: 'wacky_font';

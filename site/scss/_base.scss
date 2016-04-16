@@ -1,0 +1,30 @@
+html {  
+    margin: 0 auto;
+    padding:0;
+    width: 100%;
+    max-width: $global-width;
+}
+
+body {
+    margin: 2em;
+    background-image: url("../images/background.jpg");
+    background-repeat: repeat-y;
+}
+
+h1 {
+    font-family: 'AvenirNextLTPro-HeavyCnIt';
+    color: $wackyTitle;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $dark-gray;
+    
+    letter-spacing: -1px;
+}
+
+h2 {
+    letter-spacing: -2px;
+}
+
+p {
+    letter-spacing: -.25px;
+    
+}
