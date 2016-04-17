@@ -3756,3 +3756,30 @@ h2 {
 
 p {
   letter-spacing: -.25px; }
+
+hr {
+  border: 1px dotted #484848;
+  border-style: none none dotted;
+  width: 10%; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.secTitle {
+  text-align: center;
+  height: auto;
+  width: 100%;
+  background-color: aqua; }
+  .secTitle hr, .secTitle h1 {
+    display: inline-block;
+    background-color: aquamarine; }
+  .secTitle h1 {
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-bottom: 0;
+    line-height: 100%; }
+  .secTitle hr {
+    width: 35%; }

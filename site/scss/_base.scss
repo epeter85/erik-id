@@ -28,3 +28,46 @@ p {
     letter-spacing: -.25px;
     
 }
+
+hr {
+    border: 1px dotted $dark-gray;
+    border-style: none none dotted; 
+    width:10%;
+}
+
+.left{
+    float:left;
+}
+
+.right{
+    float:right;
+}
+
+.secTitle {
+    //margin: 0;
+    //padding: 0;
+    text-align: center;
+    //vertical-align: middle;
+    height:auto;
+    width:100%;
+    background-color: aqua;
+    
+    hr, h1 {
+        //height:auto;
+        display:inline-block;
+        background-color: aquamarine;
+    }
+    
+    h1 {
+        margin-left:.5em;
+        margin-right:.5em;
+        margin-bottom: 0;
+        //margin-top:0;
+        line-height: 100%;
+    }
+    
+    hr{
+        width:35%;
+    }
+    
+}
