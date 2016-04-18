@@ -32,42 +32,84 @@ p {
 hr {
     border: 1px dotted $dark-gray;
     border-style: none none dotted; 
-    width:10%;
-}
-
-.left{
-    float:left;
-}
-
-.right{
-    float:right;
+    //width:10%;
+    //height: auto;
+    //height:3em;
 }
 
 .secTitle {
     //margin: 0;
     //padding: 0;
     text-align: center;
-    //vertical-align: middle;
-    height:auto;
     width:100%;
-    background-color: aqua;
+   // display: table;
+    //vertical-align: middle;
+    //height:auto;
+    //width:100%;
+    display: -webkit-flex;
+    display: flex;
+    //flex-wrap: wrap;
+    //display:table;
+   background-color: aqua;
+    
+    .titleLine {
+-webkit-flex: 2 0 0; 
+   flex: 2 0 0; 
+
+        //display: flex;
+        //height: inherit;
+        //display: inline-block;
+       // height:inherit;
+        background-color: aquamarine;
+        
+        .horzLine {
+            position: absolute;
+            top:50%;
+            width:100%;
+                        border: 1px dotted $dark-gray;
+    border-style: none none dotted; 
+        }
+    }
+    
+    .titleText {
+
+            font-family: 'AvenirNextLTPro-HeavyCnIt';
+    color: $wackyTitle;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: $dark-gray;
+    font-size: 3em;
+    letter-spacing: -1px;
+    -webkit-flex: 1 0 0; 
+    flex: 1 0 0; 
+       // display: flex;
+       // line-height: 1em;
+        //display: inline-block;
+        background-color:black;
+    }
     
     hr, h1 {
         //height:auto;
-        display:inline-block;
-        background-color: aquamarine;
+        //display:inline-block;
+        //display: flex;
+        //display: flex;
+       // display: inline-block;
     }
     
     h1 {
-        margin-left:.5em;
+       /* margin-left:.5em;
         margin-right:.5em;
         margin-bottom: 0;
-        //margin-top:0;
-        line-height: 100%;
+        line-height: 100%;*/
+       // width:auto;
+        margin-bottom: 0;
+        //line-height: 100%;
+        background-color: aquamarine;
     }
     
-    hr{
-        width:35%;
+    hr {
+        //top:50%;
+       // height:inherit;
+       // width:95%;
     }
     
 }

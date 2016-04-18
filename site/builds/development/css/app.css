@@ -3759,27 +3759,41 @@ p {
 
 hr {
   border: 1px dotted #484848;
-  border-style: none none dotted;
-  width: 10%; }
-
-.left {
-  float: left; }
-
-.right {
-  float: right; }
+  border-style: none none dotted; }
 
 .secTitle {
   text-align: center;
-  height: auto;
   width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   background-color: aqua; }
-  .secTitle hr, .secTitle h1 {
-    display: inline-block;
+  .secTitle .titleLine {
+    -webkit-flex: 2 0 0;
+    -ms-flex: 2 0 0;
+        flex: 2 0 0;
     background-color: aquamarine; }
+    .secTitle .titleLine .horzLine {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      border: 1px dotted #484848;
+      border-style: none none dotted; }
+  .secTitle .titleText {
+    font-family: 'AvenirNextLTPro-HeavyCnIt';
+    color: #eead2e;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #484848;
+    font-size: 3em;
+    letter-spacing: -1px;
+    -webkit-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+        flex: 1 0 0;
+    background-color: black; }
   .secTitle h1 {
-    margin-left: .5em;
-    margin-right: .5em;
+    /* margin-left:.5em;
+        margin-right:.5em;
+        margin-bottom: 0;
+        line-height: 100%;*/
     margin-bottom: 0;
-    line-height: 100%; }
-  .secTitle hr {
-    width: 35%; }
+    background-color: aquamarine; }
