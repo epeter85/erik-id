@@ -1,60 +1,128 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>erik-id.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.css">
-  </head>
-  <body>
-      
-      <header></header>
-      
-      <section id='about'>
-          <img src='images/homePack.png'/>
-          <div class='secTitle'>
-              <div class='titleLine'></div>
-              <div class='titleText'>ABOUT</div>
-              <div class='titleLine'></div>
-          </div>
-          <h2>WHO AM I?</h2>
-           <p>An <b>interactive developer</b> and <b>technical lead</b> with over 10 years of advertising agency experience. I began my digital career as a designer and quickly found my calling as a developer. My passion is building rich experiences that not only press the latest technologies but also are clean, functional and user friendly.</p>
-           <p>If you are looking for a developer that understands technology, has a background in design and video, and can execute ideas that sizzle, we should talk.</p>
-       </section>
-      
-      <section id='skills'>
-          <div class='secTitle'>
-              <div class='titleLine'></div>
-              <div class='titleText'>SKILLS</div>
-              <div class='titleLine'></div>
-          </div>
-          <p>It is important to spend at least 20 precent of my time learning new technologies as well as taking on on challenging projects where I learn new skills. My background in development began as a Flash developer and now I have transitioned those skills into HTML5/JS/CSS.</p>
-          <p>Here is a brief checklist of my current and growing skill set.</p>
-          <img src='images/checklist.png'/>
-      </section>
-      
-      <section id='work'>
-          <div class='secTitle'>
-              <div class='titleLine'></div>
-              <div class='titleText'>WORK</div>
-              <div class='titleLine'></div>
-          </div>
-          <p>Click the cards below to view the work samples.</p>
-          <img src='images/haagen_dazs.png'>
-          <img src='images/haagen_dazs.png'>
-          <img src='images/haagen_dazs.png'>
-      </section>
-      
-      <section id='contact'>
-      </section>
-      
-      <footer></footer>
-      
-      
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"   integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="   crossorigin="anonymous"></script>
-    <!--<script src="bower_components/what-input/what-input.js"></script>!-->
-    <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+
+</head>
+
+<body>
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
+
+                <!-- Menu -->
+                <ul class="vertical menu">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">skills</a></li>
+                    <li><a href="#">work</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="off-canvas-content" data-off-canvas-content>
+
+
+
+
+                <header id='header'>
+                    <img id='logo' src='images/logo.png' />
+                    <i class="fa fa-bars" aria-hidden="true" data-toggle="offCanvas"></i>
+                </header>
+
+                <div id='carousel'>
+                    <img src='images/pretender.jpg' />
+                </div>
+
+                <section id='about'>
+                    <!-- <div class='secTitle'>
+            <div class='titleLine'></div>
+            <div class='titleText'>ABOUT</div>
+            <div class='titleLine'></div>
+        </div>-->
+                    <div class='row'>
+                        <div id='about-image' class='small-12 medium-6 columns'><img src='images/homePack.png' /></div>
+                        <div class='small-12 medium-6 columns'>
+                            <div id='about_copy'>
+                                <h2>WHO AM I?</h2>
+                                <p>An <b>interactive developer</b> and <b>technical lead</b> with over 10 years of advertising agency experience. I began my digital career as a designer and quickly found my calling as a developer. My passion is building rich experiences that not only press the latest technologies but also are clean, functional and user friendly.</p>
+                                <p>If you are looking for a developer that understands technology, has a background in design and video, and can execute ideas that sizzle, we should talk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id='skills'>
+                    <div class='secTitle'>
+                        <div class='titleLine'></div>
+                        <div class='titleText'>SKILLS</div>
+                        <div class='titleLine'></div>
+                    </div>
+                    <div class='row'>
+                        <div id='skills_copy' class='small-12 medium-6 columns'>
+                            <p>It is important to spend at least 20 precent of my time learning new technologies as well as taking on on challenging projects where I learn new skills. My background in development began as a Flash developer and now I have transitioned those skills into HTML5/JS/CSS.</p>
+                            <p>Here is a brief checklist of my current and growing skill set.</p>
+                        </div>
+                        <div id='skills-image' class='small-12 medium-6 columns'><img src='images/checklist.png' /></div>
+                    </div>
+                </section>
+
+                <section id='work'>
+                    <div class='secTitle'>
+                        <div class='titleLine'></div>
+                        <div class='titleText'>WORK</div>
+                        <div class='titleLine'></div>
+                    </div>
+                    <p>Click the cards below to view the work samples.</p>
+                    <ul>
+                        <div class='row'>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/haagen_dazs.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/mcdonalds.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/schweid_and_sons.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/wisdom_media.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/butkus.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/chase.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/skype.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/fedex_9hole.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/renaissance.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/att.png'></li>
+                            <li class='small-12 medium-6 large-3 columns'><img src='images/fedex_caddie.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/fedex_halo.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/citi.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/mc_queen.png'></li>
+                            <li class='small-12 medium-6 large-4 columns'><img src='images/ikepod.png'></li>
+                        </div>
+                    </ul>
+                </section>
+
+                <section id='contact'>
+                </section>
+
+                <footer id='footer'>
+                    <ul>
+                        <li class='email_btn'><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                        <li class='social_btn'><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+                        <li class='social_btn'><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        <li class='social_btn'><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        <li class='social_btn'><i class="fa fa-github" aria-hidden="true"></i></li>
+                    </ul>
+                    <div id='footer-image'><img src='images/original_wacky_pack.png' /></div>
+                </footer>
+
+
+                <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+                <!--<script src="bower_components/what-input/what-input.js"></script>!-->
+                <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+                <script src="js/app.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,13 @@
+#skills {
+    #skills-image {
+        @include breakpoint(medium up) {
+            float: left;
+        }
+    }
+    #skills_copy {
+        @include breakpoint(medium up) {
+            float: right;
+            margin-top: 10%;
+        }
+    }
+}

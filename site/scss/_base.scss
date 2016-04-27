@@ -6,9 +6,22 @@ html {
 }
 
 body {
-    margin: 2em;
+    //margin: 2em;
+   // background-image: url("../images/background.jpg");
+   // background-repeat: repeat-y;
+}
+
+.off-canvas-content{
     background-image: url("../images/background.jpg");
     background-repeat: repeat-y;
+    
+}
+
+a{
+    color: $dark-gray;
+    font-family: "wacky_font";
+    text-transform: uppercase;
+    font-size: 1.5em;
 }
 
 h1 {
@@ -21,10 +34,26 @@ h1 {
 
 h2 {
     letter-spacing: -2px;
+    //margin: 2em;
 }
 
 p {
     letter-spacing: -.25px;
+    //margin: 2em;
+}
+
+#about, #skills, #work{
+   margin: 2em;
+    position: relative;
+    
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
 }
 .secTitle {
     text-align: center;
@@ -32,10 +61,13 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 4em;
+    margin-bottom: 2em;
+    //background-color: aqua;
     .titleLine {
         -webkit-flex: 2 0 0;
         flex: 2 0 0;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         border: .1em dotted $dark-gray;
         border-style: none none dashed;
     }
@@ -44,7 +76,7 @@ p {
         color: $wackyTitle;
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: $dark-gray;
-        font-size: 3em;
+        font-size: 2em;
         letter-spacing: -1px;
         -webkit-flex: 1 0 0;
         flex: 1 0 0;
