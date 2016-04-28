@@ -14,7 +14,7 @@ body {
 .off-canvas-content{
     background-image: url("../images/background.jpg");
     background-repeat: repeat-y;
-    
+    overflow-y: hidden;
 }
 
 a{
@@ -86,3 +86,43 @@ p {
         min-width: 150px;
     }
 }
+
+//vertical offcanvas menu
+    .vertical{
+
+        margin-left: 1.5em;
+        margin-right: 1.5em;
+        margin-top: 2em;
+        font-size: .75em;
+        
+        .divider{
+            border: .1em dotted $dark-gray;
+            border-style: dashed none none;
+            margin-bottom: 1.5em;
+        }
+        
+        .text_btn{
+            padding-bottom: 1em;
+            font-size: 1.25em;
+        }
+        
+        .social_btn{
+            
+            font-size: 1.25em;
+            padding-bottom: .75em;
+            
+            i{
+                margin-top: -.1em;
+            }
+            
+            span{
+                font-family: 'Arial';
+                font-size: .5em;
+                margin-left:.5em;
+                text-transform: lowercase;
+            }
+        }
+        
+        
+        
+    }

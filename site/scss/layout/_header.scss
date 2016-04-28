@@ -1,0 +1,56 @@
+#header {
+    position:relative;
+    top:0;
+    height:50px;
+    width:100%;
+    //background-color: azure;
+    
+    #mainLogo {
+        position: absolute;
+        left:1em;
+        top:.5em;
+    }
+    
+    #hamburgerIcon {
+        position: absolute;
+        top:0;
+        right:.5em;
+        font-size: 2em;
+        @include breakpoint(medium up) {
+            display: none;
+        }
+    }
+    
+
+    .horizontal{
+    
+        @include breakpoint(small down) {
+            display: none;
+        }
+        
+        position: absolute;
+        top:0;
+        right:0;
+        margin-right: 2em;
+        margin-top: 1em;
+        font-size: .75em;
+        
+        .divider{
+            padding-right: 4em;
+        }
+        
+        .text_btn{
+            padding-left: 2em;
+            font-size: 1.25em;
+        }
+        
+        .social_btn{
+            
+            font-size: 1.25em;
+            padding-right: .5em;
+        }
+        
+    }
+    
+    
+}

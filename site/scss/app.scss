@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
-@import 'font';
+@import 'base/font';
 
-@import 'settings';
+@import 'vendors/settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -47,11 +47,11 @@
 @include motion-ui-animations
     
 
-@import 'mixins';
-@import 'base';
-@import 'header';
-@import 'footer';
-@import 'carousel';
-@import 'about';
-@import 'work';
-@import 'skills';
+@import 'base/base';
+@import 'utils/mixins';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/carousel';
+@import 'pages/about';
+@import 'pages/work';
+@import 'pages/skills';

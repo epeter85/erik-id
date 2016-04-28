@@ -373,14 +373,14 @@ $mediaobject-image-width-stacked: 100%;
 
 $menu-margin: 0;
 $menu-margin-nested: 1rem;
-$menu-item-padding: 0.7rem 1rem;
+$menu-item-padding: 0rem 0rem;
 $menu-icon-spacing: 0.25rem;
 $menu-expand-max: 6;
 
 // 23. Off-canvas
 // --------------
 
-$offcanvas-size: 33%;
+$offcanvas-size: 40%;
 $offcanvas-background: $white;
 $offcanvas-zindex: -1;
 $offcanvas-transition-length: 0.5s;
