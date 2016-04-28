@@ -24,6 +24,10 @@ a{
     font-size: 1.5em;
 }
 
+a:hover {
+    color: $black;
+}
+
 h1 {
     font-family: 'AvenirNextLTPro-HeavyCnIt';
     color: $wackyTitle;
@@ -63,7 +67,6 @@ p {
     display: flex;
     margin-top: 4em;
     margin-bottom: 2em;
-    //background-color: aqua;
     .titleLine {
         -webkit-flex: 2 0 0;
         flex: 2 0 0;

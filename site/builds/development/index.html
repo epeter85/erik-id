@@ -16,7 +16,6 @@
         <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
             <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
 
-                <!-- Menu -->
                 <ul class="vertical menu">
                     <li><a href="#">about</a></li>
                     <li><a href="#">skills</a></li>
@@ -33,6 +32,12 @@
 
                 <header id='header'>
                     <img id='logo' src='images/logo.png' />
+                                    <ul class="horizontal menu">
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">skills</a></li>
+                    <li><a href="#">work</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
                     <i class="fa fa-bars" aria-hidden="true" data-toggle="offCanvas"></i>
                 </header>
 
@@ -106,12 +111,17 @@
 
                 <footer id='footer'>
                     <ul>
-                        <li class='email_btn'><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                        <div id='email_group'>
+                            <li class='email_btn'><i class="fa fa-envelope" aria-hidden="true"></i></li>
+                            <li class='email_txt'>erik@erik-id.com</li>
+                        </div>
+                    <div id='social_group'>
+
                         <li class='social_btn'><i class="fa fa-linkedin" aria-hidden="true"></i></li>
                         <li class='social_btn'><i class="fa fa-twitter" aria-hidden="true"></i></li>
                         <li class='social_btn'><i class="fa fa-instagram" aria-hidden="true"></i></li>
                         <li class='social_btn'><i class="fa fa-github" aria-hidden="true"></i></li>
-                    </ul>
+                    </div>
                     <div id='footer-image'><img src='images/original_wacky_pack.png' /></div>
                 </footer>
 

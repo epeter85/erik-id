@@ -3749,6 +3749,9 @@ a {
   text-transform: uppercase;
   font-size: 1.5em; }
 
+a:hover {
+  color: #0a0a0a; }
+
 h1 {
   font-family: 'AvenirNextLTPro-HeavyCnIt';
   color: #eead2e;
@@ -3816,37 +3819,54 @@ p {
     @media screen and (min-width: 40em) {
       #header i {
         display: none; } }
+  #header .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    margin-top: .5em;
+    font-size: .75em; }
+    @media screen and (max-width: 39.9375em) {
+      #header .menu {
+        display: none; } }
 
 #footer {
   position: relative;
   height: 90px;
   width: 100%;
   background-image: url("/images/footer_tile.jpg");
-  background-repeat: repeat-x; }
+  background-repeat: repeat-x;
+  /* li:first-child { 
+        margin-right: .75em;
+    }*/ }
   #footer #footer-image {
     position: absolute;
     bottom: 0;
     right: 0; }
   #footer ul {
     margin-left: 2em;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    /* @include breakpoint(small down) {
+            @include vertical-align;
+        }
+        @include breakpoint(medium up) {
+            @include center;
+        }*/
     list-style-type: none; }
     #footer ul li {
       display: inline-block;
       margin-right: .15em; }
-  #footer li:first-child {
-    margin-right: .75em; }
-  #footer .email_btn {
+  #footer #email_group .email_btn {
     width: 43px;
     height: 43px;
     color: #b53a2c;
     font-size: 2.5em;
     text-align: center; }
-  #footer .social_btn {
+  #footer #email_group .email_txt {
+    font-family: "wacky_font";
+    font-size: 1.25em;
+    color: #fefefe;
+    margin-right: 2em; }
+  #footer #social_group .social_btn {
     background-image: url("/images/button_backing.jpg");
     width: 43px;
     height: 43px;

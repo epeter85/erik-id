@@ -21,4 +21,18 @@
         }
     }
     
+    .menu{
+        
+        @include breakpoint(small down) {
+            display: none;
+        }
+        position: absolute;
+        top:0;
+        right:0;
+        margin-right: 1em;
+        margin-top:.5em;
+        font-size: .75em;
+        
+    }
+    
 }

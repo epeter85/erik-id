@@ -15,11 +15,13 @@
         //margin:0;
         //padding:0;
         margin-left: 2em;
-        position: relative;
-         top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+       /* @include breakpoint(small down) {
+            @include vertical-align;
+        }
+        @include breakpoint(medium up) {
+            @include center;
+        }*/
+        
         list-style-type: none;
         
         li{
@@ -28,9 +30,11 @@
         }
     }
     
-    li:first-child { 
+   /* li:first-child { 
         margin-right: .75em;
-    }
+    }*/
+    
+    #email_group{
     
     .email_btn{
         width:43px;
@@ -40,6 +44,19 @@
          text-align: center;
     }
     
+    .email_txt{
+        font-family: "wacky_font";
+        font-size: 1.25em;
+        color:$white;
+        margin-right: 2em;
+    }
+}
+
+#social_group{
+    
+
+        
+    
     .social_btn{
         background-image: url('/images/button_backing.jpg');
         width:43px;
@@ -48,4 +65,7 @@
         font-size: 2.2em;
          text-align: center;
     }
+        
+ 
+}
 }
