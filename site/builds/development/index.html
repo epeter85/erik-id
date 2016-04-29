@@ -21,22 +21,24 @@
                     <li class='text_btn'><a href="#">work</a></li>
                     <div class='divider'></div>
                     <li class='social_btn'><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span>erik@erik-id.com</span></a></li>
-                        <li class='social_btn'><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>
-                        <li class='social_btn'><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
-                        <li class='social_btn'><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li>
-                        <li class='social_btn'><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>
+                    <li class='social_btn'><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>
+                    <li class='social_btn'><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+                    <li class='social_btn'><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a></li>
+                    <li class='social_btn'><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>GitHub</span></a></li>
                 </ul>
 
             </div>
 
             <div class="off-canvas-content" data-off-canvas-content>
 
-
-
-
                 <header id='header'>
-                    <div id='mainLogo'><img id='logo' src='images/logo.png' /></div>
-                    <div id='hamburgerIcon'><i class="fa fa-bars" aria-hidden="true" data-toggle="offCanvas"></i></div>
+                    <div id='mainLogo'><img id='logo' data-interchange="[images/logo.png, small], [images/logo_md.png, medium], [images/logo_lg.png, large]">
+                        <div id='caption'>/*interactive developer*/</div>
+                    </div>
+
+
+
+
                     <ul class="horizontal menu">
                         <li class='text_btn'><a href="#">about</a></li>
                         <li class='text_btn divider'><a href="#">work</a></li>
@@ -46,7 +48,7 @@
                         <li class='social_btn'><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                         <li class='social_btn'><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
                     </ul>
-                    
+                    <button id='hamburgerIcon'><i class="fa fa-bars" aria-hidden="true" data-toggle="offCanvas"></i></button>
                 </header>
 
                 <div id='carousel'>
@@ -56,8 +58,8 @@
                 <section id='about'>
 
                     <div class='row'>
-                        <div id='about-image' class='small-12 medium-6 columns'><img src='images/homePack.png' /></div>
-                        <div class='small-12 medium-6 columns'>
+                        <div id='about-image' class='small-12 medium-5 large-4 columns'><img src='images/homePack.png' /></div>
+                        <div class='small-12 medium-7 large-8 columns'>
                             <div id='about_copy'>
                                 <h2>WHO AM I?</h2>
                                 <p>An <b>interactive developer</b> and <b>technical lead</b> with over 10 years of advertising agency experience. I began my digital career as a designer and quickly found my calling as a developer. My passion is building rich experiences that not only press the latest technologies but also are clean, functional and user friendly.</p>
@@ -70,24 +72,22 @@
                 <section id='skills'>
                     <div class='row'>
 
-                        <div id='skills_copy' class='small-12 medium-6 columns'>
+                        <div id='skills_copy' class='small-12 medium-6 large-7 columns'>
                             <h2>WHAT IS MY SKILL SET?</h2>
                             <p>It is important to spend at least 20 precent of my time learning new technologies as well as taking on on challenging projects where I learn new skills. My background in development began as a Flash developer and now I have transitioned those skills into HTML5/JS/CSS.</p>
                             <p>Here is a brief checklist of my current and growing skill set.</p>
                         </div>
-                        <div id='skills-image' class='small-12 medium-6 columns'><img src='images/checklist.png' /></div>
+                        <div id='skills-image' class='small-12 medium-6 large-5 columns'><img src='images/checklist.png' /></div>
                     </div>
                 </section>
 
                 <section id='work'>
-                    <div class='secTitle'>
-                        <div class='titleLine'></div>
-                        <div class='titleText'>WORK</div>
-                        <div class='titleLine'></div>
-                    </div>
+                    <h2>WORK SAMPLES</h2>
                     <p>Click the cards below to view the work samples.</p>
+
+
                     <ul>
-                        <div class='row'>
+                        <!-- <div class='row'>
                             <li class='small-12 medium-6 large-3 columns'><img src='images/haagen_dazs.png'></li>
                             <li class='small-12 medium-6 large-3 columns'><img src='images/mcdonalds.png'></li>
                             <li class='small-12 medium-6 large-3 columns'><img src='images/schweid_and_sons.png'></li>
@@ -103,6 +103,106 @@
                             <li class='small-12 medium-6 large-4 columns'><img src='images/citi.png'></li>
                             <li class='small-12 medium-6 large-4 columns'><img src='images/mc_queen.png'></li>
                             <li class='small-12 medium-6 large-4 columns'><img src='images/ikepod.png'></li>
+                        </div>-->
+
+                        <div class='row'>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-4 columns'>
+                                <div class='thumb-container'>
+
+                                    <img src="http://placehold.it/408x292">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
                         </div>
                     </ul>
                 </section>
@@ -111,19 +211,20 @@
                 </section>
 
                 <footer id='footer'>
-                    
+
                     <ul class="horizontal menu">
-                        
-                            <li><a href="#"><i class="fa fa-envelope email_btn" aria-hidden="true"></i><span class='email_txt'>erik@erik-id.com</span></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin social_btn" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter social_btn" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram social_btn" aria-hidden="true"></i></a></li>
-                            <li><a href="#"><i class="fa fa-github social_btn" aria-hidden="true"></i></a></li>
-                        
-                        
+
+                        <li><a href="#"><i class="fa fa-envelope email_btn" aria-hidden="true"></i><span class='email_txt'>erik@erik-id.com</span></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin social_btn" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter social_btn" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram social_btn" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github social_btn" aria-hidden="true"></i></a></li>
+
+
                     </ul>
-                        
-                        <div id='footer-image'><div id='wp_caption'>what is this?</div><img src='images/original_wacky_pack.png' /></div>
+
+                    <div id='footer-image'>
+                        <div id='wp_caption'>what is this?</div><img src='images/original_wacky_pack.png' /></div>
                 </footer>
 
 

@@ -7,17 +7,17 @@ html {
 
 body {
     //margin: 2em;
-   // background-image: url("../images/background.jpg");
-   // background-repeat: repeat-y;
+    // background-image: url("../images/background.jpg");
+    // background-repeat: repeat-y;
 }
 
-.off-canvas-content{
+.off-canvas-content {
     background-image: url("../images/background.jpg");
     background-repeat: repeat-y;
     overflow-y: hidden;
 }
 
-a{
+a {
     color: $dark-gray;
     font-family: "wacky_font";
     text-transform: uppercase;
@@ -26,6 +26,10 @@ a{
 
 a:hover {
     color: $black;
+    -moz-transition: color .25s;
+    -webkit-transition: color .25s;
+    -o-transition: color .25s;
+    transition: color .25s;
 }
 
 h1 {
@@ -38,27 +42,26 @@ h1 {
 
 h2 {
     letter-spacing: -2px;
-    //margin: 2em;
 }
 
 p {
     letter-spacing: -.25px;
-    //margin: 2em;
 }
 
-#about, #skills, #work{
-   margin: 2em;
+#about,
+#skills,
+#work {
+    margin: 2em;
     position: relative;
-    
-    img{
+    img {
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: 2em;
         margin-bottom: 2em;
     }
-    
 }
+
 .secTitle {
     text-align: center;
     width: 100%;
@@ -88,41 +91,31 @@ p {
 }
 
 //vertical offcanvas menu
-    .vertical{
-
-        margin-left: 1.5em;
-        margin-right: 1.5em;
-        margin-top: 2em;
-        font-size: .75em;
-        
-        .divider{
-            border: .1em dotted $dark-gray;
-            border-style: dashed none none;
-            margin-bottom: 1.5em;
-        }
-        
-        .text_btn{
-            padding-bottom: 1em;
-            font-size: 1.25em;
-        }
-        
-        .social_btn{
-            
-            font-size: 1.25em;
-            padding-bottom: .75em;
-            
-            i{
-                margin-top: -.1em;
-            }
-            
-            span{
-                font-family: 'Arial';
-                font-size: .5em;
-                margin-left:.5em;
-                text-transform: lowercase;
-            }
-        }
-        
-        
-        
+.vertical {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-top: 2em;
+    font-size: .75em;
+    .divider {
+        border: .1em dotted $dark-gray;
+        border-style: dashed none none;
+        margin-bottom: 1.5em;
     }
+    .text_btn {
+        padding-bottom: 1em;
+        font-size: 1.25em;
+    }
+    .social_btn {
+        font-size: 1.25em;
+        padding-bottom: .75em;
+        i {
+            margin-top: -.1em;
+        }
+        span {
+            font-family: 'Arial';
+            font-size: .5em;
+            margin-left: .5em;
+            text-transform: lowercase;
+        }
+    }
+}

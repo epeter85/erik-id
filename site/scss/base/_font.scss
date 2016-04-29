@@ -6,7 +6,7 @@
     src: url('../webfonts/wacky_font.eot');
     src: url('../webfonts/wacky_font.woff') format('woff'),
          url('../webfonts/wacky_font.ttf') format('truetype'),
-         url('../webfonts/wacky_font.svg#wacky_font') format('svg');
+         url('../webfonts/wacky_font.svg') format('svg');
     font-weight: bold;
     font-style: bold;
 
@@ -17,9 +17,22 @@
     src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.eot');
     src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.woff') format('woff'),
          url('../webfonts/AvenirNextLTPro-HeavyCnIt.ttf') format('truetype'),
-         url('../webfonts/AvenirNextLTPro-HeavyCnIt.svg#wacky_font') format('svg');
+         url('../webfonts/AvenirNextLTPro-HeavyCnIt.svg') format('svg');
     font-weight: bold;
     font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'courier_newregular';
+    src: url('../webfonts/courier_new-webfont.eot');
+    src: url('../webfonts/courier_new-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../webfonts/courier_new-webfont.woff2') format('woff2'),
+         url('../webfonts/courier_new-webfont.woff') format('woff'),
+         url('../webfonts/courier_new-webfont.ttf') format('truetype'),
+         url('../webfonts/courier_new-webfont.svg#courier_newregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
 }
 

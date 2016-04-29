@@ -1,56 +1,82 @@
 #header {
-    position:relative;
-    top:0;
-    height:50px;
-    width:100%;
-    //background-color: azure;
-    
+    position: relative;
+    top: 0;
+    height: 50px;
+    width: 100%;
     #mainLogo {
         position: absolute;
-        left:1em;
-        top:.5em;
+        display: block;
+        left: 1.5em;
+        top: .5em;
+        #caption {
+            font-family: 'courier_newregular';
+            color: $white;
+            @include breakpoint(large up) {
+                font-size: 1.1em;
+                margin-left: 25px;
+            }
+            @include breakpoint(medium only) {
+                font-size: .85em;
+                margin-left: 15px;
+            }
+            @include breakpoint(small down) {
+                margin-top: -.25em;
+                font-size: .75em;
+                margin-left: 5px;
+            }
+        }
     }
-    
     #hamburgerIcon {
         position: absolute;
-        top:0;
-        right:.5em;
+        top: 0;
+        right: .5em;
         font-size: 2em;
-        @include breakpoint(medium up) {
+        @include breakpoint(large up) {
             display: none;
         }
     }
-    
-
-    .horizontal{
-    
-        @include breakpoint(small down) {
+    @include breakpoint(medium only) {
+        height: 60px;
+    }
+    @include breakpoint(large up) {
+        height: 70px;
+    }
+    .horizontal {
+        @include breakpoint(medium down) {
             display: none;
         }
-        
         position: absolute;
         top:0;
         right:0;
         margin-right: 2em;
-        margin-top: 1em;
         font-size: .75em;
-        
-        .divider{
-            padding-right: 4em;
+        .divider {
+            padding-right: 5em;
         }
-        
-        .text_btn{
+        .text_btn {
+            padding-top: 1.75em;
             padding-left: 2em;
             font-size: 1.25em;
+            @include breakpoint(medium only) {
+                padding-top: 1.75em;
+                padding-left: 2em;
+                font-size: 1em;
+            }
         }
-        
-        .social_btn{
-            
-            font-size: 1.25em;
-            padding-right: .5em;
+        .social_btn {
+            padding-top: 1.25em;
+            font-size: 1.5em;
+            padding-right: .85em;
+            a {
+                color: $light-gray;
+            }
+            a:hover {
+                color: $dark-gray;
+                -moz-transition: color .25s;
+                -webkit-transition: color .25s;
+                -o-transition: color .25s;
+                transition: color .25s;
+            }
         }
-        
     }
-    
-    
 }

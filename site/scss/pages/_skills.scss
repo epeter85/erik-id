@@ -1,5 +1,11 @@
 #skills {
+    
+    //background-color: bisque;
+    
     #skills-image {
+        
+       // background-color: aqua;
+        
         @include breakpoint(medium up) {
             //float: left;
             
@@ -8,15 +14,17 @@
        // background-color: aqua;
     }
     #skills_copy {
-        @include breakpoint(medium up) {
-            //float: right;
-            margin-top: 5%;
-            padding-right: 3%;
+        
+       // background-color: aqua;
+        
+        @include breakpoint(medium only) {
+            padding-top: 5%;
+            //padding-right: 3%;
         }
         
         @include breakpoint(large up) {
-            padding-left: 3%;
-            //background-color: aqua;
+            padding-top:5%;
+            padding-left: 8%;
         }
     }
 }

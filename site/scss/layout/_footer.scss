@@ -1,111 +1,90 @@
 #footer {
-    position:relative;
-    height:75px;
-    width:100%;
-    background-image: url('/images/footer_tile.jpg');
+    position: relative;
+    height: 75px;
+    width: 100%;
+    background-image: url('../images/footer_tile.jpg');
     background-repeat: repeat-x;
-    
-    #footer-image{
+    #footer-image {
         position: absolute;
-        bottom:-5px;
-        right:0;
-        
-        #wp_caption{
+        bottom: -5px;
+        right: 0;
+        #wp_caption {
             position: absolute;
-            color:$white;
+            color: $white;
             font-size: 1em;
-            top:70px;
-            left:-80px;
+            top: 70px;
+            left: -80px;
             font-family: "wacky_font";
             @include breakpoint(small down) {
-                display:none;
+                display: none;
             }
         }
-        
     }
-    
-
-    
-    ul{
+    ul {
         margin-left: 2em;
         text-align: center;
         padding-top: 1em;
         @include breakpoint(medium down) {
             text-align: left;
         }
-        
         list-style-type: none;
-        
-        a{
-            
-        }
-        
+        a {}
         a:hover {
-            .social_btn{
+            .social_btn {
                 color: $wackyTitle;
-                //-webkit-text-stroke-width: 1px;
-                //-webkit-text-stroke-color: $black;
             }
-            
-            .email_btn{
+            .email_btn {
                 color: $wackyTitle;
-                -webkit-text-stroke-width: 1px;
-                -webkit-text-stroke-color: $dark-gray;
+                // -webkit-text-stroke-width: 1px;
+                //  -webkit-text-stroke-color: $dark-gray;
             }
-
         }
-        
-        li{
+        li {
             display: inline-block;
             margin-right: .15em;
         }
     }
-    
-    .email_btn{
-        width:43px;
-        height:43px;
-        color:#b53a2c;
+    .email_btn {
+        width: 43px;
+        height: 43px;
+        color: #b53a2c;
         font-size: 1.75em;
         margin-right: .25em;
-         text-align: center;
-        
+        text-align: center;
+        -moz-transition: color .25s;
+        -webkit-transition: color .25s;
+        -o-transition: color .25s;
+        transition: color .25s;
         @include breakpoint(small down) {
-           font-size: 1.5em;
+            font-size: 1.5em;
         }
     }
-    
-    .email_txt{
+    .email_txt {
         font-family: "wacky_font";
         font-size: .75em;
-        color:$white;
+        color: $white;
         margin-right: 2em;
         text-transform: lowercase;
-        
         @include breakpoint(medium down) {
-            display:none;
+            display: none;
         }
     }
-//}
-
-//#social_group{
-    
-
-        
-    
-    .social_btn{
-        background-image: url('/images/button_backing.jpg');
-        width:43px;
-        height:43px;
-        color:$white;
+    .social_btn {
+        background-image: url('../images/button_backing.jpg');
+        width: 43px;
+        height: 43px;
+        color: $white;
         font-size: 1.35em;
         padding-top: .2em;
-         text-align: center;
-        
+        text-align: center;
+        -moz-transition: color .25s;
+        -webkit-transition: color .25s;
+        -o-transition: color .25s;
+        transition: color .25s;
         @include breakpoint(small down) {
-            width:35px;
-            height:35px;
+            width: 35px;
+            height: 35px;
             font-size: 1em;
         }
     }
-
 }
