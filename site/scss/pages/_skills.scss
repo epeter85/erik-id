@@ -1,29 +1,22 @@
 #skills {
-    
     //background-color: bisque;
-    
-    #skills-image {
-        
-       // background-color: aqua;
-        
-        @include breakpoint(medium up) {
-            //float: left;
-            
+    #skills_image {
+        img {
+            height: auto;
+            width: 425px;
+            @include breakpoint(large up) {}
+            @include breakpoint(medium only) {}
+            @include breakpoint(small down) {}
         }
-        
-       // background-color: aqua;
     }
     #skills_copy {
-        
-       // background-color: aqua;
-        
+        // background-color: aqua;
         @include breakpoint(medium only) {
             padding-top: 5%;
             //padding-right: 3%;
         }
-        
         @include breakpoint(large up) {
-            padding-top:5%;
+            padding-top: 5%;
             padding-left: 8%;
         }
     }

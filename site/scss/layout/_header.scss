@@ -8,6 +8,19 @@
         display: block;
         left: 1.5em;
         top: .5em;
+        z-index: 100;
+        img {
+            height: auto;
+            @include breakpoint(large up) {
+                width: 315px;
+            }
+            @include breakpoint(medium only) {
+                width: 241px;
+            }
+            @include breakpoint(small down) {
+                width: 202px;
+            }
+        }
         #caption {
             font-family: 'courier_newregular';
             color: $white;
@@ -28,9 +41,12 @@
     }
     #hamburgerIcon {
         position: absolute;
-        top: 0;
+        top: .25em;
         right: .5em;
         font-size: 2em;
+        @include breakpoint(medium only) {
+            top: .33em;
+        }
         @include breakpoint(large up) {
             display: none;
         }

@@ -1,26 +1,23 @@
-#about{
-  
-    //background-color: bisque;
-
-    #about_copy{
-        
-       // background-color: azure;
-        
-        @include breakpoint(large up) {
-            padding-right: 10%;
-            padding-top:10%;
-        }
-        
-        @include breakpoint(medium only) {
-            padding-right: 5%;
-            padding-top:5%;
-        }
-    }
-    
-    #about_image{
-        //background-color: azure;
-        //text-align: right;
-    }
-    
-    
-}
+     #about {
+         //background-color: bisque;
+         #about_copy {
+             // background-color: azure;
+             @include breakpoint(large up) {
+                 padding-right: 10%;
+                 padding-top: 10%;
+             }
+             @include breakpoint(medium only) {
+                 padding-right: 5%;
+                 padding-top: 5%;
+             }
+         }
+         #about-image {
+             img {
+                 height: auto;
+                 width: 432px;
+                 @include breakpoint(large up) {}
+                 @include breakpoint(medium only) {}
+                 @include breakpoint(small down) {}
+             }
+         }
+     }

@@ -12,8 +12,10 @@ body {
 }
 
 .off-canvas-content {
+    
     background-image: url("../images/background.jpg");
-    background-repeat: repeat-y;
+    background-size: 700px auto;
+    background-repeat: repeat;
     overflow-y: hidden;
 }
 
@@ -59,6 +61,12 @@ p {
         margin-right: auto;
         margin-top: 2em;
         margin-bottom: 2em;
+    }
+}
+
+.carousel{
+    img{
+        //width: 100%;
     }
 }
 

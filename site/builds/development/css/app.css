@@ -3748,7 +3748,8 @@ html {
 
 .off-canvas-content {
   background-image: url("../images/background.jpg");
-  background-repeat: repeat-y;
+  background-size: 700px auto;
+  background-repeat: repeat;
   overflow-y: hidden; }
 
 a {
@@ -3847,7 +3848,19 @@ p {
     position: absolute;
     display: block;
     left: 1.5em;
-    top: .5em; }
+    top: .5em;
+    z-index: 100; }
+    #header #mainLogo img {
+      height: auto; }
+      @media screen and (min-width: 64em) {
+        #header #mainLogo img {
+          width: 315px; } }
+      @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
+        #header #mainLogo img {
+          width: 241px; } }
+      @media screen and (max-width: 43.6875em) {
+        #header #mainLogo img {
+          width: 202px; } }
     #header #mainLogo #caption {
       font-family: 'courier_newregular';
       color: #fefefe; }
@@ -3866,9 +3879,12 @@ p {
           margin-left: 5px; } }
   #header #hamburgerIcon {
     position: absolute;
-    top: 0;
+    top: .25em;
     right: .5em;
     font-size: 2em; }
+    @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
+      #header #hamburgerIcon {
+        top: .33em; } }
     @media screen and (min-width: 64em) {
       #header #hamburgerIcon {
         display: none; } }
@@ -3991,6 +4007,10 @@ p {
     padding-right: 5%;
     padding-top: 5%; } }
 
+#about #about-image img {
+  height: auto;
+  width: 432px; }
+
 @media screen and (min-width: 43.75em) {
   #work {
     padding-top: 5%; } }
@@ -4028,6 +4048,10 @@ p {
         transition: opacity 0.5s; }
     #work ul li .thumb-container:hover > .overlay {
       opacity: 1; }
+
+#skills #skills_image img {
+  height: auto;
+  width: 425px; }
 
 @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
   #skills #skills_copy {
