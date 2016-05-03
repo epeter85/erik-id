@@ -30,5 +30,8 @@
   },
   "author": "Erik Peterson",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "owl.carousel": "0.0.1"
+  }
 }

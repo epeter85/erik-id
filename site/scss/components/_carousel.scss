@@ -1,20 +1,103 @@
-#carousel {
-    
-    img{
-        width:100%;
+.carousel-cell {
+width:100%;
+height:auto;
+    background-color: beige;
+
+
+    img {
+        width:100%; 
+        height:100%;
     }
-    
 }
 
-.owl-carousel {
-display: none;
+
+/* big buttons, no circle */
+
+.flickity-prev-next-button {
+
+    opacity: 0.3;
+    background: transparent;
+    
+    @include breakpoint(large up) {
+        width: 5em;
+        height: 5em;
+    }
+    @include breakpoint(medium only) {
+        width: 4em;
+        height: 4em;
+    }
+    @include breakpoint(small down) {
+        width: 3em;
+        height: 3em;
+    }
 }
 
-.owl-carousel .owl-nav .owl-prev {
-    
-    
+.flickity-prev-next-button:hover {
+    opacity: 0.8;
+    background: transparent;
 }
 
-.owl-carousel .owl-nav .owl-next
 
+/* arrow color */
+
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+    color: white;
+}
+
+
+/* hide disabled button */
+
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+
+/* position dots in carousel */
+
+.flickity-page-dots {
+    bottom: 10px;
+}
+
+
+/* white circles */
+
+.flickity-page-dots .dot {
+
+    opacity: 0.3;
+    background: transparent;
+    border: 2px solid white;
+    
+    @include breakpoint(large up) {
+        width: .8em;
+        height: .8em;
+    }
+    @include breakpoint(medium only) {
+        width: .7em;
+        height: .7em;
+    }
+    @include breakpoint(small down) {
+        width: .6em;
+        height: .6em;
+    }
+}
+
+.flickity-page-dots .dot:hover {
+    opacity: 0.8;
+}
+
+
+/* fill-in selected dot */
+
+.flickity-page-dots .dot.is-selected {
+    opacity: 0.3;
+    background: white;
+}
+
+.flickity-page-dots .dot.is-selected:hover {
+    opacity: 0.8;
+    background: white;
 }
