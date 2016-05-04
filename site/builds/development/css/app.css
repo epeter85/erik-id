@@ -3796,25 +3796,25 @@ p {
   display: -ms-flexbox;
   display: flex;
   margin-top: 4em;
-  margin-bottom: 2em; }
-  .secTitle .titleLine {
-    -webkit-flex: 2 0 0;
-    -ms-flex: 2 0 0;
+  margin-bottom: 2em;
+  /*.titleLine {
+        -webkit-flex: 2 0 0;
         flex: 2 0 0;
-    margin-bottom: 30px;
-    border: 0.1em dotted #484848;
-    border-style: none none dashed; }
-  .secTitle .titleText {
-    font-family: 'AvenirNextLTPro-HeavyCnIt';
-    color: #eead2e;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #484848;
-    font-size: 2em;
-    letter-spacing: -1px;
-    -webkit-flex: 1 0 0;
-    -ms-flex: 1 0 0;
+        margin-bottom: 30px;
+        border: .1em dotted $dark-gray;
+        border-style: none none dashed;
+    }
+    .titleText {
+        font-family: 'AvenirNextLTPro-HeavyCnIt';
+        color: $wackyTitle;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $dark-gray;
+        font-size: 2em;
+        letter-spacing: -1px;
+        -webkit-flex: 1 0 0;
         flex: 1 0 0;
-    min-width: 150px; }
+        min-width: 150px;
+    }*/ }
 
 .vertical {
   margin-left: 1.5em;
@@ -4099,16 +4099,18 @@ p {
     text-align: center;
     padding-bottom: 3em; }
     #work ul li .thumb-container {
-      background-color: beige;
       position: relative;
-      display: inline-block; }
+      display: inline-block;
+      box-shadow: 3px 3px 3px #ccc; }
       #work ul li .thumb-container img {
         display: block;
-        margin: 0; }
+        margin: 0;
+        width: 292px;
+        height: auto; }
       #work ul li .thumb-container .overlay {
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(200, 66, 41, 0.9);
         position: absolute;
         top: 0;
         right: 0;
@@ -4116,7 +4118,43 @@ p {
         bottom: 0;
         color: white;
         opacity: 0;
+        text-align: left;
         transition: opacity 0.5s; }
+        #work ul li .thumb-container .overlay .copy {
+          margin-top: 1em;
+          margin-left: 1em;
+          margin-right: 1em; }
+          #work ul li .thumb-container .overlay .copy .titleText {
+            font-family: 'AvenirNextLTPro-HeavyCnIt';
+            color: #eead2e;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: #0a0a0a;
+            font-size: 2.25em;
+            letter-spacing: -1px;
+            text-transform: uppercase; }
+          #work ul li .thumb-container .overlay .copy .divider {
+            border: 0.1em dotted #fefefe;
+            border-style: dashed none none;
+            margin-top: .25em; }
+          #work ul li .thumb-container .overlay .copy .header {
+            margin-top: .5em;
+            margin-bottom: .5em;
+            line-height: 1.5em;
+            font-size: 1em; }
+          #work ul li .thumb-container .overlay .copy span {
+            font-weight: bold; }
+          #work ul li .thumb-container .overlay .copy .description {
+            margin-bottom: .5em;
+            line-height: 1.25em;
+            font-size: .9em; }
+          #work ul li .thumb-container .overlay .copy .btn {
+            margin-top: .5em;
+            font-weight: bold;
+            text-align: right;
+            cursor: pointer;
+            transition: color 0.25s; }
+          #work ul li .thumb-container .overlay .copy .btn:hover {
+            color: #eead2e; }
     #work ul li .thumb-container:hover > .overlay {
       opacity: 1; }
 

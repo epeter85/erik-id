@@ -16,19 +16,22 @@
             text-align: center;
             padding-bottom: 3em;
             .thumb-container {
-                background-color: beige;
                 position: relative;
                 display: inline-block;
+                box-shadow: 3px 3px 3px #ccc;
+
                 
                 img {
                     display: block;
                     margin: 0;
+                    width:292px;
+                    height:auto;
                 }
                 
                 .overlay{
                     width: 100%;
                     height: 100%;
-                    background:rgba(0,0,0,0.5);
+                    background:rgba(200,66,41,0.9);
                     position:absolute;
                     top: 0;
                     right: 0;
@@ -36,10 +39,70 @@
                     bottom: 0;
                     color: white;
                     opacity: 0;
+                    text-align: left;
                     -webkit-transition: opacity 0.5s;
                     -moz-transition: opacity 0.5s;
                     -o-transition: opacity 0.5s;
                     transition: opacity 0.5s;
+                    
+                    .copy{
+                        
+                        margin-top: 1em;
+                        margin-left: 1em;
+                        margin-right: 1em;
+                       // line-height: 1.25em;
+                        
+                        .titleText {
+                            font-family: 'AvenirNextLTPro-HeavyCnIt';
+                            color: $wackyTitle;
+                            -webkit-text-stroke-width: 2px;
+                            -webkit-text-stroke-color: $black;
+                            font-size: 2.25em;
+                            letter-spacing: -1px;
+                            text-transform: uppercase;
+                        }
+                        
+                         .divider {
+                            border: .1em dotted $white;
+                            border-style: dashed none none;
+                            margin-top: .25em;
+
+                        }
+                        
+                        .header{
+                            margin-top: .5em;
+                            margin-bottom: .5em;
+                            line-height: 1.5em;
+                            font-size: 1em;
+                        }
+                        
+                        span{
+                            font-weight: bold;
+                        }
+                        
+                        .description{
+                            margin-bottom: .5em;
+                            line-height: 1.25em;
+                            font-size: .9em;
+                        }
+                        
+                        .btn{
+                            margin-top: .5em;
+                            font-weight: bold;
+                            text-align: right;
+                            cursor: pointer;
+                            -webkit-transition: color 0.25s;
+                            -moz-transition: color 0.25s;
+                            -o-transition: color 0.25s;
+                            transition: color 0.25s;
+                        }
+                        .btn:hover{
+                            color:$wackyTitle;
+                        }
+                        
+                    }
+                    
+
                 }
 
             }
