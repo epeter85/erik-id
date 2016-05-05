@@ -3740,6 +3740,88 @@ table.hover tr:nth-of-type(even):hover {
   -webkit-animation-delay: 700ms !important;
           animation-delay: 700ms !important; }
 
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 101;
+  max-width: 87.5rem; }
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  font-size: 3em;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  color: #464646;
+  opacity: 0.6;
+  transition: opacity 0.25s; }
+
+.overlay .overlay-close:hover {
+  opacity: 1.0; }
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%); }
+
+/* Effects */
+.container {
+  overflow-x: hidden;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s; }
+
+.container.overlay-open {
+  -webkit-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+      transform: translateX(50%); }
+
+.container::after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s, visibility 0s 0.5s; }
+
+.container.overlay-open::after {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s; }
+
+.overlay-contentpush {
+  background-image: url("../images/background.jpg");
+  background-size: 700px auto;
+  background-repeat: repeat;
+  overflow-y: hidden;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+      transform: translateX(-100%);
+  transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s; }
+
+.overlay-contentpush.open {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+      transform: translateX(0%);
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s; }
+
 html {
   margin: 0 auto;
   padding: 0;
@@ -3775,6 +3857,15 @@ h2 {
 p {
   letter-spacing: -.25px; }
 
+/*#overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255,255,255,0.9);
+    z-index: 101;
+}*/
 #about,
 #skills,
 #work {
@@ -3996,8 +4087,7 @@ p {
 
 .carousel-cell {
   width: 100%;
-  height: auto;
-  background-color: beige; }
+  height: auto; }
   .carousel-cell img {
     width: 100%;
     height: 100%; }
@@ -4107,10 +4197,10 @@ p {
         margin: 0;
         width: 292px;
         height: auto; }
-      #work ul li .thumb-container .overlay {
-        width: 100%;
-        height: 100%;
-        background: rgba(200, 66, 41, 0.9);
+      #work ul li .thumb-container .cardDetails {
+        width: inherit;
+        height: auto;
+        background: #c84229;
         position: absolute;
         top: 0;
         right: 0;
@@ -4120,11 +4210,11 @@ p {
         opacity: 0;
         text-align: left;
         transition: opacity 0.5s; }
-        #work ul li .thumb-container .overlay .copy {
+        #work ul li .thumb-container .cardDetails .copy {
           margin-top: 1em;
           margin-left: 1em;
           margin-right: 1em; }
-          #work ul li .thumb-container .overlay .copy .titleText {
+          #work ul li .thumb-container .cardDetails .copy .titleText {
             font-family: 'AvenirNextLTPro-HeavyCnIt';
             color: #eead2e;
             -webkit-text-stroke-width: 2px;
@@ -4132,30 +4222,30 @@ p {
             font-size: 2.25em;
             letter-spacing: -1px;
             text-transform: uppercase; }
-          #work ul li .thumb-container .overlay .copy .divider {
+          #work ul li .thumb-container .cardDetails .copy .divider {
             border: 0.1em dotted #fefefe;
             border-style: dashed none none;
             margin-top: .25em; }
-          #work ul li .thumb-container .overlay .copy .header {
+          #work ul li .thumb-container .cardDetails .copy .header {
             margin-top: .5em;
             margin-bottom: .5em;
             line-height: 1.5em;
             font-size: 1em; }
-          #work ul li .thumb-container .overlay .copy span {
+          #work ul li .thumb-container .cardDetails .copy span {
             font-weight: bold; }
-          #work ul li .thumb-container .overlay .copy .description {
+          #work ul li .thumb-container .cardDetails .copy .description {
             margin-bottom: .5em;
             line-height: 1.25em;
             font-size: .9em; }
-          #work ul li .thumb-container .overlay .copy .btn {
+          #work ul li .thumb-container .cardDetails .copy .btn {
             margin-top: .5em;
             font-weight: bold;
             text-align: right;
             cursor: pointer;
             transition: color 0.25s; }
-          #work ul li .thumb-container .overlay .copy .btn:hover {
+          #work ul li .thumb-container .cardDetails .copy .btn:hover {
             color: #eead2e; }
-    #work ul li .thumb-container:hover > .overlay {
+    #work ul li .thumb-container:hover > .cardDetails {
       opacity: 1; }
 
 #skills #skills_image img {

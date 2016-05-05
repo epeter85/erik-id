@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/flickity.css" media="screen">
     <link rel="stylesheet" href="css/app.css">
+    <script src="js/modernizr.custom.js"></script>
 
 </head>
 
@@ -29,7 +30,7 @@
             </div>
 
             <div class="off-canvas-content" data-off-canvas-content>
-
+            
                 <header id='header'>
                     <div id='mainLogo'>
                         <img data-interchange="[images/logo_SM.png, small],
@@ -53,18 +54,9 @@
                     <button id='hamburgerIcon'><i class="fa fa-bars" aria-hidden="true" data-toggle="offCanvas"></i></button>
                 </header>
 
-                
-                <div class='main-carousel'>
+
+               <div class='main-carousel'>
                     <div class='carousel-cell'>
-                                                <img data-interchange="[images/pretender_SM.jpg, small],
-                                                   [images/pretender_MD.jpg, medium],
-                                                   [images/pretender_LG.jpg, large],
-                                                   [images/pretender_SM_x2.jpg, retina_small],
-                                                   [images/pretender_MD_x2.jpg, retina_medium],
-                                                   [images/pretender_LG_x2.jpg, retina_large]" />
-                    </div>
-                    
-                                        <div class='carousel-cell'>
                         <img data-interchange="[images/pretender_SM.jpg, small],
                                                    [images/pretender_MD.jpg, medium],
                                                    [images/pretender_LG.jpg, large],
@@ -72,8 +64,17 @@
                                                    [images/pretender_MD_x2.jpg, retina_medium],
                                                    [images/pretender_LG_x2.jpg, retina_large]" />
                     </div>
-                    
-                                        <div class='carousel-cell'>
+
+                    <div class='carousel-cell'>
+                        <img data-interchange="[images/pretender_SM.jpg, small],
+                                                   [images/pretender_MD.jpg, medium],
+                                                   [images/pretender_LG.jpg, large],
+                                                   [images/pretender_SM_x2.jpg, retina_small],
+                                                   [images/pretender_MD_x2.jpg, retina_medium],
+                                                   [images/pretender_LG_x2.jpg, retina_large]" />
+                    </div>
+
+                    <div class='carousel-cell'>
                         <img data-interchange="[images/pretender_SM.jpg, small],
                                                    [images/pretender_MD.jpg, medium],
                                                    [images/pretender_LG.jpg, large],
@@ -151,9 +152,8 @@
                         <div class='row'>
                             <li class='small-12 medium-6 large-3 columns'>
                                 <div class='thumb-container'>
-                                    <img data-interchange="[images/haagen_dazs.jpg, small],
-                                                   [images/haagen_dazs_x2.jpg, retina]" />
-                                    <div class='overlay'>
+                                    <img data-interchange="[images/haagen_dazs.jpg, small], [images/haagen_dazs_x2.jpg, retina]" />
+                                    <div class='cardDetails'>
                                         <div class='copy'>
                                             <div class='titleText'>Haagen Dazs</div>
                                             <div class='divider'></div>
@@ -162,39 +162,102 @@
                                                 <div><span>agency:</span> BBDO</div>
                                                 <div><span>platform:</span> Flash, AfterEffects, HTML</div>
                                             </div>
-                                            
-                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix 
-    voluptua scribentur, liber primis utamur id vim. Sit ei dolor 
-    vocibus complectitur, autem lucilius in duo. Per id possit 
-    maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
+                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
                                             <div class='divider'></div>
                                             <div class='btn'>view more details</div>
                                         </div>
                                     </div>
-                                    
-                                </div>
-                            </li>
-                            <li class='small-12 medium-6 large-3 columns'>
-                                <div class='thumb-container'>
-                                    <img src="http://placehold.it/292x408">
-                                    <div class='overlay'></div>
-                                    
-                                </div>
-                            </li>
-                            <li class='small-12 medium-6 large-3 columns'>
-                                <div class='thumb-container'>
-                                    <img src="http://placehold.it/292x408">
-                                    <div class='overlay'></div>
-                                </div>
-                            </li>
-                            <li class='small-12 medium-6 large-3 columns'>
-                                <div class='thumb-container'>
-                                    <img src="http://placehold.it/292x408">
-                                    <div class='overlay'></div>
-                                </div>
-                            </li>
 
-                            <li class='small-12 medium-6 large-4 columns'>
+
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img data-interchange="[images/haagen_dazs.jpg, small],
+                                                   [images/haagen_dazs_x2.jpg, retina]" />
+                                    <div class='cardDetails'>
+                                        <div class='copy'>
+                                            <div class='titleText'>Haagen Dazs</div>
+                                            <div class='divider'></div>
+                                            <div class='header'>
+                                                <div><span>client:</span> Fedex</div>
+                                                <div><span>agency:</span> BBDO</div>
+                                                <div><span>platform:</span> Flash, AfterEffects, HTML</div>
+                                            </div>
+
+                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
+                                            <div class='divider'></div>
+                                            <div class='btn'>view more details</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img data-interchange="[images/haagen_dazs.jpg, small],
+                                                   [images/haagen_dazs_x2.jpg, retina]" />
+                                    <div class='cardDetails'>
+                                        <div class='copy'>
+                                            <div class='titleText'>Haagen Dazs</div>
+                                            <div class='divider'></div>
+                                            <div class='header'>
+                                                <div><span>client:</span> Fedex</div>
+                                                <div><span>agency:</span> BBDO</div>
+                                                <div><span>platform:</span> Flash, AfterEffects, HTML</div>
+                                            </div>
+
+                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
+                                            <div class='divider'></div>
+                                            <div class='btn'>view more details</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img data-interchange="[images/haagen_dazs.jpg, small],
+                                                   [images/haagen_dazs_x2.jpg, retina]" />
+                                    <div class='cardDetails'>
+                                        <div class='copy'>
+                                            <div class='titleText'>Haagen Dazs</div>
+                                            <div class='divider'></div>
+                                            <div class='header'>
+                                                <div><span>client:</span> Fedex</div>
+                                                <div><span>agency:</span> BBDO</div>
+                                                <div><span>platform:</span> Flash, AfterEffects, HTML</div>
+                                            </div>
+
+                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
+                                            <div class='divider'></div>
+                                            <div class='btn'>view more details</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <!--<li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>
+                            <li class='small-12 medium-6 large-3 columns'>
+                                <div class='thumb-container'>
+                                    <img src="http://placehold.it/292x408">
+                                    <div class='overlay'></div>
+                                </div>
+                            </li>-->
+
+                           <!-- <li class='small-12 medium-6 large-4 columns'>
                                 <div class='thumb-container'>
 
                                     <img src="http://placehold.it/408x292">
@@ -265,7 +328,7 @@
                                     <img src="http://placehold.it/292x408">
                                     <div class='overlay'></div>
                                 </div>
-                            </li>
+                            </li>-->
                         </div>
                     </ul>
                 </section>
@@ -289,36 +352,44 @@
                     <div id='footer-image'>
                         <div id='wp_caption'>what is this?</div><img src='images/original_wacky_pack.png' /></div>
                 </footer>
+                
+                <div class="overlay overlay-contentpush">
+                    <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+   
+                </div>
 
 
                 <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
                 <!--<script src="bower_components/what-input/what-input.js"></script>!-->
                 <script src="js/flickity.pkgd.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+                <script src="js/classie.js"></script>
                 <script src="js/app.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function () {
-                        
-                        
-                $('.main-carousel').flickity({
-                  // options
-                      cellAlign: 'left',
-                    contain: true,
-                    wrapAround: true,
-                    lazyLoad: true,
-                    autoPlay: true,
-                    imagesLoaded: true
-                });
-                        
-                var $photoFrame = 'images/pretender_SM.jpg' //$('.carousel-cell');
-                var interchange = new Foundation.Interchange($photoFrame, {rules: "[images/pretender_SM.jpg, small], [images/pretender_MD.jpg, medium], [images/pretender_LG.jpg, large],[images/pretender_SM_x2.jpg, retina_small], [images/pretender_MD_x2.jpg, retina_medium], [images/pretender_LG_x2.jpg, retina_large]"});
-                        
-                        console.log($photoFrame);
-                        
-               /* $carousel.on( 'lazyLoad', function( event, cellElement ) {
-                    
-                    alert('lazy load');
-                })*/
+
+
+                        $('.main-carousel').flickity({
+                            // options
+                            cellAlign: 'left',
+                            contain: true,
+                            wrapAround: true,
+                            lazyLoad: true,
+                            autoPlay: true,
+                            imagesLoaded: true
+                        });
+
+                        /*var $photoFrame = 'images/pretender_SM.jpg' //$('.carousel-cell');
+                        var interchange = new Foundation.Interchange($photoFrame, {
+                            rules: "[images/pretender_SM.jpg, small], [images/pretender_MD.jpg, medium], [images/pretender_LG.jpg, large],[images/pretender_SM_x2.jpg, retina_small], [images/pretender_MD_x2.jpg, retina_medium], [images/pretender_LG_x2.jpg, retina_large]"
+                        });
+
+                        console.log($photoFrame);*/
+
+                        /* $carousel.on( 'lazyLoad', function( event, cellElement ) {
+                             
+                             alert('lazy load');
+                         })*/
 
                     });
                 </script>

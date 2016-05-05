@@ -8,31 +8,33 @@
     p {
         text-align: center;
     }
+
+    
+    
     ul {
         list-style-type: none;
         margin-top: 3em;
-        
         li {
             text-align: center;
             padding-bottom: 3em;
+            
             .thumb-container {
+                //background-color: black;
                 position: relative;
                 display: inline-block;
                 box-shadow: 3px 3px 3px #ccc;
-
-                
                 img {
                     display: block;
                     margin: 0;
-                    width:292px;
-                    height:auto;
+                    //min-width: 275px;
+                    width: 292px;
+                    height: auto;
                 }
-                
-                .overlay{
-                    width: 100%;
-                    height: 100%;
-                    background:rgba(200,66,41,0.9);
-                    position:absolute;
+                .cardDetails {
+                    width: inherit;
+                    height: auto;
+                    background: rgba(200, 66, 41, 1);
+                    position: absolute;
                     top: 0;
                     right: 0;
                     left: 0;
@@ -44,14 +46,11 @@
                     -moz-transition: opacity 0.5s;
                     -o-transition: opacity 0.5s;
                     transition: opacity 0.5s;
-                    
-                    .copy{
-                        
+                    .copy {
                         margin-top: 1em;
                         margin-left: 1em;
                         margin-right: 1em;
-                       // line-height: 1.25em;
-                        
+
                         .titleText {
                             font-family: 'AvenirNextLTPro-HeavyCnIt';
                             color: $wackyTitle;
@@ -61,32 +60,26 @@
                             letter-spacing: -1px;
                             text-transform: uppercase;
                         }
-                        
-                         .divider {
+                        .divider {
                             border: .1em dotted $white;
                             border-style: dashed none none;
                             margin-top: .25em;
-
                         }
-                        
-                        .header{
+                        .header {
                             margin-top: .5em;
                             margin-bottom: .5em;
                             line-height: 1.5em;
                             font-size: 1em;
                         }
-                        
-                        span{
+                        span {
                             font-weight: bold;
                         }
-                        
-                        .description{
+                        .description {
                             margin-bottom: .5em;
                             line-height: 1.25em;
                             font-size: .9em;
                         }
-                        
-                        .btn{
+                        .btn {
                             margin-top: .5em;
                             font-weight: bold;
                             text-align: right;
@@ -96,22 +89,15 @@
                             -o-transition: color 0.25s;
                             transition: color 0.25s;
                         }
-                        .btn:hover{
-                            color:$wackyTitle;
+                        .btn:hover {
+                            color: $wackyTitle;
                         }
-                        
                     }
-                    
-
                 }
-
             }
-            
-
-            .thumb-container:hover > .overlay {
+            .thumb-container:hover > .cardDetails {
                 opacity: 1;
             }
         }
     }
-
 }
