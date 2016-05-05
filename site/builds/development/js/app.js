@@ -22,7 +22,7 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 
 		if( classie.has( overlay, 'open' ) ) {
 			classie.remove( overlay, 'open' );
-			//classie.remove( container, 'overlay-open' );
+			classie.remove( container, 'overlay-open' );
 			classie.add( overlay, 'close' );
 			var onEndTransitionFn = function( ev ) {
 				if( support.transitions ) {
@@ -40,7 +40,7 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 		}
 		else if( !classie.has( overlay, 'close' ) ) {
 			classie.add( overlay, 'open' );
-			//classie.add( container, 'overlay-open' );
+			classie.add( container, 'overlay-open' );
 		}
 	}
 
