@@ -359,6 +359,58 @@
                 
                 <div class="overlay overlay-contentpush">
                     <button type="button" class="overlay-close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                    
+                    <div id='overlay-content'>
+                <div class='overlay-carousel'>
+                    <div class='carousel-cell'>
+                        <img data-interchange="[images/pretender_SM.jpg, small],
+                                                   [images/pretender_MD.jpg, medium],
+                                                   [images/pretender_LG.jpg, large],
+                                                   [images/pretender_SM_x2.jpg, retina_small],
+                                                   [images/pretender_MD_x2.jpg, retina_medium],
+                                                   [images/pretender_LG_x2.jpg, retina_large]" />
+                    </div>
+
+                    <div class='carousel-cell'>
+                        <img data-interchange="[images/pretender_SM.jpg, small],
+                                                   [images/pretender_MD.jpg, medium],
+                                                   [images/pretender_LG.jpg, large],
+                                                   [images/pretender_SM_x2.jpg, retina_small],
+                                                   [images/pretender_MD_x2.jpg, retina_medium],
+                                                   [images/pretender_LG_x2.jpg, retina_large]" />
+                    </div>
+
+                    <div class='carousel-cell'>
+                        <img data-interchange="[images/pretender_SM.jpg, small],
+                                                   [images/pretender_MD.jpg, medium],
+                                                   [images/pretender_LG.jpg, large],
+                                                   [images/pretender_SM_x2.jpg, retina_small],
+                                                   [images/pretender_MD_x2.jpg, retina_medium],
+                                                   [images/pretender_LG_x2.jpg, retina_large]" />
+                    </div>
+
+                </div>
+                    
+                                  <div class='project-details'>
+                                        <div class='copy'>
+                                            <h2 class='titleText'>Haagen Dazs</h2>
+                                            <div class='divider'></div>
+                                            <div class='header'>
+                                                <ul>
+                                                    <li><span>client:</span> Fedex</li>
+                                                    <li><span>agency:</span> BBDO</li>
+                                                    <li><span>platform:</span> Flash, AfterEffects, HTML</li>
+                                                </ul>
+                                            </div>
+                                            <div class='divider'></div>
+                                            <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum, mel erant erroribus id, qui ne tale labore democritum.</div>
+                                            <div id='buttons'>
+                                                <div class='view_site_btn'><i class="fa fa-eye" aria-hidden="true"></i>view website</div>
+                                                <div class='back_btn'><i class="fa fa-caret-left" aria-hidden="true"></i>back</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
    
                 </div>
 
@@ -374,6 +426,16 @@
 
 
                         $('.main-carousel').flickity({
+                            // options
+                            cellAlign: 'left',
+                            contain: true,
+                            wrapAround: true,
+                            lazyLoad: true,
+                            autoPlay: true,
+                            imagesLoaded: true
+                        });
+                        
+                        $('.overlay-carousel').flickity({
                             // options
                             cellAlign: 'left',
                             contain: true,

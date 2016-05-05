@@ -24,7 +24,7 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 			classie.remove( overlay, 'open' );
 			classie.remove( container, 'overlay-open' );
 			classie.add( overlay, 'close' );
-			var onEndTransitionFn = function( ev ) {
+var onEndTransitionFn = function( ev ) {
 				if( support.transitions ) {
 					if( ev.propertyName !== 'visibility' ) return;
 					this.removeEventListener( transEndEventName, onEndTransitionFn );
@@ -47,6 +47,7 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 	$('.thumb-container img').click( toggleOverlay );
     $('.btn').click( toggleOverlay );
     $('.overlay-close').click( toggleOverlay );
+    $('.back_btn').click( toggleOverlay );
 
 })();
 

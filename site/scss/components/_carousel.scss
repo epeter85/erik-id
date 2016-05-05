@@ -1,12 +1,4 @@
-.carousel-cell {
-      width:100%;
-    height:auto;
 
-    img {
-        width:100%; 
-        height:100%;
-    }
-}
 
 
 /* big buttons, no circle */
@@ -98,4 +90,32 @@
 .flickity-page-dots .dot.is-selected:hover {
     opacity: 0.8;
     background: white;
+}
+
+.main-carousel{
+    
+    .carousel-cell {
+      width:100%;
+    height:auto;
+
+    img {
+        width:100%; 
+        height:100%;
+    }
+}
+    
+}
+
+.overlay-carousel{
+    
+    .carousel-cell {
+      width:100%;
+        height:auto;
+
+    img {
+        width:100%; 
+        height:100%;
+    }
+}
+    
 }
