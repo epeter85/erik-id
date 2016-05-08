@@ -32,6 +32,9 @@ a:hover {
     -o-transition: color .25s;
     transition: color .25s;
 }
+a:visited{
+    color: $dark-gray;
+}
 
 h1 {
     font-family: 'AvenirNextLTPro-HeavyCnIt';

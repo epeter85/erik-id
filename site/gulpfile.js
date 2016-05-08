@@ -16,8 +16,11 @@ var sassPaths = [
 ],
     env,
     jsSources = [
-        
+        'scripts/template.js',
+        'scripts/classie.js',
+        'scripts/app.js'
     ],
+    jsonSources = [outputDir + 'js/*.json'],
     htmlSources = [outputDir + '*.html'],
     outputDir
     
@@ -45,6 +48,7 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
   gulp.watch(jsSources, ['js']);
+  gulp.watch('builds/development/js/*.json', ['json']);
   gulp.watch(['scss/**/*.scss'], ['sass']);
   gulp.watch('builds/development/*.html', ['html']); 
 });
@@ -78,5 +82,11 @@ gulp.task('js', function() {
     .pipe(connect.reload())
 });
 
+/*gulp.task('json', function() {
+  gulp.src('builds/development/js/*.json')
+    .pipe(gulpif(env === 'production', jsonminify()))
+    .pipe(gulpif(env === 'production', gulp.dest('builds/production/js')))
+    .pipe(connect.reload())
+});*/
 
 gulp.task('default', ['html', 'js', 'sass', 'connect', 'images', 'watch']);

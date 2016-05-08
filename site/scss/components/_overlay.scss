@@ -194,9 +194,19 @@ body {
             margin-top: 1em;
             .view_site_btn {
                 display: inline-block;
-                font-size: .9em;
+                //font-size: .9em;
+                a{
+                    font-family: "Arial";
+                    font-size: .9em;
+                    text-transform: lowercase;
+                }
+                a:hover{
+                    color: $wackyTitle;
+                }
                 @include breakpoint(small down) {
-                    font-size: .8em;
+                    a{
+                        font-size: .8em;
+                    }
                 }
                 font-weight: bold;
                 cursor: pointer;
@@ -208,7 +218,7 @@ body {
                 .fa{
                     padding-right: .5em;
                 }
-                
+
                 -webkit-transition: color 0.25s;
                 -moz-transition: color 0.25s;
                 -o-transition: color 0.25s;
