@@ -4300,9 +4300,10 @@ p {
       #work ul li .thumb-container img {
         display: block;
         margin: 0;
-        width: 292px;
+        width: inherit;
         height: auto; }
       #work ul li .thumb-container .cardDetails {
+        overflow: hidden;
         width: inherit;
         height: auto;
         background: #c84229;
