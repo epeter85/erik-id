@@ -17,7 +17,8 @@ var sassPaths = [
     env,
     jsSources = [
         'scripts/template.js',
-        'scripts/classie.js',
+       // 'scripts/classie.js'
+        //,
         'scripts/app.js'
     ],
     jsonSources = [outputDir + 'js/*.json'],

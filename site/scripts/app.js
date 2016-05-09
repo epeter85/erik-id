@@ -2,20 +2,6 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_small'] = 'only screen and (min-w
 Foundation.Interchange.SPECIAL_QUERIES['retina_medium'] = 'only screen and (min-width: 641px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 641px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 641px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 641px) and (min-device-pixel-ratio: 2), only screen and (min-width: 641px) and (min-resolution: 192dpi), only screen and (min-width: 641px) and (min-resolution: 2dppx)';
 Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1025px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (min-resolution: 192dpi), only screen and (min-width: 1025px) and (min-resolution: 2dppx)';
 
-//view details data
-//todo add to json
-var projects = [
-    ['Haagen Dazs1', //titleText
-     'Fedex', //client
-     'BBDO', //agency
-     'Flash, AfterEffects, HTML', //platform
-     'Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.',
-     'http://www.starbucks.com', //description
-     'pretender', //image1
-     'pretender', //image2
-     'pretender' //image3
-    ]
-];
 
 var isFlickity = false;
 var slideImage0;
@@ -98,6 +84,8 @@ var changeCarouselImage = function (image) {
         };
 
     function toggleOverlay(event) {
+        
+        console.log('toggleOverlay')
 
         if (classie.has(overlay, 'open')) {
             
@@ -169,6 +157,8 @@ var changeCarouselImage = function (image) {
                 });
             }
             
+           
+            
             slideImage0 = projects[event.target.id][6];
             slideImage1 = projects[event.target.id][7];
             slideImage2 = projects[event.target.id][8];
@@ -176,16 +166,27 @@ var changeCarouselImage = function (image) {
             changeCarouselImage(slideImage0);
             changeCarouselImage(slideImage1);
             changeCarouselImage(slideImage2);
-            
-            
+             
         }
+         
     }
-
-    $('.thumb-container img').click(toggleOverlay);
-    $('.btn').click(toggleOverlay);
-    $('.overlay-close').click(toggleOverlay);
-    $('.back_btn').click(toggleOverlay);
-
+    
+    $(document).ready(function () {
+        //console.log($('#projects > li > .thumb-container > img'));
+        //$('#projects').click(toggleOverlay);
+        $('#projects > li > .thumb-container > img').click(toggleOverlay);
+        $('#projects .thumb-container > .cardDetails > .btn').click(toggleOverlay);
+        $('.overlay-close').click(toggleOverlay);
+        $('.back_btn').click(toggleOverlay);
+        
+        //if ($('#pussy') != null){
+        if(document.getElementsByClassName("thumb-container") !== null) {
+            alert('Found');
+        }
+        
+        
+    });
+    
 })();
 
 $( window ).resize(function() {
@@ -211,15 +212,15 @@ $( window ).resize(function() {
         console.log('resize triggered');
         $('.overlay-carousel').flickity('destroy');
         $('.overlay-carousel').html("");
-                $('.overlay-carousel').flickity({
-                    // options
-                    cellAlign: 'left',
-                    contain: true,
-                    wrapAround: true,
-                    lazyLoad: true,
-                    autoPlay: true,
-                    imagesLoaded: true
-                });
+        $('.overlay-carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            wrapAround: true,
+            lazyLoad: true,
+            autoPlay: true,
+            imagesLoaded: true
+        });
         
         console.log(slideImage0);
         

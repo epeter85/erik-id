@@ -134,25 +134,19 @@
                         <div class='row'>
                         <ul class='small-12 medium-6 large-3 columns' id='projects'>
                             
-                              <!-- <li >
+                              <!--<li >
                                     <div class='thumb-container'>
-                                        <img data-interchange="[images/haagen_dazs.jpg, small], [images/haagen_dazs_x2.jpg, retina]" />
+                                        <img src='images/haagen_dazs.jpg'/>
                                         <div class='cardDetails'>
                                             <div class='copy'>
-                                                <div class='titleText'>Haagen Dazs</div>
+                                                <div class='titleText'></div>
                                                 <div class='divider'></div>
-                                                <div class='header'>
-                                                    <div><span>client:</span> Fedex</div>
-                                                    <div><span>agency:</span> BBDO</div>
-                                                    <div><span>platform:</span> Flash, AfterEffects, HTML</div>
-                                                </div>
-                                                <div class='description'>Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.</div>
+                                                <div class='header'></div>
+                                                <div class='description'></div>
                                                 <div class='divider'></div>
-                                                <div class='btn' id='0'>view more details</div>
+                                                <div class='btn'></div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </li>-->
                             
@@ -214,11 +208,10 @@
                 <!--<script src="bower_components/what-input/what-input.js"></script>!-->
                 <script src="js/flickity.pkgd.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
+                <script src="js/classie.js"></script>
                 <script src="js/script.js"></script>
-                <!--<script src="js/foundation.interchange.js"></script>-->
                 <script type="text/javascript">
                     $(document).ready(function () {
-
 
                         $('.main-carousel').flickity({
                             // options
@@ -236,7 +229,6 @@
                     
                 </script>
                 <script id="cardsdata" type="text/template">
-
                         {{#projects}}
                                 <li >
                                     <div class='thumb-container'>
@@ -252,7 +244,7 @@
                                                 </div>
                                                 <div class='description'>{{intro}}</div>
                                                 <div class='divider'></div>
-                                                <div class='btn' id='0'>view more details</div>
+                                                <div class='btn' id={{id}}>view more details</div>
                                             </div>
                                         </div>
                                     </div>
