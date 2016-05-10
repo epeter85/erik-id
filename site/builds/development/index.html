@@ -229,7 +229,7 @@
                 </script>
                 <script id="cardsdata" type="text/template">
                         {{#projects}}
-                                <li>
+                                <li class='flex-item'>
                                     <div class='thumb-container'>
                                         <img src={{cardImage}} />
                                         <div class='cardDetails'>
@@ -246,6 +246,7 @@
                                                 <div class='btn' id={{id}}>view more details</div>
                                             </div>
                                         </div>
+                                        <div class='marker'>{{id}}</div>
                                     </div>
                                 </li>       
                         {{/projects}}
