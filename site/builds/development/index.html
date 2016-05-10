@@ -19,7 +19,7 @@
             <div class="off-canvas position-right" id="offCanvas" data-off-canvas data-position="right">
                 <ul class="vertical menu">
                     <li class='text_btn'><a href="#">about</a></li>
-                    <li class='text_btn'><a href="#">work</a></li>
+                    <li class='text_btn'><a href="#">work</a> </li>
                     <div class='divider'></div>
                     <li class='social_btn'><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i><span>erik@erik-id.com</span></a></li>
                     <li class='social_btn'><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a></li>
@@ -131,27 +131,27 @@
                         <h2>WORK SAMPLES</h2>
                         <p>Click the cards below to view the work samples.</p>
 
-                        <div class='row'>
-                        <ul class='small-12 medium-6 large-3 columns' id='projects'>
-                            
-                              <!--<li >
-                                    <div class='thumb-container'>
-                                        <img src='images/haagen_dazs.jpg'/>
-                                        <div class='cardDetails'>
-                                            <div class='copy'>
-                                                <div class='titleText'></div>
-                                                <div class='divider'></div>
-                                                <div class='header'></div>
-                                                <div class='description'></div>
-                                                <div class='divider'></div>
-                                                <div class='btn'></div>
+                       <!-- <div class='row'>-->
+                            <ul id='projects'>
+
+                                  <!--<li >
+                                        <div class='thumb-container'>
+                                            <img src='images/haagen_dazs.jpg'/>
+                                            <div class='cardDetails'>
+                                                <div class='copy'>
+                                                    <div class='titleText'></div>
+                                                    <div class='divider'></div>
+                                                    <div class='header'></div>
+                                                    <div class='description'></div>
+                                                    <div class='divider'></div>
+                                                    <div class='btn'></div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>-->
-                            
-                        </ul>
-                        </div>
+                                    </li>-->
+
+                            </ul>
+                       <!-- </div>-->
                     </section>
 
                     <section id='contact'>
@@ -208,7 +208,6 @@
                 <!--<script src="bower_components/what-input/what-input.js"></script>!-->
                 <script src="js/flickity.pkgd.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
-                <script src="js/classie.js"></script>
                 <script src="js/script.js"></script>
                 <script type="text/javascript">
                     $(document).ready(function () {
@@ -230,7 +229,7 @@
                 </script>
                 <script id="cardsdata" type="text/template">
                         {{#projects}}
-                                <li >
+                                <li>
                                     <div class='thumb-container'>
                                         <img src={{cardImage}} />
                                         <div class='cardDetails'>
