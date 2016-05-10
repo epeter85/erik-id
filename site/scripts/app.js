@@ -12,7 +12,7 @@ var currentMediaSize;
 var previousMediaSize;
 
 //update images on detail view carousel
-var changeCarouselImage = function (image) {
+function changeCarouselImage(image) {
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -105,9 +105,6 @@ var changeCarouselImage = function (image) {
                 onEndTransitionFn();
             }
         } else if (!classie.has(overlay, 'close')) {
-            
-            //alert(event.target.id)
-           // alert(projectsArray[0].title);
 
             //add title
             $(".project-details > .copy > .titleText").html("");
@@ -125,8 +122,6 @@ var changeCarouselImage = function (image) {
             $(".project-details > .copy > #buttons > .view_site_btn").append(
                 "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
             );
-
-
 
             classie.add(overlay, 'open');
             classie.add(container, 'overlay-open');
@@ -160,8 +155,6 @@ var changeCarouselImage = function (image) {
                 });
             }
             
-           
-            
             slideImage0 = projectsArray[event.target.id].image1;
             slideImage1 = projectsArray[event.target.id].image2;
             slideImage2 = projectsArray[event.target.id].image3;
@@ -173,43 +166,9 @@ var changeCarouselImage = function (image) {
         }
          
     }
-    
-    
-    //$(document).ready(function () {
-        //console.log($('#projects > li > .thumb-container > img'));
-        //$('#projects').click(toggleOverlay);
-      /*  $('#projects > li > .thumb-container > img').click(toggleOverlay);
-        $('#projects .thumb-container > .cardDetails > .btn').click(toggleOverlay);
-        $('.overlay-close').click(toggleOverlay);
-        $('.back_btn').click(toggleOverlay);*/
-    
-    // document.getElementById ("projects").addEventListener ("click", toggleOverlay, false);
-        
-        //if ($('#pussy') != null){
-       /* if(document.getElementsByClassName("btn") !== null) {
-            console.log('Found');
-        }*/
-        
-        /*  var callback = function () {
-              console.log('callback');
-        }*/
-        
-        
-   // });
+
     
 //})();
-
-var enableButtons = function () {
-    console.log('enableButtons');
-              //console.log('callback');
-   // toggleOverlay();
-   // $('#projects .thumb-container > .cardDetails > .btn').click(toggleOverlay);
-    //document.getElementById ("projects").addEventListener ("click", toggleOverlay, false);
-    
-            $('#projects .thumb-container > .cardDetails > .btn').click(function(){
-                alert('url accessed');
-        });
-}
 
 
 $( window ).resize(function() {
