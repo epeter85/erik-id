@@ -630,36 +630,18 @@
 }));
 
 },{}],2:[function(require,module,exports){
-var projectsArray = [];
-
-$(function() {
-  var Mustache = require('mustache');
-
-  $.getJSON('js/work.json', function(data) {
-    var template = $('#cardsdata').html();
-    var html = Mustache.to_html(template, data);
-    $('#projects').html(html);  
-      
-      var index;
-      for (index = 0; index < data.projects.length; ++index) {
-            projectsArray.push(data.projects[index])
-        }
-      
-  });//getJSON
-
-}); //function
 Foundation.Interchange.SPECIAL_QUERIES['retina_small'] = 'only screen and (min-width: 1px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1px) and (min-resolution: 192dpi), only screen and (min-width: 1px) and (min-resolution: 2dppx)';
 Foundation.Interchange.SPECIAL_QUERIES['retina_medium'] = 'only screen and (min-width: 641px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 641px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 641px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 641px) and (min-device-pixel-ratio: 2), only screen and (min-width: 641px) and (min-resolution: 192dpi), only screen and (min-width: 641px) and (min-resolution: 2dppx)';
 Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-width: 1025px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (min--moz-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (-o-min-device-pixel-ratio: 2/1), only screen and (min-width: 1025px) and (min-device-pixel-ratio: 2), only screen and (min-width: 1025px) and (min-resolution: 192dpi), only screen and (min-width: 1025px) and (min-resolution: 2dppx)';
 
 
+var projectsArray = [];
 var isFlickity = false;
 var slideImage0;
 var slideImage1;
 var slideImage2;
 var currentMediaSize;
 var previousMediaSize;
-
 
 //update images on detail view carousel
 var changeCarouselImage = function (image) {
@@ -716,7 +698,7 @@ var changeCarouselImage = function (image) {
 };
 
 ///overlay js
-(function () {
+//(function () {
     var container = document.querySelector('div.container'),
         triggerBttn = document.getElementById('trigger-overlay'),
         overlay = document.querySelector('div.overlay'),
@@ -755,22 +737,25 @@ var changeCarouselImage = function (image) {
                 onEndTransitionFn();
             }
         } else if (!classie.has(overlay, 'close')) {
+            
+            //alert(event.target.id)
+           // alert(projectsArray[0].title);
 
             //add title
             $(".project-details > .copy > .titleText").html("");
-            $(".project-details > .copy > .titleText").append(projects[event.target.id][0]);
+            $(".project-details > .copy > .titleText").append(projectsArray[event.target.id].title);
             //add header copy
             $(".project-details > .copy > .header").html("");
             $(".project-details > .copy > .header").append(
-                '<div><span>client: </span>' + projects[event.target.id][1] + '</div><div><span>agency: </span>' + projects[event.target.id][2] + '</div><div><span>platform: </span>' + projects[event.target.id][3] + '</div>'
+                '<div><span>client: </span>' + projectsArray[event.target.id].client + '</div><div><span>agency: </span>' + projectsArray[event.target.id].agency + '</div><div><span>platform: </span>' + projectsArray[event.target.id].platform + '</div>'
             );
             //add description
             $(".project-details > .copy > .description").html("");
-            $(".project-details > .copy > .description").append(projects[event.target.id][4]);
+            $(".project-details > .copy > .description").append(projectsArray[event.target.id].description);
             //add url
             $(".project-details > .copy > #buttons > .view_site_btn").html("");
             $(".project-details > .copy > #buttons > .view_site_btn").append(
-                "<a href=" + projects[event.target.id][5] + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
+                "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
             );
 
 
@@ -809,9 +794,9 @@ var changeCarouselImage = function (image) {
             
            
             
-            slideImage0 = projects[event.target.id][6];
-            slideImage1 = projects[event.target.id][7];
-            slideImage2 = projects[event.target.id][8];
+            slideImage0 = projectsArray[event.target.id].image1;
+            slideImage1 = projectsArray[event.target.id].image2;
+            slideImage2 = projectsArray[event.target.id].image3;
             
             changeCarouselImage(slideImage0);
             changeCarouselImage(slideImage1);
@@ -821,23 +806,43 @@ var changeCarouselImage = function (image) {
          
     }
     
-    $(document).ready(function () {
+    
+    //$(document).ready(function () {
         //console.log($('#projects > li > .thumb-container > img'));
         //$('#projects').click(toggleOverlay);
-        $('#projects > li > .thumb-container > img').click(toggleOverlay);
+      /*  $('#projects > li > .thumb-container > img').click(toggleOverlay);
         $('#projects .thumb-container > .cardDetails > .btn').click(toggleOverlay);
         $('.overlay-close').click(toggleOverlay);
-        $('.back_btn').click(toggleOverlay);
+        $('.back_btn').click(toggleOverlay);*/
+    
+    // document.getElementById ("projects").addEventListener ("click", toggleOverlay, false);
         
         //if ($('#pussy') != null){
-        if(document.getElementsByClassName("thumb-container") !== null) {
-            alert('Found');
-        }
+       /* if(document.getElementsByClassName("btn") !== null) {
+            console.log('Found');
+        }*/
+        
+        /*  var callback = function () {
+              console.log('callback');
+        }*/
         
         
-    });
+   // });
     
-})();
+//})();
+
+var enableButtons = function () {
+    console.log('enableButtons');
+              //console.log('callback');
+   // toggleOverlay();
+   // $('#projects .thumb-container > .cardDetails > .btn').click(toggleOverlay);
+    //document.getElementById ("projects").addEventListener ("click", toggleOverlay, false);
+    
+            $('#projects .thumb-container > .cardDetails > .btn').click(function(){
+                alert('url accessed');
+        });
+}
+
 
 $( window ).resize(function() {
 
@@ -883,4 +888,42 @@ $( window ).resize(function() {
 
     previousMediaSize = currentMediaSize;
 });
+$(function() {
+    
+    //$(document).ready(function(){
+
+
+
+//});
+    
+    
+    
+  var Mustache = require('mustache');
+
+  $.getJSON('js/work.json', function(data) {
+    var template = $('#cardsdata').html();
+    var html = Mustache.to_html(template, data);
+    $('#projects').html(html);  
+      
+      var index;
+      for (index = 0; index < data.projects.length; ++index) {
+            projectsArray.push(data.projects[index])
+        }
+
+      console.log('create thumbs');
+     // enableButtons();
+      
+     // document.getElementById ("projects").addEventListener ("click", toggleOverlay, false);
+      $('#projects .thumb-container .cardDetails .btn').click(toggleOverlay);
+      
+
+      
+  });//getJSON
+    
+
+
+}); //function
+
+
+
 },{"mustache":1}]},{},[2])
