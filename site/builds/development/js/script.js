@@ -724,7 +724,9 @@ var slideImage2;
 var currentMediaSize;
 var previousMediaSize;
 
-//update images on detail view carousel
+
+/*update images on detail view carousel*/
+
 function changeCarouselImage(image) {
 
     var $image;
@@ -778,7 +780,9 @@ function changeCarouselImage(image) {
     $('.overlay-carousel').flickity( 'append', $cellElems );
 };
 
-///overlay js
+
+/*overlay js*/
+
 //(function () {
     var container = document.querySelector('div.container'),
         triggerBttn = document.getElementById('trigger-overlay'),
@@ -884,6 +888,10 @@ function changeCarouselImage(image) {
 //})();
 
 
+
+/*Window resize listener and image swap
+for view details carousel */
+
 $( window ).resize(function() {
 
     var mediaSize = Foundation.MediaQuery.current;
@@ -928,6 +936,39 @@ $( window ).resize(function() {
 
     previousMediaSize = currentMediaSize;
 });
+
+/*after template is executed
+  add images
+  */
+
+function addThumbImages() {
+
+    var $retina = false;
+
+    if (window.devicePixelRatio >= 2) {
+        $retina = true;
+    }
+    
+    console.log('isRetina: ' + $retina);
+    
+    var _projects = document.getElementById('projects');
+    var _projectsList = _projects.getElementsByTagName("li");
+    var _img = _projects.getElementsByTagName("img");
+    
+    for (var i=0;i<=_img.length-1;i++)
+    {
+        var _img_div = $(_img[i]);
+        var _imgs = projectsArray[i].cardImage
+
+        if ($retina) {
+            _img_div.attr('src', 'images/' + _imgs + '_x2.jpg');
+        }else{
+            _img_div.attr('src', 'images/' + _imgs + '.jpg');
+        }
+    }
+    
+    
+};
 $(function () {
 
     var Mustache = require('mustache');
@@ -946,6 +987,8 @@ $(function () {
         $('#projects > li > .thumb-container > img').click(toggleOverlay);
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
+        
+        addThumbImages();
         
     }); //getJSON
 }); //function

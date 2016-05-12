@@ -17,5 +17,7 @@ $(function () {
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
         
+        addThumbImages();
+        
     }); //getJSON
 }); //function

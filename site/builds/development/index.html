@@ -202,15 +202,18 @@
                         });
 
                         $(document).foundation();
+  
+                        
 
                     });
                     
                 </script>
                 <script id="cardsdata" type="text/template">
-                        {{#projects}}
+                
+                            {{#projects}}
                                 <li class='flex-item'>
                                     <div class='thumb-container'>
-                                        <img src={{cardImage}}>
+                                        <img />
                                         <div class='cardDetails'>
                                             <div class='copy'>
                                                 <div class='titleText'>{{title}}</div>
@@ -227,8 +230,8 @@
                                         </div>
                                         <div class='marker'>{{id}}</div>
                                     </div>
-                                </li>       
-                        {{/projects}}
+                                </li>     
+                            {{/projects}}
                 </script>
             </div>
         </div>
