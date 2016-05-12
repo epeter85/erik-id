@@ -11,19 +11,17 @@
 
     
     
-    ul {
+    #projects {
         list-style-type: none;
         margin-top: 3em;
         margin-left: 0;
         margin-right: 0;
         display: flex;
         flex-direction: row; 
-        //justify-content: center; 
         justify-content: space-around;
         flex-wrap: wrap;
-        background-color: aqua;
         
-        @media only screen and (min-width: 866px) {
+        @media only screen and (min-width: 734px) {
         //@include breakpoint(medium up) {
             //set image width
             li:nth-of-type(1),
@@ -33,9 +31,19 @@
             li:nth-of-type(8),
             li:nth-of-type(9),
             li:nth-of-type(10),
-            li:nth-of-type(11),
+            li:nth-of-type(11)
             { 
                 min-width: 292px;
+                .thumb-container{
+                    min-width: 292px;
+                }
+                
+                @media only screen and (min-width: 734px) and (max-width: 1046px) {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+            
+                
             }
 
             li:nth-of-type(5),
@@ -43,16 +51,44 @@
             li:nth-of-type(7),
             li:nth-of-type(12),
             li:nth-of-type(13),
-            li:nth-of-type(14),
-            li:nth-of-type(15),
-            { 
+            li:nth-of-type(14){
+                
                 min-width: 408px;
+                .thumb-container{
+                    min-width: 408px;
+                }
+                
+                @media only screen and (min-width: 1046px) and (max-width: 1334px) {
+                    padding-left:  45px;
+                    padding-right: 45px;
+                }
+                
+                @media only screen and (min-width: 734px) and (max-width: 1046px) {
+                    padding-left: 150px;
+                    padding-right: 150px;
+                }
+                
             }
+            
+        
+            li:nth-of-type(15)
+            {
+                min-width: 408px;
+                .thumb-container{
+                    min-width: 408px;
+                }
+                
+                @media only screen and (min-width: 1046px) and (max-width: 1334px) {
+                    padding-left: 150px;
+                    padding-right: 150px;
+                }
+                
+            }
+
         }
         
         
-        @media only screen and (min-width: 926px) and (max-width: 1274px){
-        //@include breakpoint(large only) {
+        @media only screen and (min-width: 1046px) and (max-width: 1334px) {
             
             li:nth-of-type(1) { order: 1; }
             li:nth-of-type(2) { order: 2; }
@@ -77,8 +113,7 @@
             li:nth-of-type(15) { order: 15; }
         }
         
-        @media only screen and (min-width: 866px) and (max-width: 926px){
-        //@include breakpoint(medium only) {
+        @media only screen and (min-width: 734px) and (max-width: 1046px) {
     
             li:nth-of-type(1) { order: 1; }
             li:nth-of-type(2) { order: 2; }
@@ -109,54 +144,45 @@
             text-align: center;
             padding-bottom: 3em;
             //margin-right: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
-            
-            @media only screen and (min-width: 926px) and (max-width: 1274px){
-            //@include breakpoint(large up) {
-                
-               // margin-left: 5px;
-              //  margin-right: 5px;
-                
-            }
-            
-            @media only screen and (min-width: 866px) {
-            //@include breakpoint(medium up) {
-                
                 padding-left: 10px;
                 padding-right: 10px;
-                
+
+
+            background-color: antiquewhite;
+            
+          /*  @media only screen and (min-width: 1046px) and (max-width: 1334px) {
             }
             
-            @media only screen and (max-width: 866px) {
-           // @include breakpoint(small down) {
-                
-                padding-left: 20px;
-                padding-right: 20px;
-                
+            @media only screen and (min-width: 734px) {
+
             }
+            
+            @media only screen and (max-width: 734px) {
+
+            }*/
 
             @media #{$xlarge-up} {
-                width:25%;
+                //width:25%;
+                //padding-left: 10px;
+                //padding-right: 10px;
             }
             
-            @media only screen and (min-width: 926px) and (max-width: 1274px) {
-            //@include breakpoint(large only) {
-                width:33%;
+            @media only screen and (min-width: 1046px) and (max-width: 1334px) {
+                //width:33%;
+               // padding-left: 25px;
+               // padding-right: 25px;
             }
             
-            @media only screen and (min-width: 866px) and (max-width: 926px) {
-            //@include breakpoint(medium only) {
-                width:50%;
+            @media only screen and (min-width: 734px) and (max-width: 1046px) {
+                //width:50%;
             }
             
-            @media only screen and (max-width: 866px) {
-            //@include breakpoint(small down) {
-                width:100%;
+            @media only screen and (max-width: 734px) {
+                //width:100%;
             }
 
             .thumb-container {
-                
+
                 .marker{
                     position: absolute;
                     top:0;
@@ -164,7 +190,7 @@
                 }
                 
                 width:100%;
-                background-color: black;
+                //background-color: black;
                 position: relative;
                 display: inline-block;
                 box-shadow: 3px 3px 3px #ccc;
@@ -172,13 +198,7 @@
                     display: block;
                     margin: 0;
                     width:100%;
-                   // min-width:auto;
-                   // min-width: 408px;
                     //min-width: 292px;
-                    //width: 292px;
-                    //height: auto;
-                    
-                    //width: inherit;
                     height: auto;
                 }
                 .cardDetails {

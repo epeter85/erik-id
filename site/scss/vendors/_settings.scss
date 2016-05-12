@@ -76,11 +76,11 @@ $rem-base: 16px;
 
 $breakpoints: (
   small: 0,
-  //medium: 700px,
-  //large: 1024px,
-  medium: 866px,
-  large: 926px,
-  xlarge: 1275px,
+  medium: 700px,
+  large: 1024px,
+  //medium: 866px,
+  //large: 926px,
+  xlarge: 1334px,
   xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium large);
