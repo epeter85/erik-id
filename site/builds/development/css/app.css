@@ -4295,79 +4295,80 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-  @media only screen and (min-width: 734px) {
-    #work #projects li:nth-of-type(1),
-    #work #projects li:nth-of-type(2),
-    #work #projects li:nth-of-type(3),
-    #work #projects li:nth-of-type(4),
-    #work #projects li:nth-of-type(8),
-    #work #projects li:nth-of-type(9),
-    #work #projects li:nth-of-type(10),
-    #work #projects li:nth-of-type(11) {
-      min-width: 292px; }
-      #work #projects li:nth-of-type(1) .thumb-container,
-      #work #projects li:nth-of-type(2) .thumb-container,
-      #work #projects li:nth-of-type(3) .thumb-container,
-      #work #projects li:nth-of-type(4) .thumb-container,
-      #work #projects li:nth-of-type(8) .thumb-container,
-      #work #projects li:nth-of-type(9) .thumb-container,
-      #work #projects li:nth-of-type(10) .thumb-container,
-      #work #projects li:nth-of-type(11) .thumb-container {
-        min-width: 292px; } }
-  @media only screen and (min-width: 734px) and (min-width: 734px) and (max-width: 1046px) {
-    #work #projects li:nth-of-type(1),
-    #work #projects li:nth-of-type(2),
-    #work #projects li:nth-of-type(3),
-    #work #projects li:nth-of-type(4),
-    #work #projects li:nth-of-type(8),
-    #work #projects li:nth-of-type(9),
-    #work #projects li:nth-of-type(10),
-    #work #projects li:nth-of-type(11) {
-      padding-left: 25px;
-      padding-right: 25px; } }
-  @media only screen and (min-width: 734px) {
-    #work #projects li:nth-of-type(5),
-    #work #projects li:nth-of-type(6),
-    #work #projects li:nth-of-type(7),
-    #work #projects li:nth-of-type(12),
-    #work #projects li:nth-of-type(13),
-    #work #projects li:nth-of-type(14) {
-      min-width: 408px; }
-      #work #projects li:nth-of-type(5) .thumb-container,
-      #work #projects li:nth-of-type(6) .thumb-container,
-      #work #projects li:nth-of-type(7) .thumb-container,
-      #work #projects li:nth-of-type(12) .thumb-container,
-      #work #projects li:nth-of-type(13) .thumb-container,
-      #work #projects li:nth-of-type(14) .thumb-container {
-        min-width: 408px; } }
-  @media only screen and (min-width: 734px) and (min-width: 1046px) and (max-width: 1334px) {
-    #work #projects li:nth-of-type(5),
-    #work #projects li:nth-of-type(6),
-    #work #projects li:nth-of-type(7),
-    #work #projects li:nth-of-type(12),
-    #work #projects li:nth-of-type(13),
-    #work #projects li:nth-of-type(14) {
-      padding-left: 45px;
-      padding-right: 45px; } }
-  @media only screen and (min-width: 734px) and (min-width: 734px) and (max-width: 1046px) {
-    #work #projects li:nth-of-type(5),
-    #work #projects li:nth-of-type(6),
-    #work #projects li:nth-of-type(7),
-    #work #projects li:nth-of-type(12),
-    #work #projects li:nth-of-type(13),
-    #work #projects li:nth-of-type(14) {
-      padding-left: 150px;
-      padding-right: 150px; } }
-  @media only screen and (min-width: 734px) {
-    #work #projects li:nth-of-type(15) {
-      min-width: 408px; }
-      #work #projects li:nth-of-type(15) .thumb-container {
-        min-width: 408px; } }
-  @media only screen and (min-width: 734px) and (min-width: 1046px) and (max-width: 1334px) {
-    #work #projects li:nth-of-type(15) {
-      padding-left: 150px;
-      padding-right: 150px; } }
-  @media only screen and (min-width: 1046px) and (max-width: 1334px) {
+  #work #projects li:nth-of-type(1),
+  #work #projects li:nth-of-type(2),
+  #work #projects li:nth-of-type(3),
+  #work #projects li:nth-of-type(4),
+  #work #projects li:nth-of-type(8),
+  #work #projects li:nth-of-type(9),
+  #work #projects li:nth-of-type(10),
+  #work #projects li:nth-of-type(11) {
+    max-width: 292px; }
+    #work #projects li:nth-of-type(1) .thumb-container,
+    #work #projects li:nth-of-type(2) .thumb-container,
+    #work #projects li:nth-of-type(3) .thumb-container,
+    #work #projects li:nth-of-type(4) .thumb-container,
+    #work #projects li:nth-of-type(8) .thumb-container,
+    #work #projects li:nth-of-type(9) .thumb-container,
+    #work #projects li:nth-of-type(10) .thumb-container,
+    #work #projects li:nth-of-type(11) .thumb-container {
+      max-width: 292px; }
+    @media only screen and (min-width: 880px) and (max-width: 1086px) {
+      #work #projects li:nth-of-type(1),
+      #work #projects li:nth-of-type(2),
+      #work #projects li:nth-of-type(3),
+      #work #projects li:nth-of-type(4),
+      #work #projects li:nth-of-type(8),
+      #work #projects li:nth-of-type(9),
+      #work #projects li:nth-of-type(10),
+      #work #projects li:nth-of-type(11) {
+        margin-left: 45px;
+        margin-right: 45px; } }
+  #work #projects li:nth-of-type(5),
+  #work #projects li:nth-of-type(6),
+  #work #projects li:nth-of-type(7),
+  #work #projects li:nth-of-type(12),
+  #work #projects li:nth-of-type(13),
+  #work #projects li:nth-of-type(14) {
+    max-width: 408px; }
+    #work #projects li:nth-of-type(5) .thumb-container,
+    #work #projects li:nth-of-type(6) .thumb-container,
+    #work #projects li:nth-of-type(7) .thumb-container,
+    #work #projects li:nth-of-type(12) .thumb-container,
+    #work #projects li:nth-of-type(13) .thumb-container,
+    #work #projects li:nth-of-type(14) .thumb-container {
+      max-width: 408px; }
+    @media only screen and (min-width: 1086px) and (max-width: 1294px) {
+      #work #projects li:nth-of-type(5),
+      #work #projects li:nth-of-type(6),
+      #work #projects li:nth-of-type(7),
+      #work #projects li:nth-of-type(12),
+      #work #projects li:nth-of-type(13),
+      #work #projects li:nth-of-type(14) {
+        margin-left: 45px;
+        margin-right: 45px; } }
+    @media only screen and (min-width: 634px) and (max-width: 880px) {
+      #work #projects li:nth-of-type(5),
+      #work #projects li:nth-of-type(6),
+      #work #projects li:nth-of-type(7),
+      #work #projects li:nth-of-type(12),
+      #work #projects li:nth-of-type(13),
+      #work #projects li:nth-of-type(14) {
+        margin-left: 45px;
+        margin-right: 45px; } }
+  #work #projects li:nth-of-type(15) {
+    max-width: 408px;
+    /*@media only screen and (min-width: 734px) and (max-width: 1086px) {
+                    padding-left: 150px;
+                    padding-right: 150px;
+                }*/ }
+    #work #projects li:nth-of-type(15) .thumb-container {
+      max-width: 408px; }
+    @media only screen and (min-width: 880px) and (max-width: 1294px) {
+      #work #projects li:nth-of-type(15) {
+        margin-left: 150px;
+        margin-right: 150px; } }
+  @media only screen and (min-width: 1086px) and (max-width: 1294px) {
     #work #projects li:nth-of-type(1) {
       -webkit-order: 1;
           -ms-flex-order: 1;
@@ -4428,7 +4429,7 @@ p {
       -webkit-order: 15;
           -ms-flex-order: 15;
               order: 15; } }
-  @media only screen and (min-width: 734px) and (max-width: 1046px) {
+  @media only screen and (min-width: 634px) and (max-width: 1086px) {
     #work #projects li:nth-of-type(1) {
       -webkit-order: 1;
           -ms-flex-order: 1;
@@ -4494,8 +4495,7 @@ p {
     padding-bottom: 3em;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: antiquewhite;
-    /*  @media only screen and (min-width: 1046px) and (max-width: 1334px) {
+    /*  @media only screen and (min-width: 1086px) and (max-width: 1294px) {
             }
             
             @media only screen and (min-width: 734px) {
