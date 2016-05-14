@@ -8,7 +8,80 @@
     z-index: 101;
     max-width: $global-width;
     
-    #overlay-content{
+    .overlay-content{
+        
+        #detailView{
+
+        }
+        
+        #whatIsThis{
+            
+            #what-image{
+                width:100%;
+            }
+            .details {
+                position: relative;
+                color: $dark-gray;
+                text-align: left;
+                .copy {
+                    margin-top: 1.5em;
+                    margin-left: 1em;
+                    margin-right: 1em;
+                .title {
+                    margin:0;
+                    font-size: 2em;
+                    letter-spacing: -1px;
+                    text-transform: uppercase;
+
+                    @include breakpoint(small down) {
+                        font-size: 1.5em;
+                    }
+                }
+                .divider {
+                    border: .1em dotted $dark-gray;
+                    border-style: dashed none none;
+                    //margin-top: 1.25em;
+                }
+
+                .description {
+                    margin-top: .5em;
+                    margin-bottom: .5em;
+                    line-height: 1.25em;
+                    font-size: .9em;
+                    @include breakpoint(small down) {
+                        font-size: .8em;
+                    }
+                }
+                #buttons{
+                    margin-top: 1em;
+
+                    .back_btn {
+                        display: inline-block;
+                        font-size: .9em;
+                        @include breakpoint(small down) {
+                            font-size: .8em;
+                        }
+                        font-weight: bold;
+                        cursor: pointer;
+
+                        .fa{
+                            padding-right: .35em;
+                        }
+
+                        -webkit-transition: color 0.25s;
+                        -moz-transition: color 0.25s;
+                        -o-transition: color 0.25s;
+                        transition: color 0.25s;
+                    }
+
+                    .back_btn:hover {
+                        color: $wackyTitle;
+                    }
+
+                }
+    }
+}
+        }
         
         @include breakpoint(large up) {
             margin-top: 5%;
@@ -24,8 +97,6 @@
         
         @include breakpoint(small down) {
             margin-top: 40px;
-           // margin-left: 5%;
-           // margin-right: 5%;
         }
         
     }

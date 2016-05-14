@@ -223,7 +223,7 @@
                 //background-color: black;
                 position: relative;
                 display: inline-block;
-                box-shadow: 3px 3px 3px #ccc;
+                box-shadow: 4px 4px 4px #ccc;
                 img {
                     display: block;
                     margin: 0;
@@ -238,7 +238,7 @@
                     background: rgba(200, 66, 41, 1);
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    right: 0; 
                     left: 0;
                     bottom: 0;
                     color: white;
@@ -260,6 +260,7 @@
                             -webkit-text-stroke-color: $black;
                             font-size: 2.25em;
                             letter-spacing: -1px;
+                            line-height: 1em;
                             text-transform: uppercase;
                         }
                         .divider {

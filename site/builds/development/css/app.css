@@ -3748,18 +3748,62 @@ table.hover tr:nth-of-type(even):hover {
   top: 0;
   z-index: 101;
   max-width: 87.5rem; }
+  .overlay .overlay-content #whatIsThis #what-image {
+    width: 100%; }
+  .overlay .overlay-content #whatIsThis .details {
+    position: relative;
+    color: #484848;
+    text-align: left; }
+    .overlay .overlay-content #whatIsThis .details .copy {
+      margin-top: 1.5em;
+      margin-left: 1em;
+      margin-right: 1em; }
+      .overlay .overlay-content #whatIsThis .details .copy .title {
+        margin: 0;
+        font-size: 2em;
+        letter-spacing: -1px;
+        text-transform: uppercase; }
+        @media screen and (max-width: 43.6875em) {
+          .overlay .overlay-content #whatIsThis .details .copy .title {
+            font-size: 1.5em; } }
+      .overlay .overlay-content #whatIsThis .details .copy .divider {
+        border: 0.1em dotted #484848;
+        border-style: dashed none none; }
+      .overlay .overlay-content #whatIsThis .details .copy .description {
+        margin-top: .5em;
+        margin-bottom: .5em;
+        line-height: 1.25em;
+        font-size: .9em; }
+        @media screen and (max-width: 43.6875em) {
+          .overlay .overlay-content #whatIsThis .details .copy .description {
+            font-size: .8em; } }
+      .overlay .overlay-content #whatIsThis .details .copy #buttons {
+        margin-top: 1em; }
+        .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
+          display: inline-block;
+          font-size: .9em;
+          font-weight: bold;
+          cursor: pointer;
+          transition: color 0.25s; }
+          @media screen and (max-width: 43.6875em) {
+            .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
+              font-size: .8em; } }
+          .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn .fa {
+            padding-right: .35em; }
+        .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn:hover {
+          color: #eead2e; }
   @media screen and (min-width: 64em) {
-    .overlay #overlay-content {
+    .overlay .overlay-content {
       margin-top: 5%;
       margin-left: 10%;
       margin-right: 10%; } }
   @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
-    .overlay #overlay-content {
+    .overlay .overlay-content {
       margin-top: 50px;
       margin-left: 5%;
       margin-right: 5%; } }
   @media screen and (max-width: 43.6875em) {
-    .overlay #overlay-content {
+    .overlay .overlay-content {
       margin-top: 40px; } }
 
 /* Overlay closing cross */
@@ -4113,7 +4157,11 @@ p {
   #footer #footer-image {
     position: absolute;
     bottom: -5px;
-    right: 0; }
+    right: 0;
+    cursor: pointer; }
+    #footer #footer-image img {
+      width: 88px;
+      height: 103px; }
     #footer #footer-image #wp_caption {
       position: absolute;
       color: #fefefe;
@@ -4509,7 +4557,7 @@ p {
       width: 100%;
       position: relative;
       display: inline-block;
-      box-shadow: 3px 3px 3px #ccc; }
+      box-shadow: 4px 4px 4px #ccc; }
       #work #projects li .thumb-container .marker {
         position: absolute;
         top: 0;
@@ -4544,6 +4592,7 @@ p {
             -webkit-text-stroke-color: #0a0a0a;
             font-size: 2.25em;
             letter-spacing: -1px;
+            line-height: 1em;
             text-transform: uppercase; }
           #work #projects li .thumb-container .cardDetails .copy .divider {
             border: 0.1em dotted #fefefe;

@@ -28,17 +28,17 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/' + image + '_SM_x2.jpg';
+            $image = 'images/slides/' + image + '_SM_x2.jpg';
             viewState = 'sm_ret';
             break;
         case 'medium':
-            $image = 'images/' + image + '_MD_x2.jpg';
+            $image = 'images/slides/' + image + '_MD_x2.jpg';
             viewState = 'md_ret';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/' + image + '_LG_x2.jpg';
+            $image = 'images/slides/' + image + '_LG_x2.jpg';
             viewState = 'lg_ret';
             break;
         }
@@ -47,17 +47,17 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/' + image + '_SM.jpg';
+            $image = 'images/slides/' + image + '_SM.jpg';
             viewState = 'sm';
             break;
         case 'medium':
-            $image = 'images/' + image + '_MD.jpg';
+            $image = 'images/slides/' + image + '_MD.jpg';
             viewState = 'md';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/' + image + '_LG.jpg';
+            $image = 'images/slides/' + image + '_LG.jpg';
             viewState = 'lg';
             break;
         }
@@ -87,11 +87,16 @@ function changeCarouselImage(image) {
             transitions: Modernizr.csstransitions
         };
 
-    function toggleOverlay(event) {
+    function toggleOverlay(event, button) {
         
-        console.log('toggleOverlay')
+        //console.log('toggleOverlay')
 
         if (classie.has(overlay, 'open')) {
+            
+            
+            //classie.remove(overlay, 'detailView');
+            //classie.remove(overlay, 'whatIsThis');
+            
             
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
@@ -109,63 +114,76 @@ function changeCarouselImage(image) {
                 onEndTransitionFn();
             }
         } else if (!classie.has(overlay, 'close')) {
+            
+            console.log(event.data.msg)
+            
+            if (event.data.msg === 'detailsBtn'){
 
-            //add title
-            $(".project-details > .copy > .titleText").html("");
-            $(".project-details > .copy > .titleText").append(projectsArray[event.target.id].title);
-            //add header copy
-            $(".project-details > .copy > .header").html("");
-            $(".project-details > .copy > .header").append(
-                '<div><span>client: </span>' + projectsArray[event.target.id].client + '</div><div><span>agency: </span>' + projectsArray[event.target.id].agency + '</div><div><span>platform: </span>' + projectsArray[event.target.id].platform + '</div>'
-            );
-            //add description
-            $(".project-details > .copy > .description").html("");
-            $(".project-details > .copy > .description").append(projectsArray[event.target.id].description);
-            //add url
-            $(".project-details > .copy > #buttons > .view_site_btn").html("");
-            $(".project-details > .copy > #buttons > .view_site_btn").append(
-                "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
-            );
+                $('#detailView').show();
+                $('#whatIsThis').hide();
 
-            classie.add(overlay, 'open');
-            classie.add(container, 'overlay-open');
+                //add title
+                $(".project-details > .copy > .titleText").html("");
+                $(".project-details > .copy > .titleText").append(projectsArray[event.target.id].title);
+                //add header copy
+                $(".project-details > .copy > .header").html("");
+                $(".project-details > .copy > .header").append(
+                    '<div><span>client: </span>' + projectsArray[event.target.id].client + '</div><div><span>agency: </span>' + projectsArray[event.target.id].agency + '</div><div><span>platform: </span>' + projectsArray[event.target.id].platform + '</div>'
+                );
+                //add description
+                $(".project-details > .copy > .description").html("");
+                $(".project-details > .copy > .description").append(projectsArray[event.target.id].description);
+                //add url
+                $(".project-details > .copy > #buttons > .view_site_btn").html("");
+                $(".project-details > .copy > #buttons > .view_site_btn").append(
+                    "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
+                );
 
-            //initiate carousel for first time
-            if (!isFlickity) {
-                isFlickity = true;
-                console.log('carousel init first time');
-                $('.overlay-carousel').flickity({
-                    // options
-                    cellAlign: 'left',
-                    contain: true,
-                    wrapAround: true,
-                    lazyLoad: true,
-                    autoPlay: true,
-                    imagesLoaded: true
-                });
+                //initiate carousel for first time
+                if (!isFlickity) {
+                    isFlickity = true;
+                    console.log('carousel init first time');
+                    $('.overlay-carousel').flickity({
+                        // options
+                        cellAlign: 'left',
+                        contain: true,
+                        wrapAround: true,
+                        lazyLoad: true,
+                        autoPlay: true,
+                        imagesLoaded: true
+                    });
+                }else{
+                    //else remove previous slide images
+                    console.log('carousel exists');
+                    $('.overlay-carousel').flickity('destroy');
+                    $('.overlay-carousel').html("");
+                    $('.overlay-carousel').flickity({
+                        // options
+                        cellAlign: 'left',
+                        contain: true,
+                        wrapAround: true,
+                        lazyLoad: true,
+                        autoPlay: true,
+                        imagesLoaded: true
+                    });
+                }
+
+                slideImage0 = projectsArray[event.target.id].image1;
+                slideImage1 = projectsArray[event.target.id].image2;
+                slideImage2 = projectsArray[event.target.id].image3;
+
+                changeCarouselImage(slideImage0);
+                changeCarouselImage(slideImage1);
+                changeCarouselImage(slideImage2);
+                
             }else{
-                //else remove previous slide images
-                console.log('carousel exists');
-                $('.overlay-carousel').flickity('destroy');
-                $('.overlay-carousel').html("");
-                $('.overlay-carousel').flickity({
-                    // options
-                    cellAlign: 'left',
-                    contain: true,
-                    wrapAround: true,
-                    lazyLoad: true,
-                    autoPlay: true,
-                    imagesLoaded: true
-                });
+                
+                $('#detailView').hide();
+                $('#whatIsThis').show();
             }
             
-            slideImage0 = projectsArray[event.target.id].image1;
-            slideImage1 = projectsArray[event.target.id].image2;
-            slideImage2 = projectsArray[event.target.id].image3;
-            
-            changeCarouselImage(slideImage0);
-            changeCarouselImage(slideImage1);
-            changeCarouselImage(slideImage2);
+            classie.add(overlay, 'open');
+            classie.add(container, 'overlay-open');
              
         }
          
@@ -236,7 +254,7 @@ function addThumbImages() {
         $retina = true;
     }
     
-    console.log('isRetina: ' + $retina);
+    //console.log('isRetina: ' + $retina);
     
     var _projects = document.getElementById('projects');
     var _projectsList = _projects.getElementsByTagName("li");
@@ -248,9 +266,9 @@ function addThumbImages() {
         var _imgs = projectsArray[i].cardImage
 
         if ($retina) {
-            _img_div.attr('src', 'images/' + _imgs + '_x2.jpg');
+            _img_div.attr('src', 'images/thumbs/' + _imgs + '_x2.jpg');
         }else{
-            _img_div.attr('src', 'images/' + _imgs + '.jpg');
+            _img_div.attr('src', 'images/thumbs/' + _imgs + '.jpg');
         }
     }
     

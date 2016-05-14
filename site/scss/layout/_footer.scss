@@ -8,6 +8,12 @@
         position: absolute;
         bottom: -5px;
         right: 0;
+        cursor:pointer;
+        img{
+            width:88px;
+            height:103px;
+        }
+        
         #wp_caption {
             position: absolute;
             color: $white;
@@ -35,8 +41,6 @@
             }
             .email_btn {
                 color: $wackyTitle;
-                // -webkit-text-stroke-width: 1px;
-                //  -webkit-text-stroke-color: $dark-gray;
             }
         }
         li {
