@@ -14,10 +14,15 @@
          #about-image {
              img {
                  height: auto;
-                 width: 432px;
+                // width: 432px;
                  @include breakpoint(large up) {}
-                 @include breakpoint(medium only) {}
-                 @include breakpoint(small down) {}
+                 @include breakpoint(medium up) {
+                     width: 432px;
+                 }
+                 @include breakpoint(small down) {
+                     
+                     width: 300px;
+                 }
              }
          }
      }

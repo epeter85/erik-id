@@ -4313,8 +4313,13 @@ p {
     padding-top: 5%; } }
 
 #about #about-image img {
-  height: auto;
-  width: 432px; }
+  height: auto; }
+  @media screen and (min-width: 43.75em) {
+    #about #about-image img {
+      width: 432px; } }
+  @media screen and (max-width: 43.6875em) {
+    #about #about-image img {
+      width: 300px; } }
 
 @media screen and (min-width: 43.75em) {
   #work {
