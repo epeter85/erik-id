@@ -21,11 +21,8 @@ $(function () {
         
         $('.sideMenu').click(menuButtonHandler);
         $('.mainMenu').click(menuButtonHandler);
-        
-       
-        
+
         addThumbImages();
-        
         
     }); //getJSON
 }); //function
