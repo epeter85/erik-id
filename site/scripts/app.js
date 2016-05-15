@@ -274,3 +274,39 @@ function addThumbImages() {
     
     
 };
+
+
+/*button listeners*/
+var targetAnchor;
+
+function scrollToAnchor() {
+    console.log('scrollToAnchor')
+    
+    var $target = $(targetAnchor);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = targetAnchor;
+	    });
+    
+}
+
+
+function menuButtonHandler(event) {
+    
+    event.preventDefault();
+    
+    targetAnchor = this.hash;
+    console.log(targetAnchor);
+    
+    if( $(event.target).hasClass('sideMenu')) {
+        
+        $('#offCanvas').foundation('close');
+        setTimeout(scrollToAnchor, 300);
+    
+    }else{
+       scrollToAnchor();
+   }
+
+}

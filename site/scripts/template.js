@@ -19,7 +19,10 @@ $(function () {
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
         
-        $('#footer-image').click({msg: 'footerBtn'}, toggleOverlay);
+        $('.sideMenu').click(menuButtonHandler);
+        $('.mainMenu').click(menuButtonHandler);
+        
+       
         
         addThumbImages();
         
