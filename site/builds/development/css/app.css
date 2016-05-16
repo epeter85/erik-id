@@ -3748,50 +3748,52 @@ table.hover tr:nth-of-type(even):hover {
   top: 0;
   z-index: 101;
   max-width: 87.5rem; }
-  .overlay .overlay-content #whatIsThis #what-image {
-    width: 100%; }
-  .overlay .overlay-content #whatIsThis .details {
-    position: relative;
-    color: #484848;
-    text-align: left; }
-    .overlay .overlay-content #whatIsThis .details .copy {
-      margin-top: 1.5em;
-      margin-left: 1em;
-      margin-right: 1em; }
-      .overlay .overlay-content #whatIsThis .details .copy .title {
-        margin: 0;
-        font-size: 2em;
-        letter-spacing: -1px;
-        text-transform: uppercase; }
-        @media screen and (max-width: 43.6875em) {
-          .overlay .overlay-content #whatIsThis .details .copy .title {
-            font-size: 1.5em; } }
-      .overlay .overlay-content #whatIsThis .details .copy .divider {
-        border: 0.1em dotted #484848;
-        border-style: dashed none none; }
-      .overlay .overlay-content #whatIsThis .details .copy .description {
-        margin-top: .5em;
-        margin-bottom: .5em;
-        line-height: 1.25em;
-        font-size: .9em; }
-        @media screen and (max-width: 43.6875em) {
-          .overlay .overlay-content #whatIsThis .details .copy .description {
-            font-size: .8em; } }
-      .overlay .overlay-content #whatIsThis .details .copy #buttons {
-        margin-top: 1em; }
-        .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
-          display: inline-block;
-          font-size: .9em;
-          font-weight: bold;
-          cursor: pointer;
-          transition: color 0.25s; }
+  .overlay .overlay-content #whatIsThis {
+    padding-bottom: 25px; }
+    .overlay .overlay-content #whatIsThis #what-image {
+      width: 100%; }
+    .overlay .overlay-content #whatIsThis .details {
+      position: relative;
+      color: #484848;
+      text-align: left; }
+      .overlay .overlay-content #whatIsThis .details .copy {
+        margin-top: 1.5em;
+        margin-left: 1em;
+        margin-right: 1em; }
+        .overlay .overlay-content #whatIsThis .details .copy .title {
+          margin: 0;
+          font-size: 2em;
+          letter-spacing: -1px;
+          text-transform: uppercase; }
           @media screen and (max-width: 43.6875em) {
-            .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
+            .overlay .overlay-content #whatIsThis .details .copy .title {
+              font-size: 1.5em; } }
+        .overlay .overlay-content #whatIsThis .details .copy .divider {
+          border: 0.1em dotted #484848;
+          border-style: dashed none none; }
+        .overlay .overlay-content #whatIsThis .details .copy .description {
+          margin-top: .5em;
+          margin-bottom: .5em;
+          line-height: 1.25em;
+          font-size: .9em; }
+          @media screen and (max-width: 43.6875em) {
+            .overlay .overlay-content #whatIsThis .details .copy .description {
               font-size: .8em; } }
-          .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn .fa {
-            padding-right: .35em; }
-        .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn:hover {
-          color: #eead2e; }
+        .overlay .overlay-content #whatIsThis .details .copy #buttons {
+          margin-top: 1em; }
+          .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
+            display: inline-block;
+            font-size: .9em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.25s; }
+            @media screen and (max-width: 43.6875em) {
+              .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn {
+                font-size: .8em; } }
+            .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn .fa {
+              padding-right: .35em; }
+          .overlay .overlay-content #whatIsThis .details .copy #buttons .back_btn:hover {
+            color: #eead2e; }
   @media screen and (min-width: 64em) {
     .overlay .overlay-content {
       margin-top: 5%;
@@ -3878,12 +3880,14 @@ table.hover tr:nth-of-type(even):hover {
   -ms-transform: translateX(0%);
       transform: translateX(0%);
   transition: -webkit-transform 0.5s;
-  transition: transform 0.5s; }
+  transition: transform 0.5s;
+  overflow-y: scroll; }
 
 .project-details {
   position: relative;
   color: #484848;
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 25px; }
   .project-details .copy {
     margin-top: 1.5em;
     margin-left: 1em;
