@@ -3746,7 +3746,6 @@ table.hover tr:nth-of-type(even):hover {
   width: 100%;
   height: 100%;
   top: 0;
-  z-index: 101;
   max-width: 87.5rem; }
   .overlay .overlay-content #whatIsThis {
     padding-bottom: 25px; }
@@ -3776,6 +3775,13 @@ table.hover tr:nth-of-type(even):hover {
           margin-bottom: .5em;
           line-height: 1.25em;
           font-size: .9em; }
+          .overlay .overlay-content #whatIsThis .details .copy .description a {
+            font-family: Arial;
+            font-size: 1em;
+            text-transform: capitalize;
+            font-weight: 700; }
+          .overlay .overlay-content #whatIsThis .details .copy .description a:hover {
+            color: #0a0a0a; }
           @media screen and (max-width: 43.6875em) {
             .overlay .overlay-content #whatIsThis .details .copy .description {
               font-size: .8em; } }
@@ -3881,7 +3887,7 @@ table.hover tr:nth-of-type(even):hover {
       transform: translateX(0%);
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
-  overflow-y: scroll; }
+  overflow-y: auto; }
 
 .project-details {
   position: relative;
