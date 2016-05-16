@@ -19,6 +19,9 @@ $(function () {
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
         
+        $('#footer-image').click({msg: 'whatsThisBtn'}, toggleOverlay);
+        
+        
         $('.sideMenu').click(menuButtonHandler);
         $('.mainMenu').click(menuButtonHandler);
 
