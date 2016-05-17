@@ -4,6 +4,7 @@
     width: 100%;
     background-image: url('../images/footer_tile.jpg');
     background-repeat: repeat-x;
+    bottom:0;
     #footer-image {
         position: absolute;
         bottom: -5px;
@@ -34,7 +35,6 @@
             text-align: left;
         }
         list-style-type: none;
-        a {}
         a:hover {
             .social_btn {
                 color: $wackyTitle;

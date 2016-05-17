@@ -15,6 +15,8 @@ var previousMediaSize;
 /*update images on detail view carousel*/
 
 function changeCarouselImage(image) {
+    
+    console.log('changeCarouselImage')
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -24,7 +26,7 @@ function changeCarouselImage(image) {
         $retina = true;
     }
 
-    if ($retina) {
+   /* if ($retina) {
 
         switch ($size) {
         case 'small':
@@ -43,7 +45,7 @@ function changeCarouselImage(image) {
             break;
         }
 
-    } else {
+    } else {*/
 
         switch ($size) {
         case 'small':
@@ -61,10 +63,15 @@ function changeCarouselImage(image) {
             viewState = 'lg';
             break;
         }
-    }
+   // }
 
     var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
     $('.overlay-carousel').flickity( 'append', $cellElems );
+    
+   // resizeCarousel();
+    //console.log('reloadCells')
+   // $('.overlay-carousel').flickity('reloadCells');
+
 };
 
 
@@ -88,14 +95,15 @@ function changeCarouselImage(image) {
         };
 
     function toggleOverlay(event, button) {
-        
-        //console.log('toggleOverlay')
 
         if (classie.has(overlay, 'open')) {
             
-            
-            //classie.remove(overlay, 'detailView');
-            //classie.remove(overlay, 'whatIsThis');
+            if (isFlickity) {
+                console.log('carousel kill');
+                $('.overlay-carousel').flickity('destroy');
+                $('.overlay-carousel').html("");
+                isFlickity = false;
+            }
             
             
             classie.remove(overlay, 'open');
@@ -138,43 +146,50 @@ function changeCarouselImage(image) {
                 $(".project-details > .copy > #buttons > .view_site_btn").append(
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
-
-                //initiate carousel for first time
-                if (!isFlickity) {
+                
+                    slideImage0 = projectsArray[event.target.id].image1;
+                    slideImage1 = projectsArray[event.target.id].image2;
+                    slideImage2 = projectsArray[event.target.id].image3;
+                    slideImage3 = projectsArray[event.target.id].image4;
+                    slideImage4 = projectsArray[event.target.id].image5;
+                    slideImage5 = projectsArray[event.target.id].image6;
+                    
+                    console.log('carousel init');
+                    $('.overlay-carousel').flickity({
+                        // options
+                        cellAlign: 'left',
+                        contain: true,
+                        wrapAround: true,
+                        lazyLoad: true,
+                        autoPlay: true,
+                        imagesLoaded: true
+                    });
+                
+                
                     isFlickity = true;
-                    console.log('carousel init first time');
-                    $('.overlay-carousel').flickity({
-                        // options
-                        cellAlign: 'left',
-                        contain: true,
-                        wrapAround: true,
-                        lazyLoad: true,
-                        autoPlay: true,
-                        imagesLoaded: true
-                    });
+
+               if (Foundation.MediaQuery.atLeast('large')) {
+                    
+
+                    
+                    changeCarouselImage(slideImage0);
+                    changeCarouselImage(slideImage1);
+                    changeCarouselImage(slideImage2);
+                
+                    
                 }else{
-                    //else remove previous slide images
-                    console.log('carousel exists');
-                    $('.overlay-carousel').flickity('destroy');
-                    $('.overlay-carousel').html("");
-                    $('.overlay-carousel').flickity({
-                        // options
-                        cellAlign: 'left',
-                        contain: true,
-                        wrapAround: true,
-                        lazyLoad: true,
-                        autoPlay: true,
-                        imagesLoaded: true
-                    });
+
+                    changeCarouselImage(slideImage0);
+                    changeCarouselImage(slideImage1);
+                    changeCarouselImage(slideImage2);
+                    changeCarouselImage(slideImage3);
+                    changeCarouselImage(slideImage4);
+                    changeCarouselImage(slideImage5);
+                    
+                    
                 }
-
-                slideImage0 = projectsArray[event.target.id].image1;
-                slideImage1 = projectsArray[event.target.id].image2;
-                slideImage2 = projectsArray[event.target.id].image3;
-
-                changeCarouselImage(slideImage0);
-                changeCarouselImage(slideImage1);
-                changeCarouselImage(slideImage2);
+                
+                setTimeout(resizeCarousel, 50);
                 
             }else{
                 
@@ -197,8 +212,10 @@ function changeCarouselImage(image) {
 /*Window resize listener and image swap
 for view details carousel */
 
-$( window ).resize(function() {
-
+function resizeCarousel() {
+    
+    console.log('resize carousel');
+    
     var mediaSize = Foundation.MediaQuery.current;
 
     switch (mediaSize) {
@@ -229,17 +246,35 @@ $( window ).resize(function() {
             autoPlay: true,
             imagesLoaded: true
         });
-        
-        console.log(slideImage0);
-        
-        changeCarouselImage(slideImage0);
-        changeCarouselImage(slideImage1);
-        changeCarouselImage(slideImage2);
+
+        if (Foundation.MediaQuery.atLeast('large')) {
+            
+            changeCarouselImage(slideImage0);
+            changeCarouselImage(slideImage1);
+            changeCarouselImage(slideImage2);
+
+        }else{
+            
+            changeCarouselImage(slideImage0);
+            changeCarouselImage(slideImage1);
+            changeCarouselImage(slideImage2);
+            changeCarouselImage(slideImage3);
+            changeCarouselImage(slideImage4);
+            changeCarouselImage(slideImage5);
+            
+        }
         
         
     }
 
     previousMediaSize = currentMediaSize;
+}
+
+$( window ).resize(function() {
+
+    if (isFlickity) {
+        resizeCarousel();
+    }
 });
 
 /*after template is executed

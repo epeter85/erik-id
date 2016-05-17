@@ -47,8 +47,27 @@
 
 /* position dots in carousel */
 
-.flickity-page-dots {
+.main-carousel .flickity-page-dots {
     bottom: 10px;
+    @include breakpoint(small down) {
+        bottom: -25px;
+    }
+}
+
+.overlay-carousel .flickity-page-dots {
+    
+    z-index: 100;
+    
+    
+    @include breakpoint(large up) {
+        bottom: -2em;
+    }
+    @include breakpoint(medium only) {
+        bottom: -2em;
+    }
+    @include breakpoint(small down) {
+        bottom: -1.5em;
+    }
 }
 
 
@@ -58,7 +77,6 @@
 
     opacity: 0.3;
     background: transparent;
-    border: 2px solid white;
     
     @include breakpoint(large up) {
         width: .8em;
@@ -69,9 +87,22 @@
         height: .7em;
     }
     @include breakpoint(small down) {
-        width: .6em;
-        height: .6em;
+        width: .7em;
+        height: .7em;
     }
+}
+
+.main-carousel .flickity-page-dots .dot {
+
+    border: 2px solid white;
+    @include breakpoint(small down) {
+        border: 2px solid $dark-gray;
+    }
+}
+
+.overlay-carousel .flickity-page-dots .dot {
+
+    border: 2px solid $dark-gray;
 }
 
 .flickity-page-dots .dot:hover {
@@ -83,12 +114,32 @@
 
 .flickity-page-dots .dot.is-selected {
     opacity: 0.3;
+}
+
+.main-carousel .flickity-page-dots .dot.is-selected {
     background: white;
+    @include breakpoint(small down) {
+        background: $dark-gray;
+    }
+}
+
+.overlay-carousel .flickity-page-dots .dot.is-selected {
+    background: $dark-gray;
 }
 
 .flickity-page-dots .dot.is-selected:hover {
     opacity: 0.8;
+}
+
+.main-carousel .flickity-page-dots .dot.is-selected:hover {
     background: white;
+    @include breakpoint(small down) {
+        background: $dark-gray;
+    }
+}
+
+.overlay-carousel .flickity-page-dots .dot.is-selected:hover {
+    background: $dark-gray;
 }
 
 .main-carousel{
@@ -108,8 +159,10 @@
 .overlay-carousel{
     
     .carousel-cell {
+      
       width:100%;
-        height:auto;
+      height: auto;     
+
 
     img {
         width:100%; 
