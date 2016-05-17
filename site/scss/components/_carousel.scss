@@ -8,21 +8,13 @@
     background: transparent;
     
     @include breakpoint(large up) {
-        width: 5em;
-        height: 5em;
+        width: 4em;
+        height: 4em;
     }
     
     @include breakpoint(medium down) {
         display: none;
     }
-    /*@include breakpoint(medium only) {
-        width: 4em;
-        height: 4em;
-    }
-    @include breakpoint(small down) {
-        width: 3em;
-        height: 3em;
-    }*/
 }
 
 .flickity-prev-next-button:hover {

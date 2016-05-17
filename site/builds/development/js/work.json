@@ -9,12 +9,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"https://www.haagendazs.us/",
     "cardImage":"haagen_dazs",
-    "image1":"haagen_dazs_01",
-    "image2":"haagen_dazs_02",
-    "image3":"haagen_dazs_03",
-    "image4":"haagen_dazs_04",
-    "image5":"haagen_dazs_05",
-    "image6":"haagen_dazs_06"
+      "slides": [
+        "haagen_dazs_01",
+        "haagen_dazs_02",
+        "haagen_dazs_03",
+        "haagen_dazs_04",
+        "haagen_dazs_05",
+        "haagen_dazs_06"
+      ]
       
   },
     { 
@@ -27,9 +29,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"",
     "cardImage":"mcdonalds",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "schweid_sons_01",
+            "schweid_sons_02",
+            "schweid_sons_03",
+            "schweid_sons_04",
+            "schweid_sons_05",
+            "schweid_sons_06"
+        ]
   },
     { 
     "id":2,
@@ -41,9 +48,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.schweidandsons.com",
     "cardImage":"schweid_sons",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "schweid_sons_01",
+            "schweid_sons_02",
+            "schweid_sons_03",
+            "schweid_sons_04",
+            "schweid_sons_05",
+            "schweid_sons_06"
+        ]
   },
     { 
     "id":3,
@@ -55,9 +67,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://wisdom-media.com.hk",
     "cardImage":"wisdom_media",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "wisdom_media_01",
+            "wisdom_media_02",
+            "wisdom_media_03",
+            "wisdom_media_04"
+        ]
   },
     { 
     "id":4,

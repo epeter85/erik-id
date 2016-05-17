@@ -4237,19 +4237,11 @@ p {
 /* big buttons, no circle */
 .flickity-prev-next-button {
   opacity: 0.3;
-  background: transparent;
-  /*@include breakpoint(medium only) {
-        width: 4em;
-        height: 4em;
-    }
-    @include breakpoint(small down) {
-        width: 3em;
-        height: 3em;
-    }*/ }
+  background: transparent; }
   @media screen and (min-width: 64em) {
     .flickity-prev-next-button {
-      width: 5em;
-      height: 5em; } }
+      width: 4em;
+      height: 4em; } }
   @media screen and (max-width: 63.9375em) {
     .flickity-prev-next-button {
       display: none; } }

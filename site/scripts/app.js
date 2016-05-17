@@ -4,6 +4,7 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 
 
 var projectsArray = [];
+var slidesArray;
 var isFlickity = false;
 var slideImage0;
 var slideImage1;
@@ -143,13 +144,7 @@ function changeCarouselImage(image) {
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
                 
-                    slideImage0 = projectsArray[event.target.id].image1;
-                    slideImage1 = projectsArray[event.target.id].image2;
-                    slideImage2 = projectsArray[event.target.id].image3;
-                    slideImage3 = projectsArray[event.target.id].image4;
-                    slideImage4 = projectsArray[event.target.id].image5;
-                    slideImage5 = projectsArray[event.target.id].image6;
-                    
+
                     console.log('carousel init');
                     $('.overlay-carousel').flickity({
                         // options
@@ -162,13 +157,14 @@ function changeCarouselImage(image) {
                 
                 
                     isFlickity = true;
-
-                    changeCarouselImage(slideImage0);
-                    changeCarouselImage(slideImage1);
-                    changeCarouselImage(slideImage2);
-                    changeCarouselImage(slideImage3);
-                    changeCarouselImage(slideImage4);
-                    changeCarouselImage(slideImage5);
+                
+                    slidesArray = [];
+                
+                slidesArray.push(projectsArray[event.target.id].slides);
+                
+                for (index = 0; index < slidesArray[0].length; ++index) {
+                    changeCarouselImage(slidesArray[0][index]);
+                }
 
                 setTimeout(resizeCarousel, 50);
                 
@@ -258,13 +254,11 @@ function resizeCarousel() {
                 imagesLoaded: true
             });
         }
-            
-            changeCarouselImage(slideImage0);
-            changeCarouselImage(slideImage1);
-            changeCarouselImage(slideImage2);
-            changeCarouselImage(slideImage3);
-            changeCarouselImage(slideImage4);
-            changeCarouselImage(slideImage5);
+
+        
+                for (index = 0; index < slidesArray[0].length; ++index) {
+                    changeCarouselImage(slidesArray[0][index]);
+                }
             
        // }
         
