@@ -4237,19 +4237,22 @@ p {
 /* big buttons, no circle */
 .flickity-prev-next-button {
   opacity: 0.3;
-  background: transparent; }
+  background: transparent;
+  /*@include breakpoint(medium only) {
+        width: 4em;
+        height: 4em;
+    }
+    @include breakpoint(small down) {
+        width: 3em;
+        height: 3em;
+    }*/ }
   @media screen and (min-width: 64em) {
     .flickity-prev-next-button {
       width: 5em;
       height: 5em; } }
-  @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
+  @media screen and (max-width: 63.9375em) {
     .flickity-prev-next-button {
-      width: 4em;
-      height: 4em; } }
-  @media screen and (max-width: 43.6875em) {
-    .flickity-prev-next-button {
-      width: 3em;
-      height: 3em; } }
+      display: none; } }
 
 .flickity-prev-next-button:hover {
   opacity: 0.8;
@@ -4266,6 +4269,15 @@ p {
 .flickity-prev-next-button:disabled {
   display: none; }
 
+/* position outside */
+@media screen and (min-width: 64em) {
+  .overlay-carousel .flickity-prev-next-button.previous {
+    left: -60px; }
+  .overlay-carousel .flickity-prev-next-button.next {
+    right: -60px; }
+  .overlay-carousel .flickity-prev-next-button .arrow {
+    fill: #484848; } }
+
 /* position dots in carousel */
 .main-carousel .flickity-page-dots {
   bottom: 10px; }
@@ -4277,17 +4289,17 @@ p {
   z-index: 100; }
   @media screen and (min-width: 64em) {
     .overlay-carousel .flickity-page-dots {
-      bottom: -2em; }
+      bottom: -25px; }
       .overlay-carousel .flickity-page-dots .dot {
         display: none; }
       .overlay-carousel .flickity-page-dots .dot:nth-child(2n+1) {
         display: inline-block; } }
   @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
     .overlay-carousel .flickity-page-dots {
-      bottom: -2em; } }
+      bottom: -25px; } }
   @media screen and (max-width: 43.6875em) {
     .overlay-carousel .flickity-page-dots {
-      bottom: -1.5em; } }
+      bottom: -25px; } }
 
 /* white circles */
 .flickity-page-dots .dot {
@@ -4351,24 +4363,27 @@ p {
     height: 100%; }
 
 .overlay-carousel .carousel-cell {
+  top: -3px;
   height: auto; }
   @media screen and (min-width: 64em) {
     .overlay-carousel .carousel-cell {
-      width: 50%; } }
-  @media screen and (max-width: 63.9375em) {
+      width: 50%;
+      padding-right: 10px;
+      padding-left: 10px; } }
+  @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
     .overlay-carousel .carousel-cell {
-      width: 100%; } }
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px; } }
+  @media screen and (max-width: 43.6875em) {
+    .overlay-carousel .carousel-cell {
+      width: 100%;
+      padding-right: 10px;
+      padding-left: 10px; } }
   .overlay-carousel .carousel-cell img {
     width: 100%;
-    height: auto; }
-
-@media screen and (min-width: 64em) {
-  .overlay-carousel .carousel-cell:nth-child(odd) {
-    padding-right: 10px; } }
-
-@media screen and (min-width: 64em) {
-  .overlay-carousel .carousel-cell:nth-child(even) {
-    padding-left: 10px; } }
+    height: auto;
+    box-shadow: 2px 2px 2px #ccc; }
 
 @media screen and (min-width: 64em) {
   #about #about_copy {

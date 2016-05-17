@@ -739,15 +739,15 @@ function changeCarouselImage(image) {
         $retina = true;
     }
 
-   /* if ($retina) {
+    if ($retina) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_SM_x2.jpg';
+            $image = 'images/slides/' + image + '_LG_x2.jpg';
             viewState = 'sm_ret';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_MD_x2.jpg';
+            $image = 'images/slides/' + image + '_LG_x2.jpg';
             viewState = 'md_ret';
             break;
         case 'large':
@@ -758,7 +758,7 @@ function changeCarouselImage(image) {
             break;
         }
 
-    } else {*/
+    } else {
 
         switch ($size) {
         case 'small':
@@ -776,14 +776,10 @@ function changeCarouselImage(image) {
             viewState = 'lg';
             break;
         }
-   // }
+    }
 
     var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
     $('.overlay-carousel').flickity( 'append', $cellElems );
-    
-   // resizeCarousel();
-    //console.log('reloadCells')
-   // $('.overlay-carousel').flickity('reloadCells');
 
 };
 
@@ -880,27 +876,13 @@ function changeCarouselImage(image) {
                 
                     isFlickity = true;
 
-              /* if (Foundation.MediaQuery.atLeast('large')) {
-                    
-
-                    
-                    changeCarouselImage(slideImage0);
-                    changeCarouselImage(slideImage1);
-                    changeCarouselImage(slideImage2);
-                
-                    
-                }else{*/
-
                     changeCarouselImage(slideImage0);
                     changeCarouselImage(slideImage1);
                     changeCarouselImage(slideImage2);
                     changeCarouselImage(slideImage3);
                     changeCarouselImage(slideImage4);
                     changeCarouselImage(slideImage5);
-                    
-                    
-               // }
-                
+
                 setTimeout(resizeCarousel, 50);
                 
             }else{
