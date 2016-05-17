@@ -49,11 +49,11 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_SM.jpg';
+            $image = 'images/slides/' + image + '_LG.jpg';
             viewState = 'sm';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_MD.jpg';
+            $image = 'images/slides/' + image + '_LG.jpg';
             viewState = 'md';
             break;
         case 'large':
@@ -160,15 +160,14 @@ function changeCarouselImage(image) {
                         cellAlign: 'left',
                         contain: true,
                         wrapAround: true,
-                        lazyLoad: true,
-                        autoPlay: true,
+                        lazyLoad: 2,
                         imagesLoaded: true
                     });
                 
                 
                     isFlickity = true;
 
-               if (Foundation.MediaQuery.atLeast('large')) {
+              /* if (Foundation.MediaQuery.atLeast('large')) {
                     
 
                     
@@ -177,7 +176,7 @@ function changeCarouselImage(image) {
                     changeCarouselImage(slideImage2);
                 
                     
-                }else{
+                }else{*/
 
                     changeCarouselImage(slideImage0);
                     changeCarouselImage(slideImage1);
@@ -187,7 +186,7 @@ function changeCarouselImage(image) {
                     changeCarouselImage(slideImage5);
                     
                     
-                }
+               // }
                 
                 setTimeout(resizeCarousel, 50);
                 
@@ -237,23 +236,46 @@ function resizeCarousel() {
         console.log('resize triggered');
         $('.overlay-carousel').flickity('destroy');
         $('.overlay-carousel').html("");
-        $('.overlay-carousel').flickity({
-            // options
-            cellAlign: 'left',
-            contain: true,
-            wrapAround: true,
-            lazyLoad: true,
-            autoPlay: true,
-            imagesLoaded: true
-        });
 
+
+        //SKIPS 2 SLIDES FOR LARGE FORMAT
         if (Foundation.MediaQuery.atLeast('large')) {
             
-            changeCarouselImage(slideImage0);
-            changeCarouselImage(slideImage1);
-            changeCarouselImage(slideImage2);
+            //no autoplay
+            $('.overlay-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                lazyLoad: 2,
+                imagesLoaded: true
+            });
+            
+            $('.overlay-carousel .flickity-prev-next-button.next').click(function(){
+                var flkty = $('.overlay-carousel').data('flickity');
+                var defaultSelect = flkty.selectedIndex;
+                var newSelect = defaultSelect + 1;
+                $('.overlay-carousel').flickity( 'select', newSelect );
+            });
+            $('.overlay-carousel .flickity-prev-next-button.previous').click(function(){
+                var flkty = $('.overlay-carousel').data('flickity');
+                var defaultSelect = flkty.selectedIndex;
+                var newSelect = defaultSelect - 1;
+                $('.overlay-carousel').flickity( 'select', newSelect );
+            });
 
         }else{
+            
+            $('.overlay-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                lazyLoad: 2,
+                autoPlay: true,
+                imagesLoaded: true
+            });
+        }
             
             changeCarouselImage(slideImage0);
             changeCarouselImage(slideImage1);
@@ -262,7 +284,7 @@ function resizeCarousel() {
             changeCarouselImage(slideImage4);
             changeCarouselImage(slideImage5);
             
-        }
+       // }
         
         
     }

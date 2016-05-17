@@ -61,6 +61,13 @@
     
     @include breakpoint(large up) {
         bottom: -2em;
+        
+       .dot {
+            display:none;
+        }
+        .dot:nth-child(2n+1){
+            display:inline-block;
+        }   
     }
     @include breakpoint(medium only) {
         bottom: -2em;
@@ -145,8 +152,8 @@
 .main-carousel{
     
     .carousel-cell {
-      width:100%;
-    height:auto;
+        width:100%;
+        height:auto;
 
     img {
         width:100%; 
@@ -158,16 +165,42 @@
 
 .overlay-carousel{
     
+   // background-color: black;
+    
     .carousel-cell {
+        
+        @include breakpoint(large up) {
+            width:50%;
+            //padding-right: 20px;
+        }
+        
+        @include breakpoint(medium down) {
+            width:100%;
+            //margin-right: 10px;
+        }
       
-      width:100%;
+        
       height: auto;     
 
 
     img {
         width:100%; 
-        height:100%;
+        height:auto;
     }
 }
+    
+    .carousel-cell:nth-child(odd) {
+        @include breakpoint(large up) {
+            padding-right: 10px;
+        }
+        
+    }
+    
+    .carousel-cell:nth-child(even) {
+        @include breakpoint(large up) {
+            padding-left: 10px;
+        }
+        
+    }
     
 }
