@@ -143,9 +143,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://frieswithdat.com/websites/rhr-sitelet/build/File%20Blocks/US/Brands/",
     "cardImage":"renaissance",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "renaissance_01",
+            "renaissance_02",
+            "renaissance_03",
+            "renaissance_04",
+            "renaissance_05",
+            "renaissance_06"
+        ]
   },
     { 
     "id":9,
@@ -190,9 +195,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/halo/",
     "cardImage":"fedex_halo",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "halo_01",
+            "halo_02",
+            "halo_03",
+            "halo_04",
+            "halo_05",
+            "halo_06"
+        ]  
   },
     { 
     "id":12,
@@ -204,9 +214,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/citicards/",
     "cardImage":"citi",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "citicards_01",
+            "citicards_02",
+            "citicards_03",
+            "citicards_04",
+            "citicards_05",
+            "citicards_06"
+        ]  
   },
     { 
     "id":13,
