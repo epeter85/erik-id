@@ -5,12 +5,62 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 
 var projectsArray = [];
 var slidesArray;
+var slidesPathArray;
+var loadedSlidesArray;
 var isFlickity = false;
-var slideImage0;
-var slideImage1;
-var slideImage2;
 var currentMediaSize;
 var previousMediaSize;
+
+
+function createDetailCarousel() {
+    
+     if (Foundation.MediaQuery.atLeast('large')) {
+            
+            //no autoplay
+            $('.overlay-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                imagesLoaded: true
+            });
+            
+            $('.overlay-carousel .flickity-prev-next-button.next').click(function(){
+                var flkty = $('.overlay-carousel').data('flickity');
+                var defaultSelect = flkty.selectedIndex;
+                var newSelect = defaultSelect + 1;
+                $('.overlay-carousel').flickity( 'select', newSelect );
+            });
+            $('.overlay-carousel .flickity-prev-next-button.previous').click(function(){
+                var flkty = $('.overlay-carousel').data('flickity');
+                var defaultSelect = flkty.selectedIndex;
+                var newSelect = defaultSelect - 1;
+                $('.overlay-carousel').flickity( 'select', newSelect );
+            });
+
+        }else{
+            
+            $('.overlay-carousel').flickity({
+                // options
+                cellAlign: 'left',
+                contain: true,
+                wrapAround: true,
+                autoPlay: true,
+                imagesLoaded: true
+            });
+        }
+    
+    
+}
+
+function killDetailCarousel() {
+    console.log(killDetailCarousel);
+    $('.overlay-carousel').flickity('destroy');
+    $('.overlay-carousel').html("");
+    isFlickity = false;
+}
+    
+    
 
 
 /*update images on detail view carousel*/
@@ -95,13 +145,7 @@ function changeCarouselImage(image) {
 
         if (classie.has(overlay, 'open')) {
             
-            if (isFlickity) {
-                console.log('carousel kill');
-                $('.overlay-carousel').flickity('destroy');
-                $('.overlay-carousel').html("");
-                isFlickity = false;
-            }
-            
+            setTimeout(killDetailCarousel, 1000);
             
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
@@ -118,14 +162,17 @@ function changeCarouselImage(image) {
             } else {
                 onEndTransitionFn();
             }
-        } else if (!classie.has(overlay, 'close')) {
             
-            console.log(event.data.msg)
+        } else if (!classie.has(overlay, 'close')) {
             
             if (event.data.msg === 'detailsBtn'){
 
                 $('#detailView').show();
                 $('#whatIsThis').hide();
+
+                createDetailCarousel();
+                    
+                isFlickity = true;
 
                 //add title
                 $(".project-details > .copy > .titleText").html("");
@@ -143,39 +190,86 @@ function changeCarouselImage(image) {
                 $(".project-details > .copy > #buttons > .view_site_btn").append(
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
+            
                 
+                slidesArray = [];
+                slidesPathArray = [];
+                loadedSlidesArray = [];
+                var $retina = false;
 
-                    console.log('carousel init');
-                    $('.overlay-carousel').flickity({
-                        // options
-                        cellAlign: 'left',
-                        contain: true,
-                        wrapAround: true,
-                        lazyLoad: 2,
-                        imagesLoaded: true
-                    });
+                if (window.devicePixelRatio >= 2) {
+                    $retina = true;
+                }
+                
+                function handleComplete(event) {
+
+                    console.log('complete loading: ' + loadedSlidesArray)
+                    
+                    for (index = 0; index < loadedSlidesArray.length; ++index) {
+                    
+                        var $id = 'cell' + index
+                        var $cellElems = $("<div class='carousel-cell' id='" + $id + "'></div>");
+                         $('.overlay-carousel').flickity( 'append', $cellElems );
+                        document.getElementById($id).appendChild(loadedSlidesArray[index]);
+                         
+                    }
+                    
+                    $('.overlay-carousel').flickity('resize');
+                    
+                    classie.add(overlay, 'open');
+                    classie.add(container, 'overlay-open');
+                 }
+                
+                 function handleFileLoad(event) {
+                     
+                     var item = event.item; // A reference to the item that was passed in to the LoadQueue
+                     var type = item.type;
+
+                     // Add any images to the page body.
+                     if (type == createjs.LoadQueue.IMAGE) {
+                
+                         loadedSlidesArray.push(event.result);
+                     }
+                 }
+                
+                function handleProgressLoad(event) {
+                    console.log ('percent loaded: ' + event.loaded)
+                }
                 
                 
-                    isFlickity = true;
-                
-                    slidesArray = [];
-                
+                //get image paths
+                //put into slidesPathArray
                 slidesArray.push(projectsArray[event.target.id].slides);
                 
                 for (index = 0; index < slidesArray[0].length; ++index) {
-                    changeCarouselImage(slidesArray[0][index]);
+                    
+                    var $imagePath;
+                    
+                    if($retina){
+                        $imagePath = 'images/slides/' + slidesArray[0][index] + '_LG_x2.jpg';
+                    }else{
+                        $imagePath = 'images/slides/' + slidesArray[0][index] + '_LG.jpg';
+                    }
+                    
+                    slidesPathArray.push($imagePath);
                 }
+                
+                //add image paths to image loader cue
+                var queue = new createjs.LoadQueue();
+                queue.on("complete", handleComplete, this);
+                queue.on("fileload", handleFileLoad, this);
+                queue.on("progress", handleProgressLoad, this);
+                queue.loadManifest(slidesPathArray, true); // Note the 2nd argument that tells the queue not to start loading yet
 
-                setTimeout(resizeCarousel, 100);
                 
             }else{
                 
                 $('#detailView').hide();
                 $('#whatIsThis').show();
+                
+                classie.add(overlay, 'open');
+                classie.add(container, 'overlay-open');
             }
-            
-            classie.add(overlay, 'open');
-            classie.add(container, 'overlay-open');
              
         }
          
@@ -214,55 +308,15 @@ function resizeCarousel() {
         console.log('resize triggered');
         $('.overlay-carousel').flickity('destroy');
         $('.overlay-carousel').html("");
-
-
-        //SKIPS 2 SLIDES FOR LARGE FORMAT
-        if (Foundation.MediaQuery.atLeast('large')) {
-            
-            //no autoplay
-            $('.overlay-carousel').flickity({
-                // options
-                cellAlign: 'left',
-                contain: true,
-                wrapAround: true,
-                lazyLoad: 2,
-                imagesLoaded: true
-            });
-            
-            $('.overlay-carousel .flickity-prev-next-button.next').click(function(){
-                var flkty = $('.overlay-carousel').data('flickity');
-                var defaultSelect = flkty.selectedIndex;
-                var newSelect = defaultSelect + 1;
-                $('.overlay-carousel').flickity( 'select', newSelect );
-            });
-            $('.overlay-carousel .flickity-prev-next-button.previous').click(function(){
-                var flkty = $('.overlay-carousel').data('flickity');
-                var defaultSelect = flkty.selectedIndex;
-                var newSelect = defaultSelect - 1;
-                $('.overlay-carousel').flickity( 'select', newSelect );
-            });
-
-        }else{
-            
-            $('.overlay-carousel').flickity({
-                // options
-                cellAlign: 'left',
-                contain: true,
-                wrapAround: true,
-                lazyLoad: 2,
-                autoPlay: true,
-                imagesLoaded: true
-            });
+        
+        createDetailCarousel();
+        
+        for (index = 0; index < slidesArray[0].length; ++index) {
+            changeCarouselImage(slidesArray[0][index]);
         }
+        
+        $('.overlay-carousel').flickity('resize')
 
-        
-                for (index = 0; index < slidesArray[0].length; ++index) {
-                    changeCarouselImage(slidesArray[0][index]);
-                }
-            
-       // }
-        
-        
     }
 
     previousMediaSize = currentMediaSize;
@@ -286,8 +340,6 @@ function addThumbImages() {
     if (window.devicePixelRatio >= 2) {
         $retina = true;
     }
-    
-    //console.log('isRetina: ' + $retina);
     
     var _projects = document.getElementById('projects');
     var _projectsList = _projects.getElementsByTagName("li");

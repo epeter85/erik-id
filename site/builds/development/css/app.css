@@ -4651,7 +4651,7 @@ p {
         overflow: hidden;
         width: inherit;
         height: auto;
-        background-image: url("/images/rice-paper.png");
+        background-image: url("../images/rice_paper.png");
         background-repeat: repeat;
         position: absolute;
         top: 0;
