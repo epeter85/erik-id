@@ -4651,7 +4651,8 @@ p {
         overflow: hidden;
         width: inherit;
         height: auto;
-        background: #c84229;
+        background-image: url("/images/rice-paper.png");
+        background-repeat: repeat;
         position: absolute;
         top: 0;
         right: 0;
@@ -4702,7 +4703,8 @@ p {
 
 #skills #skills_image img {
   height: auto;
-  width: 425px; }
+  width: 415px;
+  box-shadow: 4px 4px 4px #ccc; }
 
 @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
   #skills #skills_copy {

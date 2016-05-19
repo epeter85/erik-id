@@ -3,7 +3,8 @@
     #skills_image {
         img {
             height: auto;
-            width: 425px;
+            width: 415px;
+            box-shadow: 4px 4px 4px #ccc;
             @include breakpoint(large up) {}
             @include breakpoint(medium only) {}
             @include breakpoint(small down) {}

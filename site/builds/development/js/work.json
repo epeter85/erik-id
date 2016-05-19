@@ -30,12 +30,12 @@
     "url":"",
     "cardImage":"mcdonalds",
         "slides": [
-            "schweid_sons_01",
-            "schweid_sons_02",
-            "schweid_sons_03",
-            "schweid_sons_04",
-            "schweid_sons_05",
-            "schweid_sons_06"
+            "mcdonalds_01",
+            "mcdonalds_02",
+            "mcdonalds_03",
+            "mcdonalds_04",
+            "mcdonalds_05",
+            "mcdonalds_06"
         ]
   },
     { 
@@ -98,9 +98,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"",
     "cardImage":"chase",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "chase_01",
+            "chase_02",
+            "chase_03",
+            "chase_04"
+        ]   
   },
     { 
     "id":6,
@@ -154,9 +157,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/international_roaming_widget/",
     "cardImage":"att",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "att_01",
+            "att_02",
+            "att_03",
+            "att_04",
+            "att_05",
+            "att_06"
+        ]    
   },
     { 
     "id":10,

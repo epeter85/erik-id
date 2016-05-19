@@ -879,7 +879,7 @@ function changeCarouselImage(image) {
                     changeCarouselImage(slidesArray[0][index]);
                 }
 
-                setTimeout(resizeCarousel, 50);
+                setTimeout(resizeCarousel, 100);
                 
             }else{
                 

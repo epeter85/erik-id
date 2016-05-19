@@ -14,6 +14,7 @@
          #about-image {
              img {
                  height: auto;
+                 
                 // width: 432px;
                  @include breakpoint(large up) {}
                  @include breakpoint(medium up) {
