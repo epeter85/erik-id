@@ -4011,10 +4011,34 @@ p {
   letter-spacing: -.25px; }
 
 #loaderOverlay {
-  background-color: aqua;
+  background-image: url("../images/background.jpg");
+  background-size: 700px auto;
+  background-repeat: repeat;
+  overflow-y: hidden;
+  z-index: 101;
+  position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 105; }
+  top: 0;
+  max-width: 87.5rem;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*-webkit-transition: opacity .25s ease-in;
+       -moz-transition: opacity .25s ease-in;
+        -ms-transition: opacity .25s ease-in;
+         -o-transition: opacity .25s ease-in;
+            transition: opacity .25s ease-in;*/ }
+  #loaderOverlay #loadingLogo {
+    text-align: center; }
+  #loaderOverlay #loadingCaption {
+    text-align: center; }
 
 #about,
 #skills,

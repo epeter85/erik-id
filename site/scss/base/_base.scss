@@ -54,10 +54,44 @@ p {
 
 #loaderOverlay {
     
-    background-color: aqua;
-    width:100%;
-    height:100%;
-    z-index:105;
+    //opacity: 0;
+    //visibility: hidden;
+    background-image: url("../images/background.jpg");
+    background-size: 700px auto;
+    background-repeat: repeat;
+    overflow-y: hidden;
+   // background-color: rgba(255, 255, 255, 1);
+    z-index:101;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    max-width: $global-width;
+    
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /*-webkit-transition: opacity .25s ease-in;
+       -moz-transition: opacity .25s ease-in;
+        -ms-transition: opacity .25s ease-in;
+         -o-transition: opacity .25s ease-in;
+            transition: opacity .25s ease-in;*/
+    
+    #loadingLogo{
+        //opacity:0;
+        text-align: center;
+    }
+    
+    #loadingCaption{
+        text-align: center;
+        
+    }
+ 
 }
 
 #about,

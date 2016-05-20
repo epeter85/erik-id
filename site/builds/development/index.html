@@ -10,7 +10,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/flickity.css" media="screen">
     <link rel="stylesheet" href="css/app.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+    <script src='https://code.createjs.com/preloadjs-0.6.2.min.js'></script>
     <script src="js/modernizr.custom.js"></script>
+    <script type='text/javascript'>
+    $(function(){
+            //add image paths to image loader cue
+            var queue = new createjs.LoadQueue();
+            //queue.on("complete", handleComplete, this);
+           // queue.on("fileload", handleFileLoad, this);
+            //queue.on("progress", handleProgressLoad, this);
+            //queue.loadManifest(slidesPathArray, true); // Note the 2nd argument that tells the queue not to start loading yet
+    })
+    </script>
 
 </head>
 
@@ -230,14 +242,36 @@
                     </div>
 
                 </div>
+                
+                <div id='loaderOverlay'>
+                    <div id='loadingLogo'>
+                            <img data-interchange="[images/logo_SM.png, small],
+                                               [images/logo_MD.png, medium],
+                                               [images/logo_LG.png, large],
+                                               [images/logo_SM_x2.png, retina_small],
+                                               [images/logo_MD_x2.png, retina_medium],
+                                               [images/logo_LG_x2.png, retina_large]">
+                        <div id='loadingCaption'>loading</div>
+                        </div>
+                </div>
 
-                <script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw=" crossorigin="anonymous"></script>
+                
                 <!--<script src="bower_components/what-input/what-input.js"></script>!-->
-                <script src='https://code.createjs.com/preloadjs-0.6.2.min.js'></script>
+                
                 <script src="js/flickity.pkgd.min.js"></script>
                 <script src="https://cdn.jsdelivr.net/foundation/6.2.1/foundation.min.js"></script>
                 <script src="js/script.js"></script>
                 <script type="text/javascript">
+                    
+                    
+                    $(window).load(function() {
+                    // Animate loader off screen
+                     $( "#loaderOverlay" ).fadeOut( "slow", function() {
+                        $( "#loaderOverlay").hide();
+                    });
+                });
+                    
+                    
                     $(document).ready(function () {
 
                         $('.main-carousel').flickity({
@@ -252,7 +286,22 @@
 
                         $(document).foundation();
   
+                       
                         
+                       // $("#loadingLogo").fadeIn('fast');
+                        
+                        //$("#loaderOverlay").delay(1000).animate({ opacity: 0 }, 500);
+                        //$(".container").fadeIn('slow');
+                        
+                       /* $("#loadingLogo").delay(2000).animate({ opacity: 1 }, 200, function() {
+                            $( "#loaderOverlay").hide();
+                          });*/
+                        
+                       // $(".container").delay(1000).animate({ opacity: 1 }, 500);
+                       // $(".container").fadeIn('slow', function() {
+                            //$( "#loaderOverlay").hide();
+                        //  });
+
 
                     });
                     
