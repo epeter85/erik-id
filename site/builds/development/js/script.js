@@ -1047,6 +1047,9 @@ function loadPageImages() {
     
     if (firstLoad) {
         
+        $( ".container" ).show();
+        $('.main-carousel').flickity('resize');
+        
         $( "#loaderOverlay" ).fadeOut( "slow", function() {
             $( "#loaderOverlay").hide();
         });
@@ -1073,8 +1076,7 @@ function loadPageImages() {
             $( _img_div ).append( $( preloadPathArray[i + numberHomeSlideImages + 4] ) );
 
         }
-    
-    
+
 }
 
 function handleFilePreload(event) {
@@ -1091,6 +1093,10 @@ function handleFilePreload(event) {
 
 function handleProgressPreload(event) {
     console.log('percent loaded: ' + event.loaded)
+    
+    var percentLoaded = Math.round(event.loaded*100);
+    
+    $( "#loadingCaption" ).html( 'loading: ' + percentLoaded + '%');
 }
 
 function getPreloadImagePaths(imageArray) {
@@ -1262,7 +1268,7 @@ function resizePage() {
     
     console.log('resize page');
     
-    var currentImagePaths = getPreloadImagePaths(preloadArray, formatArray);
+    var currentImagePaths = getPreloadImagePaths(preloadArray);
     console.log(currentImagePaths)
     
     loadPageImages();
@@ -1272,7 +1278,7 @@ function resizePage() {
 
 $( window ).resize(function() {
 
-    //getCurrentMediaQuery();
+    getCurrentMediaQuery();
 
 });
 $(function () {

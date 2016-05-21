@@ -3842,6 +3842,7 @@ table.hover tr:nth-of-type(even):hover {
 
 /* Effects */
 .container {
+  display: none;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s; }
 
@@ -4049,7 +4050,9 @@ p {
         #loaderOverlay #loadingLogo img {
           width: 202px; } }
   #loaderOverlay #loadingCaption {
-    text-align: center; }
+    text-align: center;
+    color: #0a0a0a;
+    font-family: 'courier_newregular'; }
 
 #about,
 #skills,

@@ -55,7 +55,7 @@ function resizePage() {
     
     console.log('resize page');
     
-    var currentImagePaths = getPreloadImagePaths(preloadArray, formatArray);
+    var currentImagePaths = getPreloadImagePaths(preloadArray);
     console.log(currentImagePaths)
     
     loadPageImages();
@@ -65,6 +65,6 @@ function resizePage() {
 
 $( window ).resize(function() {
 
-    //getCurrentMediaQuery();
+    getCurrentMediaQuery();
 
 });
