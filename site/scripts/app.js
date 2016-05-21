@@ -8,8 +8,7 @@ var slidesArray;
 var slidesPathArray;
 var loadedSlidesArray;
 var isFlickity = false;
-var currentMediaSize;
-var previousMediaSize;
+
 
 
 function createDetailCarousel() {
@@ -280,87 +279,6 @@ function changeCarouselImage(image) {
 
 
 
-/*Window resize listener and image swap
-for view details carousel */
-
-function resizeCarousel() {
-    
-    console.log('resize carousel');
-    
-    var mediaSize = Foundation.MediaQuery.current;
-
-    switch (mediaSize) {
-        case 'small':
-            currentMediaSize = 'small';
-            break;
-        case 'medium':
-            currentMediaSize = 'medium';
-            break;
-        case 'large':
-        case 'xlarge':
-        case 'xxlarge':
-            currentMediaSize = 'large';
-            break;
-    }
-    
-    if(isFlickity && previousMediaSize !== currentMediaSize) {
-        
-        console.log('resize triggered');
-        $('.overlay-carousel').flickity('destroy');
-        $('.overlay-carousel').html("");
-        
-        createDetailCarousel();
-        
-        for (index = 0; index < slidesArray[0].length; ++index) {
-            changeCarouselImage(slidesArray[0][index]);
-        }
-        
-        $('.overlay-carousel').flickity('resize')
-
-    }
-
-    previousMediaSize = currentMediaSize;
-}
-
-$( window ).resize(function() {
-
-    if (isFlickity) {
-        resizeCarousel();
-    }
-});
-
-/*after template is executed
-  add images
-  */
-
-function addThumbImages() {
-
-    var $retina = false;
-
-    if (window.devicePixelRatio >= 2) {
-        $retina = true;
-    }
-    
-    var _projects = document.getElementById('projects');
-    var _projectsList = _projects.getElementsByTagName("li");
-    var _img = _projects.getElementsByTagName("img");
-    
-    for (var i=0;i<=_img.length-1;i++)
-    {
-        var _img_div = $(_img[i]);
-        var _imgs = projectsArray[i].cardImage
-
-        if ($retina) {
-            _img_div.attr('src', 'images/thumbs/' + _imgs + '_x2.jpg');
-        }else{
-            _img_div.attr('src', 'images/thumbs/' + _imgs + '.jpg');
-        }
-    }
-    
-    
-};
-
-
 /*button listeners*/
 var targetAnchor;
 
@@ -395,3 +313,5 @@ function menuButtonHandler(event) {
    }
 
 }
+
+

@@ -25,7 +25,7 @@ $(function () {
         $('.sideMenu').click(menuButtonHandler);
         $('.mainMenu').click(menuButtonHandler);
 
-        addThumbImages();
+       // addThumbImages();
         
     }); //getJSON
 }); //function

@@ -16,9 +16,10 @@ var sassPaths = [
 ],
     env,
     jsSources = [
-        
         'scripts/classie.js',
         'scripts/app.js',
+        'scripts/loader.js',
+        'scripts/resize.js',
         'scripts/template.js'
     ],
     jsonSources = [outputDir + 'js/*.json'],

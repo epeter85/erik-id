@@ -84,6 +84,19 @@ p {
     
     #loadingLogo{
         //opacity:0;
+        img {
+            height: auto;
+            @include breakpoint(large up) {
+                width: 315px;
+            }
+            @include breakpoint(medium only) {
+                width: 241px;
+            }
+            @include breakpoint(small down) {
+                width: 202px;
+            }
+        }
+        
         text-align: center;
     }
     

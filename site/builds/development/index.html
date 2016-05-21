@@ -16,7 +16,7 @@
     <script type='text/javascript'>
     $(function(){
             //add image paths to image loader cue
-            var queue = new createjs.LoadQueue();
+           // var queue = new createjs.LoadQueue();
             //queue.on("complete", handleComplete, this);
            // queue.on("fileload", handleFileLoad, this);
             //queue.on("progress", handleProgressLoad, this);
@@ -48,12 +48,13 @@
 
                     <header id='header'>
                         <div id='mainLogo'>
-                            <img data-interchange="[images/logo_SM.png, small],
+                            <div id='logoImage'></div>
+                            <!--<img data-interchange="[images/logo_SM.png, small],
                                                [images/logo_MD.png, medium],
                                                [images/logo_LG.png, large],
                                                [images/logo_SM_x2.png, retina_small],
                                                [images/logo_MD_x2.png, retina_medium],
-                                               [images/logo_LG_x2.png, retina_large]">
+                                               [images/logo_LG_x2.png, retina_large]">-->
                             <div id='caption'>/*interactive developer*/</div>
                         </div>
 
@@ -122,12 +123,13 @@
 
                         <div class='row'>
                             <div id='about-image' class='small-12 medium-5 large-4 columns'>
-                                <img data-interchange="[images/homePack_SM.png, small],
+                                <div id='homePackImage'></div>
+                               <!-- <img data-interchange="[images/homePack_SM.png, small],
                                                    [images/homePack.png, medium],
                                                    [images/homePack.png, large],
                                                    [images/homePack_SM_x2.png, retina_small],
                                                    [images/homePack_x2.png, retina_medium],
-                                                   [images/homePack_x2.png, retina_large]">
+                                                   [images/homePack_x2.png, retina_large]">-->
                             </div>
                             <div class='small-12 medium-7 large-8 columns'>
                                 <div id='about_copy'>
@@ -148,12 +150,13 @@
                                 <p>Here is a brief checklist of my current and growing skill set.</p>
                             </div>
                             <div id='skills_image' class='small-12 medium-6 large-5 columns'>
-                                <img data-interchange="[images/checklist.jpg, small],
+                                <div id='checkListImage'></div>
+                                <!--<img data-interchange="[images/checklist.jpg, small],
                                                    [images/checklist.jpg, medium],
                                                    [images/checklist.jpg, large],
                                                    [images/checklist_x2.jpg, retina_small],
                                                    [images/checklist_x2.jpg, retina_medium],
-                                                   [images/checklist_x2.jpg, retina_large]">
+                                                   [images/checklist_x2.jpg, retina_large]">-->
                             </div>
                         </div>
                     </section>
@@ -178,12 +181,13 @@
 
                         <div id='footer-image'>
                             <div id='wp_caption'>what is this?</div>
-                            <img data-interchange="[images/original_wacky_pack.png, small],
+                            <div id='origWackyPackImage'></div>
+                            <!--<img data-interchange="[images/original_wacky_pack.png, small],
                                                [images/original_wacky_pack.png, medium],
                                                [images/original_wacky_pack.png, large],
                                                [images/original_wacky_pack_x2.png, retina_small],
                                                [images/original_wacky_pack_x2.png, retina_medium],
-                                               [images/original_wacky_pack_x2.png, retina_large]">
+                                               [images/original_wacky_pack_x2.png, retina_large]">-->
                         </div>
                     </footer>
 
@@ -264,14 +268,6 @@
                 <script type="text/javascript">
                     
                     
-                    $(window).load(function() {
-                    // Animate loader off screen
-                     $( "#loaderOverlay" ).fadeOut( "slow", function() {
-                        $( "#loaderOverlay").hide();
-                    });
-                });
-                    
-                    
                     $(document).ready(function () {
 
                         $('.main-carousel').flickity({
@@ -286,23 +282,6 @@
 
                         $(document).foundation();
   
-                       
-                        
-                       // $("#loadingLogo").fadeIn('fast');
-                        
-                        //$("#loaderOverlay").delay(1000).animate({ opacity: 0 }, 500);
-                        //$(".container").fadeIn('slow');
-                        
-                       /* $("#loadingLogo").delay(2000).animate({ opacity: 1 }, 200, function() {
-                            $( "#loaderOverlay").hide();
-                          });*/
-                        
-                       // $(".container").delay(1000).animate({ opacity: 1 }, 500);
-                       // $(".container").fadeIn('slow', function() {
-                            //$( "#loaderOverlay").hide();
-                        //  });
-
-
                     });
                     
                 </script>

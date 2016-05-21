@@ -4037,6 +4037,17 @@ p {
             transition: opacity .25s ease-in;*/ }
   #loaderOverlay #loadingLogo {
     text-align: center; }
+    #loaderOverlay #loadingLogo img {
+      height: auto; }
+      @media screen and (min-width: 64em) {
+        #loaderOverlay #loadingLogo img {
+          width: 315px; } }
+      @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
+        #loaderOverlay #loadingLogo img {
+          width: 241px; } }
+      @media screen and (max-width: 43.6875em) {
+        #loaderOverlay #loadingLogo img {
+          width: 202px; } }
   #loaderOverlay #loadingCaption {
     text-align: center; }
 
