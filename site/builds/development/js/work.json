@@ -84,9 +84,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/fedexbutkis/",
     "cardImage":"butkus",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "butkus_01",
+            "butkus_02",
+            "butkus_03",
+            "butkus_04",
+            "butkus_05",
+            "butkus_06"
+        ]
   },
     { 
     "id":5,
@@ -129,9 +134,14 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/fedexcup09/ninehole/",
     "cardImage":"fedex_nine_hole",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "fedexCup_01",
+            "fedexCup_02",
+            "fedexCup_03",
+            "fedexCup_04",
+            "fedexCup_05",
+            "fedexCup_06"
+        ]
   },
     { 
     "id":8,
