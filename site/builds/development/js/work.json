@@ -191,9 +191,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/fedexcup09/caddie/",
     "cardImage":"fedex_caddie",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "fedexCaddie_01",
+            "fedexCaddie_02",
+            "fedexCaddie_03",
+            "fedexCaddie_04"
+        ]    
   },
     { 
     "id":11,
@@ -243,9 +246,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/mcqueen/",
     "cardImage":"mcqueen",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "mcqueen_01",
+            "mcqueen_02",
+            "mcqueen_03",
+            "mcqueen_04"
+        ]  
   },
     { 
     "id":14,
