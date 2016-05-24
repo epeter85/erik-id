@@ -4529,11 +4529,7 @@ p {
         margin-left: 45px;
         margin-right: 45px; } }
   #work #projects li:nth-of-type(15) {
-    max-width: 408px;
-    /*@media only screen and (min-width: 734px) and (max-width: 1086px) {
-                    padding-left: 150px;
-                    padding-right: 150px;
-                }*/ }
+    max-width: 408px; }
     #work #projects li:nth-of-type(15) .thumb-container {
       max-width: 408px; }
     @media only screen and (min-width: 880px) and (max-width: 1294px) {
@@ -4667,17 +4663,11 @@ p {
     padding-bottom: 3em;
     padding-left: 10px;
     padding-right: 10px;
-    /*  @media only screen and (min-width: 1086px) and (max-width: 1294px) {
-            }
-            
-            @media only screen and (min-width: 734px) {
-
-            }
-            
-            @media only screen and (max-width: 734px) {
-
+    /* .thumb-container:hover > .cardDetails {
+                opacity: 1;
             }*/ }
     #work #projects li .thumb-container {
+      cursor: pointer;
       width: 100%;
       position: relative;
       display: inline-block;
@@ -4742,8 +4732,6 @@ p {
             transition: color 0.25s; }
           #work #projects li .thumb-container .cardDetails .copy .btn:hover {
             color: #eead2e; }
-    #work #projects li .thumb-container:hover > .cardDetails {
-      opacity: 1; }
 
 #skills #skills_image img {
   height: auto;

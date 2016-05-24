@@ -13,9 +13,13 @@ $(function () {
             projectsArray.push(data.projects[index])
         }
         
+        //$('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
-        $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
-        $('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);
+        $('.thumb-container').click(cardDetailsHandler);
+        
+       // $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+        //$('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);
+        
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
         

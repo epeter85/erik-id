@@ -733,6 +733,22 @@ function scrollToAnchor() {
     
 }
 
+function cardDetailsHandler(event) {
+    
+    var details = $(this).find('.cardDetails');
+    
+     $('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
+    
+    if(details.css('opacity') == 0) {
+        details.fadeTo( 50 , 1);
+        $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+    }else{
+        details.fadeTo( 50 , 0);
+    }
+
+}
+
+
 
 function menuButtonHandler(event) {
     
@@ -1038,6 +1054,8 @@ var isFlickity = false;
             
             setTimeout(killDetailCarousel, 1000);
             
+            $('#projects .thumb-container .cardDetails .btn').off( 'click' );
+            
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
             classie.add(overlay, 'close');
@@ -1292,9 +1310,13 @@ $(function () {
             projectsArray.push(data.projects[index])
         }
         
+        //$('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
-        $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
-        $('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);
+        $('.thumb-container').click(cardDetailsHandler);
+        
+       // $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+        //$('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);
+        
         $('.overlay-close').click(toggleOverlay);
         $('.back_btn').click(toggleOverlay);
         

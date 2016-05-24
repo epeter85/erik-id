@@ -20,6 +20,22 @@ function scrollToAnchor() {
     
 }
 
+function cardDetailsHandler(event) {
+    
+    var details = $(this).find('.cardDetails');
+    
+     $('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
+    
+    if(details.css('opacity') == 0) {
+        details.fadeTo( 50 , 1);
+        $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+    }else{
+        details.fadeTo( 50 , 0);
+    }
+
+}
+
+
 
 function menuButtonHandler(event) {
     

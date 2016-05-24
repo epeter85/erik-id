@@ -30,6 +30,8 @@ var isFlickity = false;
             
             setTimeout(killDetailCarousel, 1000);
             
+            $('#projects .thumb-container .cardDetails .btn').off( 'click' );
+            
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
             classie.add(overlay, 'close');

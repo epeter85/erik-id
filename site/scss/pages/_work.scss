@@ -104,14 +104,8 @@
                     margin-left: 150px;
                     margin-right: 150px;
                 }
-                /*@media only screen and (min-width: 734px) and (max-width: 1086px) {
-                    padding-left: 150px;
-                    padding-right: 150px;
-                }*/
                 
             }
-
-       // }
         
         
         @media only screen and (min-width: 1086px) and (max-width: 1294px) {
@@ -174,44 +168,9 @@
                 padding-right: 10px;
 
 
-            //background-color: antiquewhite;
-            
-          /*  @media only screen and (min-width: 1086px) and (max-width: 1294px) {
-            }
-            
-            @media only screen and (min-width: 734px) {
-
-            }
-            
-            @media only screen and (max-width: 734px) {
-
-            }*/
-          
-
-            @media #{$xlarge-up} {
-                //width:25%;
-                //padding-left: 10px;
-                //padding-right: 10px;
-                //flex-grow:1;
-            }
-            
-            @media only screen and (min-width: 1086px) and (max-width: 1294px) {
-                //width:33%;
-               // padding-left: 25px;
-               // padding-right: 25px;
-                  //flex-grow:1;
-            }
-            
-            @media only screen and (min-width: 734px) and (max-width: 1086px) {
-                //width:50%;
-                  //flex-grow:1;
-            }
-            
-            @media only screen and (max-width: 734px) {
-                //width:100%;
-            }
-
             .thumb-container {
+                
+                cursor: pointer;
 
                 .marker{
                     position: absolute;
@@ -244,6 +203,7 @@
                     bottom: 0;
                     color: white;
                     opacity: 0;
+                    //visibility: hidden;
                     text-align: left;
                     -webkit-transition: opacity 0.5s;
                     -moz-transition: opacity 0.5s;
@@ -299,9 +259,9 @@
                     }
                 }
             }
-            .thumb-container:hover > .cardDetails {
+           /* .thumb-container:hover > .cardDetails {
                 opacity: 1;
-            }
+            }*/
         }
     }
 }
