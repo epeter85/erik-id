@@ -120,9 +120,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"",
     "cardImage":"skype",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "siws_01",
+            "siws_02",
+            "siws_03",
+            "siws_04"
+        ]   
   },  
     { 
     "id":7,
@@ -263,9 +266,12 @@
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
     "url":"http://www.frieswithdat.com/ikepod/",
     "cardImage":"ikepod",
-    "image1":"pretender",
-    "image2":"pretender",
-    "image3":"pretender"
+        "slides": [
+            "ikepod_01",
+            "ikepod_02",
+            "ikepod_03",
+            "ikepod_04"
+        ]  
   }
 
     
