@@ -13,7 +13,7 @@ $(function () {
             projectsArray.push(data.projects[index])
         }
         
-        //$('.thumb-container .cardDetails').hide();
+       // $('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
         $('.thumb-container').click(cardDetailsHandler);
         

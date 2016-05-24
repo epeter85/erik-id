@@ -22,8 +22,11 @@ function scrollToAnchor() {
 
 function cardDetailsHandler(event) {
     
-    var details = $(this).find('.cardDetails');
+  //  alert('click')
     
+    event.preventDefault();
+    
+    var details = $(this).find('.cardDetails');
      $('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
     
     if(details.css('opacity') == 0) {

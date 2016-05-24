@@ -3747,6 +3747,8 @@ table.hover tr:nth-of-type(even):hover {
   height: 100%;
   top: 0;
   max-width: 87.5rem; }
+  .overlay .overlay-content #detailView {
+    height: 100%; }
   .overlay .overlay-content #whatIsThis {
     padding-bottom: 25px; }
     .overlay .overlay-content #whatIsThis #what-image {
@@ -3868,6 +3870,8 @@ table.hover tr:nth-of-type(even):hover {
   transition: opacity 0.5s; }
 
 .overlay-contentpush {
+  height: 100%;
+  width: 100%;
   background-image: url("../images/background.jpg");
   background-size: 700px auto;
   background-repeat: repeat;
@@ -4030,12 +4034,7 @@ p {
           align-items: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  /*-webkit-transition: opacity .25s ease-in;
-       -moz-transition: opacity .25s ease-in;
-        -ms-transition: opacity .25s ease-in;
-         -o-transition: opacity .25s ease-in;
-            transition: opacity .25s ease-in;*/ }
+          justify-content: center; }
   #loaderOverlay #loadingLogo {
     text-align: center; }
     #loaderOverlay #loadingLogo img {
@@ -4398,28 +4397,39 @@ p {
     width: 100%;
     height: 100%; }
 
-.overlay-carousel .carousel-cell {
-  top: -3px;
-  height: auto; }
-  @media screen and (min-width: 64em) {
-    .overlay-carousel .carousel-cell {
-      width: 50%;
-      padding-right: 10px;
-      padding-left: 10px; } }
-  @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
-    .overlay-carousel .carousel-cell {
+#loadingCaption2 {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  top: 100px;
+  color: #0a0a0a;
+  font-family: 'courier_newregular'; }
+
+.overlay-carousel {
+  opacity: 0;
+  min-height: 150px; }
+  .overlay-carousel .carousel-cell {
+    top: -3px;
+    height: auto; }
+    @media screen and (min-width: 64em) {
+      .overlay-carousel .carousel-cell {
+        width: 50%;
+        padding-right: 10px;
+        padding-left: 10px; } }
+    @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {
+      .overlay-carousel .carousel-cell {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px; } }
+    @media screen and (max-width: 43.6875em) {
+      .overlay-carousel .carousel-cell {
+        width: 100%;
+        padding-right: 10px;
+        padding-left: 10px; } }
+    .overlay-carousel .carousel-cell img {
       width: 100%;
-      padding-right: 10px;
-      padding-left: 10px; } }
-  @media screen and (max-width: 43.6875em) {
-    .overlay-carousel .carousel-cell {
-      width: 100%;
-      padding-right: 10px;
-      padding-left: 10px; } }
-  .overlay-carousel .carousel-cell img {
-    width: 100%;
-    height: auto;
-    box-shadow: 2px 2px 2px #ccc; }
+      height: auto;
+      box-shadow: 2px 2px 2px #ccc; }
 
 @media screen and (min-width: 64em) {
   #about #about_copy {

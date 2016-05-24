@@ -30,8 +30,6 @@ var isFlickity = false;
             
             setTimeout(killDetailCarousel, 1000);
             
-            $('#projects .thumb-container .cardDetails .btn').off( 'click' );
-            
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
             classie.add(overlay, 'close');
@@ -51,11 +49,17 @@ var isFlickity = false;
         } else if (!classie.has(overlay, 'close')) {
             
             if (event.data.msg === 'detailsBtn'){
+                
+                $( "#loadingCaption2").show();
+                
+                $('#projects .thumb-container .cardDetails .btn').prop('disabled', true);
 
                 $('#detailView').show();
                 $('#whatIsThis').hide();
 
                 createDetailCarousel();
+                
+                $(".overlay-carousel").css('opacity' , '0');
                     
                 isFlickity = true;
 
@@ -87,6 +91,12 @@ var isFlickity = false;
                 }
                 
                 function handleComplete(event) {
+                    
+                    //$( "#loadingCaption2" ).html( '');
+                    
+                    /*$( "#loadingCaption2" ).fadeOut( "slow", function() {
+                        $( "#loadingCaption2").hide();
+                    });*/
 
                     console.log('complete loading: ' + loadedSlidesArray)
                     
@@ -100,9 +110,9 @@ var isFlickity = false;
                     }
                     
                     $('.overlay-carousel').flickity('resize');
-                    
-                    classie.add(overlay, 'open');
-                    classie.add(container, 'overlay-open');
+                    $( "#loadingCaption2" ).fadeTo("fast", 0);
+                    $('.overlay-carousel').fadeTo("slow", 1);
+
                  }
                 
                  function handleFileLoad(event) {
@@ -119,6 +129,10 @@ var isFlickity = false;
                 
                 function handleProgressLoad(event) {
                     console.log ('percent loaded: ' + event.loaded)
+    
+                        var percentLoaded = Math.round(event.loaded*100);
+
+                        $( "#loadingCaption2" ).html( 'loading: ' + percentLoaded + '%');
                 }
                 
                 
@@ -152,9 +166,12 @@ var isFlickity = false;
                 $('#detailView').hide();
                 $('#whatIsThis').show();
                 
+                //classie.add(overlay, 'open');
+                //classie.add(container, 'overlay-open');
+            }
+            
                 classie.add(overlay, 'open');
                 classie.add(container, 'overlay-open');
-            }
              
         }
          

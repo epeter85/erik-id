@@ -172,7 +172,36 @@
     
 }
 
+#loadingCaption2{
+
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top:100px;
+        color: $black;
+        font-family: 'courier_newregular';
+    }
+
 .overlay-carousel{
+    
+    opacity:0;
+   // visibility: hidden;
+    
+    //todo:breakpoints min-height;
+    min-height: 150px;
+    
+    @include breakpoint(large up) {
+       // min-height: 500px;
+    }
+    @include breakpoint(medium only) {
+        //min-height: 400px;
+    }
+    @include breakpoint(small down) {
+        //min-height: 300px;
+    }
+    
+    
+
 
     .carousel-cell {
         

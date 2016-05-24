@@ -129,7 +129,6 @@ function getPreloadImagePaths(imageArray) {
         
         imagePathArray.push(imgPath);
         
-        
     }
     
 

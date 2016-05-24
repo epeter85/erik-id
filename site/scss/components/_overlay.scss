@@ -11,6 +11,8 @@
     .overlay-content{
 
         #detailView{
+            
+            height:100%;
 
         }
         
@@ -198,6 +200,8 @@ body {
 
 .overlay-contentpush {
     //background: rgba(255,255,255,.9);
+    height:100%;
+    width:100%;
     background-image: url("../images/background.jpg");
     background-size: 700px auto;
     background-repeat: repeat;
