@@ -20,6 +20,7 @@ var sassPaths = [
         'scripts/app.js',
         'scripts/loader.js',
         'scripts/resize.js',
+        'scripts/carousel.js',
         'scripts/template.js'
     ],
     jsonSources = [outputDir + 'js/*.json'],
