@@ -9,9 +9,9 @@
 @font-face {
   font-family: 'AvenirNextLTPro-HeavyCnIt';
   src: url("../webfonts/AvenirNextLTPro-HeavyCnIt.eot");
-  src: url("../webfonts/AvenirNextLTPro-HeavyCnIt.woff") format("woff"), url("../webfonts/AvenirNextLTPro-HeavyCnIt.ttf") format("truetype"), url("../webfonts/AvenirNextLTPro-HeavyCnIt.svg") format("svg");
-  font-weight: bold;
-  font-style: italic; }
+  src: url("../webfonts/AvenirNextLTPro-HeavyCnIt?#iefix") format("embedded-opentype"), url("../webfonts/AvenirNextLTPro-HeavyCnIt.woff") format("woff"), url("../webfonts/AvenirNextLTPro-HeavyCnIt.ttf") format("truetype"), url("../webfonts/AvenirNextLTPro-HeavyCnIt.svg#AvenirNextLTPro-HeavyCnIt") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 @font-face {
   font-family: 'courier_newregular';
@@ -4713,12 +4713,16 @@ p {
           #work #projects li .thumb-container .cardDetails .copy .titleText {
             font-family: 'AvenirNextLTPro-HeavyCnIt';
             color: #eead2e;
-            -webkit-text-stroke-width: 2px;
-            -webkit-text-stroke-color: #0a0a0a;
+            text-shadow: -2px -2px 0 #0a0a0a, 2px -2px 0 #0a0a0a, -2px 2px 0 #0a0a0a, 2px 2px 0 #0a0a0a;
             font-size: 2.25em;
             letter-spacing: -1px;
             line-height: 1em;
             text-transform: uppercase; }
+            @media screen and (-webkit-min-device-pixel-ratio: 0) {
+              #work #projects li .thumb-container .cardDetails .copy .titleText {
+                -webkit-text-stroke-width: 2px;
+                -webkit-text-stroke-color: #0a0a0a;
+                text-shadow: 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a; } }
           #work #projects li .thumb-container .cardDetails .copy .divider {
             border: 0.1em dotted #fefefe;
             border-style: dashed none none;

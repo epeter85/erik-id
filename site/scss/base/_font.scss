@@ -15,11 +15,12 @@
 @font-face {
     font-family: 'AvenirNextLTPro-HeavyCnIt';
     src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.eot');
-    src: url('../webfonts/AvenirNextLTPro-HeavyCnIt.woff') format('woff'),
+    src: url('../webfonts/AvenirNextLTPro-HeavyCnIt?#iefix') format('embedded-opentype'),
+         url('../webfonts/AvenirNextLTPro-HeavyCnIt.woff') format('woff'),
          url('../webfonts/AvenirNextLTPro-HeavyCnIt.ttf') format('truetype'),
-         url('../webfonts/AvenirNextLTPro-HeavyCnIt.svg') format('svg');
-    font-weight: bold;
-    font-style: italic;
+         url('../webfonts/AvenirNextLTPro-HeavyCnIt.svg#AvenirNextLTPro-HeavyCnIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
 }
 
