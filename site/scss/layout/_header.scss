@@ -41,7 +41,7 @@
     }
     #hamburgerIcon {
         position: absolute;
-        top: .25em;
+        top: 3px;
         right: .5em;
         font-size: 2em;
         @include breakpoint(medium only) {

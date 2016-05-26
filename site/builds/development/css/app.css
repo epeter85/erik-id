@@ -3835,9 +3835,9 @@ table.hover tr:nth-of-type(even):hover {
       top: 10px; } }
   @media screen and (max-width: 43.6875em) {
     .overlay .overlay-close {
-      font-size: 1.5em;
-      right: 10px;
-      top: 5px; } }
+      font-size: 2em;
+      right: .5em;
+      top: .35em; } }
 
 .overlay .overlay-close:hover {
   opacity: 1.0; }
@@ -3987,7 +3987,8 @@ html {
   background-image: url("../images/background.jpg");
   background-size: 700px auto;
   background-repeat: repeat;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  padding-top: 10px; }
 
 a {
   color: #484848;
@@ -4157,7 +4158,7 @@ p {
           margin-left: 5px; } }
   #header #hamburgerIcon {
     position: absolute;
-    top: .25em;
+    top: 3px;
     right: .5em;
     font-size: 2em; }
     @media screen and (min-width: 43.75em) and (max-width: 63.9375em) {

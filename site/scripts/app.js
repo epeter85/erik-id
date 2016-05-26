@@ -22,18 +22,23 @@ function scrollToAnchor() {
 
 function cardDetailsHandler(event) {
     
-  //  alert('click')
+   //alert('click')
     
     event.preventDefault();
     
     var details = $(this).find('.cardDetails');
-     $('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
+     
+    //$('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
     
     if(details.css('opacity') == 0) {
+        console.log('fadein');
         details.fadeTo( 50 , 1);
+         //$('#projects .thumb-container .cardDetails .btn').prop('disabled', false);
         $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
     }else{
+        console.log('fadeout');
         details.fadeTo( 50 , 0);
+        $(this).find('.cardDetails .btn').off();
     }
 
 }

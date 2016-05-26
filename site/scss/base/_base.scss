@@ -3,12 +3,14 @@ html {
     padding: 0;
     width: 100%;
     max-width: $global-width;
+    
 }
 
 body {
     //margin: 2em;
     // background-image: url("../images/background.jpg");
     // background-repeat: repeat-y;
+    
 }
 
 .off-canvas-content {
@@ -16,6 +18,8 @@ body {
     background-size: 700px auto;
     background-repeat: repeat;
     overflow-y: hidden;
+    padding-top: 10px;
+    
 }
 
 a {
