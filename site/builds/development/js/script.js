@@ -735,21 +735,14 @@ function scrollToAnchor() {
 
 function cardDetailsHandler(event) {
     
-   //alert('click')
-    
     event.preventDefault();
     
     var details = $(this).find('.cardDetails');
-     
-    //$('#projects .thumb-container .cardDetails').fadeTo( 50 , 0);
     
     if(details.css('opacity') == 0) {
-        console.log('fadein');
         details.fadeTo( 50 , 1);
-         //$('#projects .thumb-container .cardDetails .btn').prop('disabled', false);
         $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
     }else{
-        console.log('fadeout');
         details.fadeTo( 50 , 0);
         $(this).find('.cardDetails .btn').off();
     }
@@ -1056,17 +1049,10 @@ var isFlickity = false;
         };
 
     function toggleOverlay(event, button) {
-        
-        //event.preventDefault();
 
         if (classie.has(overlay, 'open')) {
-            
-            //console.log('CLOSE!!!!')
-            
+
             setTimeout(killDetailCarousel, 1000);
-            
-           // $('#projects .thumb-container .cardDetails .btn').prop('disabled', false);
-           // $('#projects .thumb-container .cardDetails .btn').prop('disabled', true);
             
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
@@ -1088,12 +1074,8 @@ var isFlickity = false;
             
             if (event.data.msg === 'detailsBtn'){
                 
-                //console.log('OPEN!!!!')
-                
                 $( "#loadingCaption2").show();
                 $( "#loadingCaption2" ).fadeTo("fast", 1);
-                
-                //$('#projects .thumb-container .cardDetails .btn').prop('disabled', true);
 
                 $('#detailView').show();
                 $('#whatIsThis').hide();

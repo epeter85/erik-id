@@ -25,17 +25,10 @@ var isFlickity = false;
         };
 
     function toggleOverlay(event, button) {
-        
-        //event.preventDefault();
 
         if (classie.has(overlay, 'open')) {
-            
-            //console.log('CLOSE!!!!')
-            
+
             setTimeout(killDetailCarousel, 1000);
-            
-           // $('#projects .thumb-container .cardDetails .btn').prop('disabled', false);
-           // $('#projects .thumb-container .cardDetails .btn').prop('disabled', true);
             
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
@@ -57,12 +50,8 @@ var isFlickity = false;
             
             if (event.data.msg === 'detailsBtn'){
                 
-                //console.log('OPEN!!!!')
-                
                 $( "#loadingCaption2").show();
                 $( "#loadingCaption2" ).fadeTo("fast", 1);
-                
-                //$('#projects .thumb-container .cardDetails .btn').prop('disabled', true);
 
                 $('#detailView').show();
                 $('#whatIsThis').hide();
