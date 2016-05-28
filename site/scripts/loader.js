@@ -1,10 +1,11 @@
 //variables
 var preloadQueue;
 var preloadArray = [];
+var mainSlidesArray = [];
 var formatArray = [];
 var preloadPathArray = [];
 var firstLoad = true;
-var numberHomeSlideImages = 5;
+var numberHomeSlideImages = 1;
 
 function preloadComplete(event) {
     
@@ -13,27 +14,22 @@ function preloadComplete(event) {
 }
 
 function loadPageImages() {
-    
-    if (firstLoad) {
-        
-        $( ".container" ).show();
-        $('.main-carousel').flickity('resize');
-        
-        $( "#loaderOverlay" ).fadeOut( "slow", function() {
-            $( "#loaderOverlay").hide();
-        });
-        
-        firstLoad = false;
-        
-    }else{
-        
-        
-    }
 
     document.getElementById('logoImage').appendChild(preloadPathArray[numberHomeSlideImages]);
     document.getElementById('homePackImage').appendChild(preloadPathArray[numberHomeSlideImages+1]);
     document.getElementById('checkListImage').appendChild(preloadPathArray[numberHomeSlideImages + 2]);
     document.getElementById('origWackyPackImage').appendChild(preloadPathArray[numberHomeSlideImages + 3]);
+    
+    createMainCarousel();
+    
+    //add main carousel images to dom
+    for (var index=0;index<=numberHomeSlideImages-1;index++)
+    {
+        var $id = 'cell' + index;
+        var $cellElems = $("<div class='carousel-cell' id='" + $id + "'></div>");
+        $('.main-carousel').flickity( 'append', $cellElems );
+        document.getElementById($id).appendChild(preloadPathArray[index]);
+    }
     
     
     //add thumb images to dom
@@ -45,6 +41,23 @@ function loadPageImages() {
             $( _img_div ).append( $( preloadPathArray[i + numberHomeSlideImages + 4] ) );
 
         }
+    
+    if (firstLoad) {
+        
+        $( ".container" ).show();
+        
+        $( "#loaderOverlay" ).fadeOut( "slow", function() {
+            $( "#loaderOverlay").hide();
+        });
+        
+        $('.main-carousel').flickity('resize');
+        
+        firstLoad = false;
+        
+    }else{
+        
+        
+    }
 
 }
 
@@ -61,7 +74,7 @@ function handleFilePreload(event) {
 }
 
 function handleProgressPreload(event) {
-    console.log('percent loaded: ' + event.loaded)
+    //console.log('percent loaded: ' + event.loaded)
     
     var percentLoaded = Math.round(event.loaded*100);
     
@@ -74,6 +87,7 @@ function getPreloadImagePaths(imageArray) {
     var imageMediaSize;
     var $retina = false;
     var imagePathArray = [];
+    mainSlidesArray = [];
     
     if (window.devicePixelRatio >= 2) {
         $retina = true;
@@ -118,7 +132,13 @@ function getPreloadImagePaths(imageArray) {
                 
         }
         
+        //capture main carousel images
+        if(i < numberHomeSlideImages) {
+            
+            mainSlidesArray.push(imageArray[i].name);
         
+        }
+
         //retina or not
         if ($retina) {
             imgPath = imgPath + '_x2'
@@ -131,6 +151,7 @@ function getPreloadImagePaths(imageArray) {
         
     }
     
+    // console.log(mainSlidesArray)
 
     return imagePathArray;
     
@@ -155,11 +176,11 @@ $(window).load(function() {
         // 2 = two sizes SM + medium & up
         // 3 = three sizes SM + MD + LG
     
-        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
+        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                       /* {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},*/
                         
                         {'name':'logo', 'sizes':'3', 'path':'images/', 'format':'.png'},
                         {'name':'homePack', 'sizes':'2', 'path':'images/', 'format':'.png'},

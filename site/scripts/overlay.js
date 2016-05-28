@@ -134,6 +134,8 @@ var isFlickity = false;
                 //put into slidesPathArray
                 slidesArray.push(projectsArray[event.target.id].slides);
                 
+                //console.log(slidesArray);
+                
                 for (index = 0; index < slidesArray[0].length; ++index) {
                     
                     var $imagePath;

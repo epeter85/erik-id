@@ -1,3 +1,18 @@
+function createMainCarousel() {
+    
+    $('.main-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        lazyLoad: true,
+        autoPlay: true,
+        imagesLoaded: true
+    });
+    
+}
+
+
 function createDetailCarousel() {
     
      if (Foundation.MediaQuery.atLeast('large')) {
@@ -49,9 +64,7 @@ function killDetailCarousel() {
     
 /*update images on detail view carousel*/
 
-function changeCarouselImage(image) {
-    
-    console.log('changeCarouselImage')
+function changeCarouselImage(image, id) {
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -65,17 +78,29 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_SM_x2.jpg';
+            }
             viewState = 'sm_ret';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_MD_x2.jpg';
+            }
             viewState = 'md_ret';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_LG_x2.jpg';
+            }
             viewState = 'lg_ret';
             break;
         }
@@ -84,23 +109,44 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_SM.jpg';
+            }
             viewState = 'sm';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_MD.jpg';
+            }
             viewState = 'md';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_LG.jpg';
+            }
             viewState = 'lg';
             break;
         }
     }
-
+    
     var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
-    $('.overlay-carousel').flickity( 'append', $cellElems );
+    
+    if(id === 'detail'){
+        
+        $('.overlay-carousel').flickity( 'append', $cellElems );
+    }
+    
+    if(id === 'main'){
+
+        $('.main-carousel').flickity( 'append', $cellElems );
+    }
 
 };

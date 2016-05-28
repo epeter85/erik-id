@@ -774,10 +774,11 @@ function menuButtonHandler(event) {
 //variables
 var preloadQueue;
 var preloadArray = [];
+var mainSlidesArray = [];
 var formatArray = [];
 var preloadPathArray = [];
 var firstLoad = true;
-var numberHomeSlideImages = 5;
+var numberHomeSlideImages = 1;
 
 function preloadComplete(event) {
     
@@ -786,27 +787,22 @@ function preloadComplete(event) {
 }
 
 function loadPageImages() {
-    
-    if (firstLoad) {
-        
-        $( ".container" ).show();
-        $('.main-carousel').flickity('resize');
-        
-        $( "#loaderOverlay" ).fadeOut( "slow", function() {
-            $( "#loaderOverlay").hide();
-        });
-        
-        firstLoad = false;
-        
-    }else{
-        
-        
-    }
 
     document.getElementById('logoImage').appendChild(preloadPathArray[numberHomeSlideImages]);
     document.getElementById('homePackImage').appendChild(preloadPathArray[numberHomeSlideImages+1]);
     document.getElementById('checkListImage').appendChild(preloadPathArray[numberHomeSlideImages + 2]);
     document.getElementById('origWackyPackImage').appendChild(preloadPathArray[numberHomeSlideImages + 3]);
+    
+    createMainCarousel();
+    
+    //add main carousel images to dom
+    for (var index=0;index<=numberHomeSlideImages-1;index++)
+    {
+        var $id = 'cell' + index;
+        var $cellElems = $("<div class='carousel-cell' id='" + $id + "'></div>");
+        $('.main-carousel').flickity( 'append', $cellElems );
+        document.getElementById($id).appendChild(preloadPathArray[index]);
+    }
     
     
     //add thumb images to dom
@@ -818,6 +814,23 @@ function loadPageImages() {
             $( _img_div ).append( $( preloadPathArray[i + numberHomeSlideImages + 4] ) );
 
         }
+    
+    if (firstLoad) {
+        
+        $( ".container" ).show();
+        
+        $( "#loaderOverlay" ).fadeOut( "slow", function() {
+            $( "#loaderOverlay").hide();
+        });
+        
+        $('.main-carousel').flickity('resize');
+        
+        firstLoad = false;
+        
+    }else{
+        
+        
+    }
 
 }
 
@@ -834,7 +847,7 @@ function handleFilePreload(event) {
 }
 
 function handleProgressPreload(event) {
-    console.log('percent loaded: ' + event.loaded)
+    //console.log('percent loaded: ' + event.loaded)
     
     var percentLoaded = Math.round(event.loaded*100);
     
@@ -847,6 +860,7 @@ function getPreloadImagePaths(imageArray) {
     var imageMediaSize;
     var $retina = false;
     var imagePathArray = [];
+    mainSlidesArray = [];
     
     if (window.devicePixelRatio >= 2) {
         $retina = true;
@@ -891,7 +905,13 @@ function getPreloadImagePaths(imageArray) {
                 
         }
         
+        //capture main carousel images
+        if(i < numberHomeSlideImages) {
+            
+            mainSlidesArray.push(imageArray[i].name);
         
+        }
+
         //retina or not
         if ($retina) {
             imgPath = imgPath + '_x2'
@@ -904,6 +924,7 @@ function getPreloadImagePaths(imageArray) {
         
     }
     
+    // console.log(mainSlidesArray)
 
     return imagePathArray;
     
@@ -928,11 +949,11 @@ $(window).load(function() {
         // 2 = two sizes SM + medium & up
         // 3 = three sizes SM + MD + LG
     
-        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/slides/', 'format':'.jpg'},
+        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                       /* {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},*/
                         
                         {'name':'logo', 'sizes':'3', 'path':'images/', 'format':'.png'},
                         {'name':'homePack', 'sizes':'2', 'path':'images/', 'format':'.png'},
@@ -976,13 +997,12 @@ function getCurrentMediaQuery() {
     if(previousMediaSize !== currentMediaSize) {
         
         resizePage();
+        resizeCarousel();
     }
     
     if(isFlickity && previousMediaSize !== currentMediaSize) {
         resizeCarousel();
     }
-    
-
     
     previousMediaSize = currentMediaSize;
     
@@ -990,7 +1010,20 @@ function getCurrentMediaQuery() {
 
 function resizeCarousel() {
     
-    console.log('resize carousel');
+    $('.main-carousel').flickity('destroy');
+    $('.main-carousel').html("");
+    
+    createMainCarousel();
+    
+    for (var index=0;index <= mainSlidesArray.length-1;index++) {
+        
+        changeCarouselImage(mainSlidesArray[index], 'main');
+    }
+        
+    $('.main-carousel').flickity('resize')
+    
+    //if in detail view
+    if(isFlickity) {
 
         $('.overlay-carousel').flickity('destroy');
         $('.overlay-carousel').html("");
@@ -998,19 +1031,20 @@ function resizeCarousel() {
         createDetailCarousel();
         
         for (index = 0; index < slidesArray[0].length; ++index) {
-            changeCarouselImage(slidesArray[0][index]);
+            changeCarouselImage(slidesArray[0][index], 'detail');
         }
         
         $('.overlay-carousel').flickity('resize')
+    }
 
 }
 
 function resizePage() {
     
-    console.log('resize page');
+    //console.log('resize page');
     
     var currentImagePaths = getPreloadImagePaths(preloadArray);
-    console.log(currentImagePaths)
+    //console.log(currentImagePaths)
     
     loadPageImages();
     
@@ -1158,6 +1192,8 @@ var isFlickity = false;
                 //put into slidesPathArray
                 slidesArray.push(projectsArray[event.target.id].slides);
                 
+                //console.log(slidesArray);
+                
                 for (index = 0; index < slidesArray[0].length; ++index) {
                     
                     var $imagePath;
@@ -1196,6 +1232,21 @@ var isFlickity = false;
     
 //})();
 
+
+
+function createMainCarousel() {
+    
+    $('.main-carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true,
+        wrapAround: true,
+        lazyLoad: true,
+        autoPlay: true,
+        imagesLoaded: true
+    });
+    
+}
 
 
 function createDetailCarousel() {
@@ -1249,9 +1300,7 @@ function killDetailCarousel() {
     
 /*update images on detail view carousel*/
 
-function changeCarouselImage(image) {
-    
-    console.log('changeCarouselImage')
+function changeCarouselImage(image, id) {
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -1265,17 +1314,29 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_SM_x2.jpg';
+            }
             viewState = 'sm_ret';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_MD_x2.jpg';
+            }
             viewState = 'md_ret';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/slides/' + image + '_LG_x2.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG_x2.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_LG_x2.jpg';
+            }
             viewState = 'lg_ret';
             break;
         }
@@ -1284,24 +1345,45 @@ function changeCarouselImage(image) {
 
         switch ($size) {
         case 'small':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_SM.jpg';
+            }
             viewState = 'sm';
             break;
         case 'medium':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_MD.jpg';
+            }
             viewState = 'md';
             break;
         case 'large':
         case 'xlarge':
         case 'xxlarge':
-            $image = 'images/slides/' + image + '_LG.jpg';
+            if(id === 'detail'){
+                $image = 'images/slides/' + image + '_LG.jpg';
+            }else{
+                $image = 'images/main_carousel/' + image + '_LG.jpg';
+            }
             viewState = 'lg';
             break;
         }
     }
-
+    
     var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
-    $('.overlay-carousel').flickity( 'append', $cellElems );
+    
+    if(id === 'detail'){
+        
+        $('.overlay-carousel').flickity( 'append', $cellElems );
+    }
+    
+    if(id === 'main'){
+
+        $('.main-carousel').flickity( 'append', $cellElems );
+    }
 
 };
 $(function () {
