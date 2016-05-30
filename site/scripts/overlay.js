@@ -78,6 +78,16 @@ var isFlickity = false;
                 $(".project-details > .copy > #buttons > .view_site_btn").append(
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
+                
+                
+                if(projectsArray[event.target.id].url === "no link"){
+                    console.log(projectsArray[event.target.id].url);
+                    $('.view_site_btn').hide();
+                }else{
+                    $('.view_site_btn').show();
+                }
+                    
+                    
             
                 
                 slidesArray = [];
@@ -91,11 +101,12 @@ var isFlickity = false;
                 
                 function handleComplete(event) {
 
-                    console.log('complete loading: ' + loadedSlidesArray)
+                    //console.log('complete loading: ' + loadedSlidesArray)
                     
                     for (index = 0; index < loadedSlidesArray.length; ++index) {
                     
-                        var $id = 'cell' + index
+                        var $id = 'cell' + index+1;
+                        
                         var $cellElems = $("<div class='carousel-cell' id='" + $id + "'></div>");
                          $('.overlay-carousel').flickity( 'append', $cellElems );
                         document.getElementById($id).appendChild(loadedSlidesArray[index]);
@@ -122,7 +133,7 @@ var isFlickity = false;
                 
                 function handleProgressLoad(event) {
                     
-                    console.log ('percent loaded: ' + event.loaded)
+                   // console.log ('percent loaded: ' + event.loaded)
     
                         var percentLoaded = Math.round(event.loaded*100);
 

@@ -5,8 +5,8 @@
     "client":"Haagen Dazs",
     "agency":"Grey",
     "platform":"HTML5, CSS, Javascript, .net",
-    "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
-    "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
+    "intro":"Flagship responsive website for Haagen Dazs US.",
+    "description":"Haagen Dazs needed of a rebranding of their existing flagship website. Their goal was a more mobile friendly website that begins with their flavors first.  The flavor driven portal guides the user to Haagen Dazs store locations and grocery store locations where the flavor can be found based on the user's geo location. The Haagen Dazs rebrand proved a great success giving a more dynamic, data driven tool that quickly satisfies the user’s ice cream sweet tooth in real time.",
     "url":"https://www.haagendazs.us/",
     "cardImage":"haagen_dazs",
       "slides": [
@@ -27,7 +27,7 @@
     "platform":"HTML5, CSS, Javascript, Backbone",
     "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
-    "url":"",
+    "url":"no link",
     "cardImage":"mcdonalds",
         "slides": [
             "mcdonalds_01",
@@ -101,7 +101,7 @@
     "platform":"HTML5, CSS, Javascript",
     "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
     "description":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim. Sit ei dolor vocibus complectitur, autem lucilius in duo. Per id possit maiorum mel erant erroribus id, qui ne tale labore democritum.",
-    "url":"",
+    "url":"no link",
     "cardImage":"chase",
         "slides": [
             "chase_01",
@@ -116,9 +116,9 @@
     "client":"Skype",
     "agency":"1000heads",
     "platform":"Flash, PHP, HTML",
-    "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
-    "description":"With Say it With Skype Facebook App you can team up with your favourite band to say Happy Birthday to friends and family. Send a group video greeting today with Skype. Post your messages and links to video on your friends Facebook profile",
-    "url":"",
+    "intro":"Facebook interactive video app for Skype.",
+    "description":"<p>The Say It With Skype app provides you a lineup of talented artists and bands to help you make your greetings more special. So, whether your friend likes to headbang it, dance to some techno beats, or wind down with some whimsical tunes, you can choose the bands to play for you, like Jettblack, The Whip, Body Language, and so much more. It’s like making your own musical greeting card, only ten times better.</p><p>Start creating your group video greeting by logging in your Facebook or Skype account to go to the Say it with Skype page. Next, choose the occasion you want and the tune that goes along with it, such as “Happy Birthday” or “You Rock!” Type in the name of your friend you want to greet, and pick out the band your friend would like the most. You can even rock out and sing along with the band by turning your own webcam on.</p><p>If you’re the shy type, just post a picture of you and your friend, and send a short greeting for the band members to hold up in cardboard signs. Once you’re done, send the video and in minutes your pal will have a greeting he’ll never forget.</p>",
+    "url":"no link",
     "cardImage":"skype",
         "slides": [
             "siws_01",
@@ -152,8 +152,8 @@
     "client":"Marriott",
     "agency":"McGarryBowen",
     "platform":"Flash, HTML",
-    "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
-    "description":"Luxury brand of hotels from Marriott. This worldwide portal highlights the Renaissance distinctive style and hotel ambiance.",
+    "intro":"Worldwide flagship portal for Renaissance Hotels by Marriott.",
+    "description":"Enjoy luxury amenities and exceptional service at Renaissance Hotels, where guests experience exciting destinations and chic hotel accommodations. This worldwide portal highlights the distinctive style and hotel ambiance that is Renaissance. Choose by city or location to find your next first class destination on 6 continents.",
     "url":"http://frieswithdat.com/websites/rhr-sitelet/build/File%20Blocks/US/Brands/",
     "cardImage":"renaissance",
         "slides": [
@@ -171,8 +171,8 @@
     "client":"AT&T",
     "agency":"BBDO",
     "platform":"Flash, HTML",
-    "intro":"Usu idque salutatus ne, ut cum integre malorum facilis. Cu vix voluptua scribentur, liber primis utamur id vim.",
-    "description":"A marketing tie-in for the AT&T International Roaming campaign. The widget can be downloaded to your desktop or shared as an application via Facebook or other social networking websites.",
+    "intro":"Facebook app that promotes AT&T’s international roaming campaign.",
+    "description":"Ready for your next trip?  A social media marketing tie-in for the AT&T International Roaming campaign, ‘more phones that work in more than 215 countries.' The user creates a colorful country suitcase countdown clock that goes viral sharing the countdown to their next trip. The widget can be downloaded to your desktop or shared as an application via Facebook or other social networking websites.",
     "url":"http://www.frieswithdat.com/international_roaming_widget/",
     "cardImage":"att",
         "slides": [

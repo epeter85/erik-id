@@ -778,7 +778,7 @@ var mainSlidesArray = [];
 var formatArray = [];
 var preloadPathArray = [];
 var firstLoad = true;
-var numberHomeSlideImages = 1;
+var numberHomeSlideImages = 2;
 
 function preloadComplete(event) {
     
@@ -950,8 +950,8 @@ $(window).load(function() {
         // 3 = three sizes SM + MD + LG
     
         preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
-                       /* {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'subway', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        /*{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},*/
                         
@@ -1041,7 +1041,7 @@ function resizeCarousel() {
 
 function resizePage() {
     
-    //console.log('resize page');
+    console.log('resize page');
     
     var currentImagePaths = getPreloadImagePaths(preloadArray);
     //console.log(currentImagePaths)
@@ -1136,6 +1136,16 @@ var isFlickity = false;
                 $(".project-details > .copy > #buttons > .view_site_btn").append(
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
+                
+                
+                if(projectsArray[event.target.id].url === "no link"){
+                    console.log(projectsArray[event.target.id].url);
+                    $('.view_site_btn').hide();
+                }else{
+                    $('.view_site_btn').show();
+                }
+                    
+                    
             
                 
                 slidesArray = [];
@@ -1149,11 +1159,12 @@ var isFlickity = false;
                 
                 function handleComplete(event) {
 
-                    console.log('complete loading: ' + loadedSlidesArray)
+                    //console.log('complete loading: ' + loadedSlidesArray)
                     
                     for (index = 0; index < loadedSlidesArray.length; ++index) {
                     
-                        var $id = 'cell' + index
+                        var $id = 'cell' + index+1;
+                        
                         var $cellElems = $("<div class='carousel-cell' id='" + $id + "'></div>");
                          $('.overlay-carousel').flickity( 'append', $cellElems );
                         document.getElementById($id).appendChild(loadedSlidesArray[index]);
@@ -1180,7 +1191,7 @@ var isFlickity = false;
                 
                 function handleProgressLoad(event) {
                     
-                    console.log ('percent loaded: ' + event.loaded)
+                   // console.log ('percent loaded: ' + event.loaded)
     
                         var percentLoaded = Math.round(event.loaded*100);
 

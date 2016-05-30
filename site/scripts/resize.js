@@ -66,7 +66,7 @@ function resizeCarousel() {
 
 function resizePage() {
     
-    //console.log('resize page');
+    console.log('resize page');
     
     var currentImagePaths = getPreloadImagePaths(preloadArray);
     //console.log(currentImagePaths)
