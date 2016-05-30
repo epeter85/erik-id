@@ -4724,6 +4724,12 @@ p {
                 -webkit-text-stroke-width: 2px;
                 -webkit-text-stroke-color: #0a0a0a;
                 text-shadow: 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a, 0px 0px 0 #0a0a0a; } }
+            @media only screen and (max-width: 450px) {
+              #work #projects li .thumb-container .cardDetails .copy .titleText {
+                font-size: 2em; } }
+            @media only screen and (max-width: 350px) {
+              #work #projects li .thumb-container .cardDetails .copy .titleText {
+                font-size: 1.75em; } }
           #work #projects li .thumb-container .cardDetails .copy .divider {
             border: 0.1em dotted #fefefe;
             border-style: dashed none none;
@@ -4733,18 +4739,36 @@ p {
             margin-bottom: .5em;
             line-height: 1.5em;
             font-size: 1em; }
+            @media only screen and (max-width: 450px) {
+              #work #projects li .thumb-container .cardDetails .copy .header {
+                font-size: .9em; } }
+            @media only screen and (max-width: 350px) {
+              #work #projects li .thumb-container .cardDetails .copy .header {
+                font-size: .8em; } }
           #work #projects li .thumb-container .cardDetails .copy span {
             font-weight: bold; }
           #work #projects li .thumb-container .cardDetails .copy .description {
             margin-bottom: .5em;
             line-height: 1.25em;
             font-size: .9em; }
+            @media only screen and (max-width: 450px) {
+              #work #projects li .thumb-container .cardDetails .copy .description {
+                font-size: .8em; } }
+            @media only screen and (max-width: 350px) {
+              #work #projects li .thumb-container .cardDetails .copy .description {
+                font-size: .7em; } }
           #work #projects li .thumb-container .cardDetails .copy .btn {
             margin-top: .5em;
             font-weight: bold;
             text-align: right;
             cursor: pointer;
             transition: color 0.25s; }
+            @media only screen and (max-width: 450px) {
+              #work #projects li .thumb-container .cardDetails .copy .btn {
+                font-size: .9em; } }
+            @media only screen and (max-width: 350px) {
+              #work #projects li .thumb-container .cardDetails .copy .btn {
+                font-size: .8em; } }
           #work #projects li .thumb-container .cardDetails .copy .btn:hover {
             color: #eead2e; }
 

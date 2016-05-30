@@ -242,6 +242,13 @@
                             letter-spacing: -1px;
                             line-height: 1em;
                             text-transform: uppercase;
+                            
+                             @media only screen and (max-width: 450px) {
+                                 font-size: 2em;
+                            }
+                            @media only screen and (max-width: 350px) {
+                                 font-size: 1.75em;
+                            }
                         }
                         .divider {
                             border: .1em dotted $white;
@@ -253,6 +260,12 @@
                             margin-bottom: .5em;
                             line-height: 1.5em;
                             font-size: 1em;
+                             @media only screen and (max-width: 450px) {
+                                 font-size: .9em;
+                            }
+                            @media only screen and (max-width: 350px) {
+                                 font-size: .8em;
+                            }
                         }
                         span {
                             font-weight: bold;
@@ -261,6 +274,12 @@
                             margin-bottom: .5em;
                             line-height: 1.25em;
                             font-size: .9em;
+                            @media only screen and (max-width: 450px) {
+                                font-size: .8em;
+                            }
+                            @media only screen and (max-width: 350px) {
+                                 font-size: .7em;
+                            }
                         }
                         .btn {
                             margin-top: .5em;
@@ -271,6 +290,12 @@
                             -moz-transition: color 0.25s;
                             -o-transition: color 0.25s;
                             transition: color 0.25s;
+                            @media only screen and (max-width: 450px) {
+                                font-size: .9em;
+                            }
+                            @media only screen and (max-width: 350px) {
+                                 font-size: .8em;
+                            }
                         }
                         .btn:hover {
                             color: $wackyTitle;
