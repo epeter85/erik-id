@@ -740,6 +740,7 @@ function cardDetailsHandler(event) {
     var details = $(this).find('.cardDetails');
     
     if(details.css('opacity') == 0) {
+        $('#projects .cardDetails').css('opacity', '0');
         details.fadeTo( 50 , 1);
         $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
     }else{
