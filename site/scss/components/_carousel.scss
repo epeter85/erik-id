@@ -110,7 +110,7 @@
 
 .main-carousel .flickity-page-dots .dot {
 
-    border: 2px solid white;
+    border: 2px solid $dark-gray;
     @include breakpoint(small down) {
         border: 2px solid $dark-gray;
     }
@@ -133,7 +133,7 @@
 }
 
 .main-carousel .flickity-page-dots .dot.is-selected {
-    background: white;
+    background: $dark-gray;
     @include breakpoint(small down) {
         background: $dark-gray;
     }

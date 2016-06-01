@@ -4142,7 +4142,7 @@ p {
           width: 202px; } }
     #header #mainLogo #caption {
       font-family: 'courier_newregular';
-      color: #fefefe; }
+      color: #0a0a0a; }
       @media screen and (min-width: 64em) {
         #header #mainLogo #caption {
           font-size: 1.1em;
@@ -4363,7 +4363,7 @@ p {
       height: .7em; } }
 
 .main-carousel .flickity-page-dots .dot {
-  border: 2px solid white; }
+  border: 2px solid #484848; }
   @media screen and (max-width: 43.6875em) {
     .main-carousel .flickity-page-dots .dot {
       border: 2px solid #484848; } }
@@ -4379,7 +4379,7 @@ p {
   opacity: 0.3; }
 
 .main-carousel .flickity-page-dots .dot.is-selected {
-  background: white; }
+  background: #484848; }
   @media screen and (max-width: 43.6875em) {
     .main-carousel .flickity-page-dots .dot.is-selected {
       background: #484848; } }

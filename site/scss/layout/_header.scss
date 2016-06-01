@@ -23,7 +23,7 @@
         }
         #caption {
             font-family: 'courier_newregular';
-            color: $white;
+            color: $black;
             @include breakpoint(large up) {
                 font-size: 1.1em;
                 margin-left: 25px;
