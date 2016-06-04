@@ -3983,6 +3983,9 @@ html {
   width: 100%;
   max-width: 87.5rem; }
 
+.noscroll {
+  overflow: hidden; }
+
 .off-canvas-content {
   background-image: url("../images/background.jpg");
   background-size: 700px auto;

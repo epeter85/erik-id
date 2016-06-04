@@ -10,7 +10,11 @@ body {
     //margin: 2em;
     // background-image: url("../images/background.jpg");
     // background-repeat: repeat-y;
-    
+   // overflow-y: hidden;
+}
+
+.noscroll { 
+  overflow: hidden;
 }
 
 .off-canvas-content {

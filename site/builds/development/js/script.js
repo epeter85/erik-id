@@ -1086,6 +1086,8 @@ var isFlickity = false;
     function toggleOverlay(event, button) {
 
         if (classie.has(overlay, 'open')) {
+            
+            $( "body" ).removeClass( 'noscroll' );
 
             setTimeout(killDetailCarousel, 1000);
             
@@ -1106,6 +1108,8 @@ var isFlickity = false;
             }
             
         } else if (!classie.has(overlay, 'close')) {
+            
+            $( "body" ).addClass( 'noscroll' );
             
             if (event.data.msg === 'detailsBtn'){
                 
