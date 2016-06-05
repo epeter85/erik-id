@@ -3,6 +3,7 @@ var slidesArray;
 var slidesPathArray;
 var loadedSlidesArray;
 var isFlickity = false;
+var overlayType;
 
 
 /*overlay js*/
@@ -28,9 +29,13 @@ var isFlickity = false;
 
         if (classie.has(overlay, 'open')) {
             
+            $(".project-details > .copy > #buttons > .view_site_btn").unbind( "click");
+            
             $( "body" ).removeClass( 'noscroll' );
-
-            setTimeout(killDetailCarousel, 1000);
+            
+            if (overlayType === 'detailsBtn'){
+                setTimeout(killDetailCarousel, 1000);
+            }
             
             classie.remove(overlay, 'open');
             classie.remove(container, 'overlay-open');
@@ -48,15 +53,21 @@ var isFlickity = false;
                 onEndTransitionFn();
             }
             
+            overlayType = '';
+            
         } else if (!classie.has(overlay, 'close')) {
             
             //google tracking here
-            ga('send', 'pageview', projectsArray[event.target.id].title);
+            
             //console.log(projectsArray[event.target.id].title);
             
             $( "body" ).addClass( 'noscroll' );
             
             if (event.data.msg === 'detailsBtn'){
+                
+                overlayType = 'detailsBtn';
+                
+                ga('send', 'pageview', projectsArray[event.target.id].title);
                 
                 $( "#loadingCaption2").show();
                 $( "#loadingCaption2" ).fadeTo("fast", 1);
@@ -87,6 +98,15 @@ var isFlickity = false;
                     "<a href=" + projectsArray[event.target.id].url + " target='_blank'><i class='fa fa-eye' aria-hidden='true'></i>view website</a>"
                 );
                 
+                var currentUrl = projectsArray[event.target.id].url;
+                
+                $(".project-details > .copy > #buttons > .view_site_btn").click(function(){
+                    //console.log('clicked')
+                   console.log(currentUrl);
+                    ga('send', 'event', ['link'], ['get url'], [currentUrl]);
+                });
+                
+                //ga('send', 'event', ['link'], ['get url'], []);
                 
                 if(projectsArray[event.target.id].url === "no link"){
                     console.log(projectsArray[event.target.id].url);
@@ -94,9 +114,6 @@ var isFlickity = false;
                 }else{
                     $('.view_site_btn').show();
                 }
-                    
-                    
-            
                 
                 slidesArray = [];
                 slidesPathArray = [];

@@ -37,8 +37,6 @@ function cardDetailsHandler(event) {
 
 }
 
-
-
 function menuButtonHandler(event) {
     
     event.preventDefault();
