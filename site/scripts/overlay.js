@@ -50,6 +50,10 @@ var isFlickity = false;
             
         } else if (!classie.has(overlay, 'close')) {
             
+            //google tracking here
+            ga('send', 'pageview', projectsArray[event.target.id].title);
+            //console.log(projectsArray[event.target.id].title);
+            
             $( "body" ).addClass( 'noscroll' );
             
             if (event.data.msg === 'detailsBtn'){
