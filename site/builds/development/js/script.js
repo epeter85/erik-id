@@ -793,7 +793,7 @@ function loadPageImages() {
     document.getElementById('homePackImage').appendChild(preloadPathArray[numberHomeSlideImages+1]);
     document.getElementById('checkListImage').appendChild(preloadPathArray[numberHomeSlideImages + 2]);
     document.getElementById('origWackyPackImage').appendChild(preloadPathArray[numberHomeSlideImages + 3]);
-    
+
     createMainCarousel();
     
     //add main carousel images to dom
@@ -976,6 +976,11 @@ $(window).load(function() {
 
 var currentMediaSize;
 var previousMediaSize;
+//var resizeImageArray = [];
+var resizeMainCarouselImageArray = [];
+//var mainCarouselPreloadQueue;
+//var resizeDetailCarouselImageArray = [];
+
 
 function getCurrentMediaQuery() {
     
@@ -998,7 +1003,7 @@ function getCurrentMediaQuery() {
     if(previousMediaSize !== currentMediaSize) {
         
         resizePage();
-        resizeCarousel();
+       // resizeCarousel();
     }
     
     if(isFlickity && previousMediaSize !== currentMediaSize) {
@@ -1009,19 +1014,71 @@ function getCurrentMediaQuery() {
     
 }
 
+function handleFileMainCarouselPreload(event) {
+    
+}
+
+function handleProgressMainCarouselPreload(event) {
+    
+    //console.log('percent loaded: ' + event.loaded)
+    
+      var percentLoaded = Math.round(event.loaded*100);
+    
+}
+
+function mainCarouselPreloadComplete(event) {
+    
+    for (var index=0;index <= resizeMainCarouselImageArray.length-1;index++) {
+        
+        var $cellElems = $("<div class='carousel-cell'><img src='" + resizeMainCarouselImageArray[index] + "' /></div>");
+        $('.main-carousel').flickity( 'append', $cellElems );
+    }
+    
+    
+    
+    /*if(id === 'detail'){
+        
+        $('.overlay-carousel').flickity( 'append', $cellElems );
+    }
+    
+    if(id === 'main'){*/
+
+        //$('.main-carousel').flickity( 'append', $cellElems );
+  //  }
+    
+    $('.main-carousel').flickity('resize');
+}
+
+
+function initCarouselPreload(imageArray) {
+
+    //add image paths to image loader cue
+    mainCarouselPreloadQueue = new createjs.LoadQueue();
+    mainCarouselPreloadQueue.on("complete", mainCarouselPreloadComplete, this);
+    mainCarouselPreloadQueue.on("fileload", handleFileMainCarouselPreload, this);
+    mainCarouselPreloadQueue.on("progress", handleProgressMainCarouselPreload, this);
+    mainCarouselPreloadQueue.loadManifest(imageArray, true);
+
+}
+
 function resizeCarousel() {
     
-    $('.main-carousel').flickity('destroy');
-    $('.main-carousel').html("");
+    console.log('resize carousel')
+
+   // createMainCarousel();
     
-    createMainCarousel();
+    //for (var index=0;index <= mainSlidesArray.length-1;index++) {
+        
+        //loader
+        //var $image = getCarouselImage(mainSlidesArray[index], 'main');
+       // changeCarouselImage(mainSlidesArray[index], 'main');
+        //resizeMainCarouselImageArray.push($image);
+   // }
     
-    for (var index=0;index <= mainSlidesArray.length-1;index++) {
+   // initCarouselPreload(resizeMainCarouselImageArray);
+    //console.log(resizeMainCarouselImageArray)
         
-        changeCarouselImage(mainSlidesArray[index], 'main');
-    }
-        
-    $('.main-carousel').flickity('resize')
+    //$('.main-carousel').flickity('resize')
     
     //if in detail view
     if(isFlickity) {
@@ -1032,6 +1089,8 @@ function resizeCarousel() {
         createDetailCarousel();
         
         for (index = 0; index < slidesArray[0].length; ++index) {
+            
+            //loader
             changeCarouselImage(slidesArray[0][index], 'detail');
         }
         
@@ -1252,6 +1311,18 @@ var isFlickity = false;
 
 function createMainCarousel() {
     
+   // var test = document.getElementsByClassName("main-carousel");
+    //var carousel = document.querySelector('.main-carousel')
+    var flkty = Flickity.data('.main-carousel')
+    
+    //console.log('create main carousel ' + flkty)
+    
+    if (flkty !== undefined) {
+        console.log('kill carousel');
+        $('.main-carousel').flickity('destroy');
+        $('.main-carousel').html("");
+    }
+    
     $('.main-carousel').flickity({
         // options
         cellAlign: 'left',
@@ -1316,7 +1387,8 @@ function killDetailCarousel() {
     
 /*update images on detail view carousel*/
 
-function changeCarouselImage(image, id) {
+//function changeCarouselImage(image, id) {
+function getCarouselImage(image, id) {
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -1389,7 +1461,10 @@ function changeCarouselImage(image, id) {
         }
     }
     
-    var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
+    return $image;
+    
+    //add this somewhere else
+    /*var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
     
     if(id === 'detail'){
         
@@ -1399,7 +1474,8 @@ function changeCarouselImage(image, id) {
     if(id === 'main'){
 
         $('.main-carousel').flickity( 'append', $cellElems );
-    }
+    }*/
+    ///
 
 };
 $(function () {

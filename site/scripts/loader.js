@@ -19,7 +19,7 @@ function loadPageImages() {
     document.getElementById('homePackImage').appendChild(preloadPathArray[numberHomeSlideImages+1]);
     document.getElementById('checkListImage').appendChild(preloadPathArray[numberHomeSlideImages + 2]);
     document.getElementById('origWackyPackImage').appendChild(preloadPathArray[numberHomeSlideImages + 3]);
-    
+
     createMainCarousel();
     
     //add main carousel images to dom
