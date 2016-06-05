@@ -76,8 +76,8 @@ function killDetailCarousel() {
     
 /*update images on detail view carousel*/
 
-//function changeCarouselImage(image, id) {
-function getCarouselImage(image, id) {
+function changeCarouselImage(image, id) {
+//function getCarouselImage(image, id) {
 
     var $image;
     var $size = Foundation.MediaQuery.current;
@@ -150,20 +150,21 @@ function getCarouselImage(image, id) {
         }
     }
     
-    return $image;
+    //return $image;
     
     //add this somewhere else
-    /*var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
+    var $cellElems = $("<div class='carousel-cell'><img src='" + $image + "' /></div>");
     
     if(id === 'detail'){
         
+        console.log('APPEND DETAIL IMAGES')
         $('.overlay-carousel').flickity( 'append', $cellElems );
     }
     
     if(id === 'main'){
 
         $('.main-carousel').flickity( 'append', $cellElems );
-    }*/
+    }
     ///
 
 };
