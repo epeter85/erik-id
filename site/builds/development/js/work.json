@@ -135,7 +135,7 @@
     "platform":"Flash, HTML",
     "intro":"",
     "description":"The office is your golf course. Take the challenge by playing nine of the toughest holes this side of the cubicle. Launched as a trio of websites promoting the FedExCup golf tournament.",
-    "url":"http://www.erik-id.com/sites/fedexcup09/ninehole/",
+    "url":"http://www.erik-id.com/sites/fedexcup09/ninehole/ninehole.html",
     "cardImage":"fedex_nine_hole",
         "slides": [
             "fedexCup_01",
@@ -154,7 +154,7 @@
     "platform":"Flash, HTML",
     "intro":"",
     "description":"Enjoy luxury amenities and exceptional service at Renaissance Hotels, where guests experience exciting destinations and chic hotel accommodations. This worldwide portal highlights the distinctive style and hotel ambiance that is Renaissance. Choose by city or location to find your next first class destination on 6 continents.",
-    "url":"http://frieswithdat.com/websites/rhr-sitelet/build/File%20Blocks/US/Brands/",
+    "url":"http://www.frieswithdat.com/websites/rhr-sitelet/build/File%20Blocks/US/Brands/",
     "cardImage":"renaissance",
         "slides": [
             "renaissance_01",
@@ -192,7 +192,7 @@
     "platform":"Flash, HTML",
     "intro":"",
     "description":"Ask the knowledgeable caddie any detail about golf that only a die-hard fan would want to know. Launched as a trio of websites for the FedExCup golf tournament.",
-    "url":"http://www.erik-id.com/sites/fedexcup09/caddie/",
+    "url":"http://www.erik-id.com/sites/fedexcup09/caddie/caddy.html",
     "cardImage":"fedex_caddie",
         "slides": [
             "fedexCaddie_01",

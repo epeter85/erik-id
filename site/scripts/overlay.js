@@ -103,8 +103,13 @@ var overlayType;
                 $(".project-details > .copy > #buttons > .view_site_btn").click(function(){
                     //console.log('clicked')
                    console.log(currentUrl);
-                    ga('send', 'event', ['link'], ['get url'], [currentUrl]);
-                });
+                    //ga('send', 'event', ['link'], ['get url'], [currentUrl]);
+                     ga('send', 'event', {
+                            eventCategory: 'Outbound Link',
+                            eventAction: 'click',
+                            eventLabel: currentUrl
+                          });
+                    });
                 
                 //ga('send', 'event', ['link'], ['get url'], []);
                 
