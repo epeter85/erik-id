@@ -28,7 +28,7 @@ var sassPaths = [
     htmlSources = [outputDir + '*.html'],
     outputDir
     
-env = process.env.NODE_ENV || 'development';
+env = process.env.NODE_ENV || 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';

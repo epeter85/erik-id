@@ -12,7 +12,7 @@
 //@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
-@include foundation-forms;
+/*@include foundation-forms;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 @include foundation-accordion;
@@ -26,10 +26,10 @@
 @include foundation-dropdown-menu;
 @include foundation-flex-video;
 @include foundation-label;
-@include foundation-media-object;
+@include foundation-media-object;*/
 @include foundation-menu;
 @include foundation-off-canvas;
-@include foundation-orbit;
+/*@include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
 @include foundation-slider;
@@ -44,7 +44,7 @@
 @include foundation-top-bar;
 
 @include motion-ui-transitions;
-@include motion-ui-animations
+@include motion-ui-animations*/
     
 
 @import 'components/overlay';

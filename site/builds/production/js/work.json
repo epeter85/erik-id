@@ -1,0 +1,278 @@
+{ "projects" : [
+  { 
+    "id":0,
+    "title":"Haagen Dazs US",
+    "client":"Haagen Dazs",
+    "agency":"Grey",
+    "platform":"HTML5, CSS, Javascript, .net",
+    "intro":"",
+    "description":"Haagen Dazs needed of a rebranding of their existing flagship website. Their goal was a more mobile friendly website that begins with their flavors first.  The flavor driven portal guides the user to Haagen Dazs store locations and grocery store locations where the flavor can be found based on the user's geo location. The Haagen Dazs rebrand proved a great success giving a more dynamic, data driven tool that quickly satisfies the user’s ice cream sweet tooth in real time.",
+    "url":"https://www.haagendazs.us/",
+    "cardImage":"haagen_dazs",
+      "slides": [
+        "haagen_dazs_01",
+        "haagen_dazs_02",
+        "haagen_dazs_03",
+        "haagen_dazs_04",
+        "haagen_dazs_05",
+        "haagen_dazs_06"
+      ]
+      
+  },
+    { 
+    "id":1,
+    "title":"Burger Builder",
+    "client":"McDonalds",
+    "agency":"Bossa NYC",
+    "platform":"HTML5, CSS, Javascript, Backbone",
+    "intro":"",
+    "description":"<p>Would you chow down on something called a 'Chicago Woozy' burger, served on a pretzel bun with two quarter-pound beef patties, fries, smoked bacon, creamy garlic dressing, tartar sauce, mushrooms, tomatoes, grilled onions, Swiss cheese and shaved Parmesan cheese? Well you can build this or any other countless combinations with McDonald’s Burger Builder.</p><p>Using the app, you build, name, and submit your burger for voting. The top two winning burgers were sold for a limited-time offering at McDonald’s in the Chicago area.</p>",
+    "url":"no link",
+    "cardImage":"mcdonalds",
+        "slides": [
+            "mcdonalds_01",
+            "mcdonalds_02",
+            "mcdonalds_03",
+            "mcdonalds_04",
+            "mcdonalds_05",
+            "mcdonalds_06"
+        ]
+  },
+    { 
+    "id":2,
+    "title":"Schweid & Sons",
+    "client":"Schweid & Sons",
+    "agency":"Night Agency NYC",
+    "platform":"HTML5, CSS, Javascript",
+    "intro":"",
+    "description":"A responsive website with subtle and elegant video backgrounds for Schweid & Sons, a high end beef producer for gourmet restaurants and specialty markets.",
+    "url":"http://www.schweidandsons.com",
+    "cardImage":"schweid_sons",
+        "slides": [
+            "schweid_sons_01",
+            "schweid_sons_02",
+            "schweid_sons_03",
+            "schweid_sons_04",
+            "schweid_sons_05",
+            "schweid_sons_06"
+        ]
+  },
+    { 
+    "id":3,
+    "title":"Wisdom Media",
+    "client":"Wisdom Media HK",
+    "agency":"erik-id",
+    "platform":"HTML5, CSS, Javascript",
+    "intro":"",
+    "description":"A responsive website for Wisdom Media, a cutting edge video production company based in Hong Kong.",
+    "url":"http://wisdom-media.com.hk",
+    "cardImage":"wisdom_media",
+        "slides": [
+            "wisdom_media_01",
+            "wisdom_media_02",
+            "wisdom_media_03",
+            "wisdom_media_04"
+        ]
+  },
+    { 
+    "id":4,
+    "title":"Fedex Pep Talk",
+    "client":"Fedex",
+    "agency":"BBDO NY",
+    "platform":"Flash, AfterEffects, HTML",
+    "intro":"",
+    "description":"Meet the most feared man in the game, Dick Butkus, former coach of the Chicago Bears. Butkus is here to talk to you about business – YOUR business. Create a custom video pep talk from the man himself, giving you specific advice tailored to fix and promote your business. Once created, the video link is sharable via social media. This advertisement campaign won a Webby award for it’s unique and dynamic presentation.",
+    "url":"http://www.erik-id.com/sites/fedexbutkis/",
+    "cardImage":"butkus",
+        "slides": [
+            "butkus_01",
+            "butkus_02",
+            "butkus_03",
+            "butkus_04",
+            "butkus_05",
+            "butkus_06"
+        ]
+  },
+    { 
+    "id":5,
+    "title":"Chase Jacksonville",
+    "client":"Chase",
+    "agency":"McGarryBowen",
+    "platform":"HTML5, CSS, Javascript",
+    "intro":"",
+    "description":"A responsive website promoting the new branches in Jacksonville, FL. Includes a 360 virtial tour section.",
+    "url":"no link",
+    "cardImage":"chase",
+        "slides": [
+            "chase_01",
+            "chase_02",
+            "chase_03",
+            "chase_04"
+        ]   
+  },
+    { 
+    "id":6,
+    "title":"Say It with Skype",
+    "client":"Skype",
+    "agency":"1000heads",
+    "platform":"Flash, PHP, HTML",
+    "intro":"",
+    "description":"<p>The Say It With Skype app provides you a lineup of talented artists and bands to help you make your greetings more special. So, whether your friend likes to headbang it, dance to some techno beats, or wind down with some whimsical tunes, you can choose the bands to play for you, like Jettblack, The Whip, Body Language, and so much more. It’s like making your own musical greeting card, only ten times better.</p><p>Start creating your group video greeting by logging in your Facebook or Skype account to go to the Say it with Skype page. Next, choose the occasion you want and the tune that goes along with it, such as “Happy Birthday” or “You Rock!” Type in the name of your friend you want to greet, and pick out the band your friend would like the most. You can even rock out and sing along with the band by turning your own webcam on.</p><p>If you’re the shy type, just post a picture of you and your friend, and send a short greeting for the band members to hold up in cardboard signs. Once you’re done, send the video and in minutes your pal will have a greeting he’ll never forget.</p>",
+    "url":"no link",
+    "cardImage":"skype",
+        "slides": [
+            "siws_01",
+            "siws_02",
+            "siws_03",
+            "siws_04"
+        ]   
+  },  
+    { 
+    "id":7,
+    "title":"Fedex Nine Hole",
+    "client":"Fedex",
+    "agency":"BBDO",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"The office is your golf course. Take the challenge by playing nine of the toughest holes this side of the cubicle. Launched as a trio of websites promoting the FedExCup golf tournament.",
+    "url":"http://www.erik-id.com/sites/fedexcup09/ninehole/ninehole.html",
+    "cardImage":"fedex_nine_hole",
+        "slides": [
+            "fedexCup_01",
+            "fedexCup_02",
+            "fedexCup_03",
+            "fedexCup_04",
+            "fedexCup_05",
+            "fedexCup_06"
+        ]
+  },
+    { 
+    "id":8,
+    "title":"Renaissance",
+    "client":"Marriott",
+    "agency":"McGarryBowen",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"Enjoy luxury amenities and exceptional service at Renaissance Hotels, where guests experience exciting destinations and chic hotel accommodations. This worldwide portal highlights the distinctive style and hotel ambiance that is Renaissance. Choose by city or location to find your next first class destination on 6 continents.",
+    "url":"http://www.frieswithdat.com/websites/rhr-sitelet/build/File%20Blocks/US/Brands/",
+    "cardImage":"renaissance",
+        "slides": [
+            "renaissance_01",
+            "renaissance_02",
+            "renaissance_03",
+            "renaissance_04",
+            "renaissance_05",
+            "renaissance_06"
+        ]
+  },
+    { 
+    "id":9,
+    "title":"International Roaming Widget",
+    "client":"AT&T",
+    "agency":"BBDO",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"Ready for your next trip?  A social media marketing tie-in for the AT&T International Roaming campaign, ‘more phones that work in more than 215 countries.' The user creates a colorful country suitcase countdown clock that goes viral sharing the countdown to their next trip. The widget can be downloaded to your desktop or shared as an application via Facebook or other social networking websites.",
+    "url":"http://www.erik-id.com/sites/international_roaming_widget/",
+    "cardImage":"att",
+        "slides": [
+            "att_01",
+            "att_02",
+            "att_03",
+            "att_04",
+            "att_05",
+            "att_06"
+        ]    
+  },
+    { 
+    "id":10,
+    "title":"Fedex Cup Caddie",
+    "client":"Fedex",
+    "agency":"BBDO",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"Ask the knowledgeable caddie any detail about golf that only a die-hard fan would want to know. Launched as a trio of websites for the FedExCup golf tournament.",
+    "url":"http://www.erik-id.com/sites/fedexcup09/caddie/caddy.html",
+    "cardImage":"fedex_caddie",
+        "slides": [
+            "fedexCaddie_01",
+            "fedexCaddie_02",
+            "fedexCaddie_03",
+            "fedexCaddie_04"
+        ]    
+  },
+    { 
+    "id":11,
+    "title":"Fedex Halo",
+    "client":"Fedex",
+    "agency":"BBDO",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"Fedex Halo takes you 'behind the scenes', communicating some of the ways FedEx helps customers’ access opportunities in the marketplace – whether those prospects are in their local communities or around the globe. This animated promotional website presents country specific logistical data via dynamic, clever animations.",
+    "url":"http://www.erik-id.com/sites/halo/",
+    "cardImage":"fedex_halo",
+        "slides": [
+            "halo_01",
+            "halo_02",
+            "halo_03",
+            "halo_04",
+            "halo_05",
+            "halo_06"
+        ]  
+  },
+    { 
+    "id":12,
+    "title":"Citi Cash Return Cards",
+    "client":"Citi",
+    "agency":"BBDO",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"Colorful, interactive and informative microsite promoting a new series of cash back cards. A highlight includes and interactive timeline video ad campaign.",
+    "url":"http://www.erik-id.com/sites/citicards/",
+    "cardImage":"citi",
+        "slides": [
+            "citicards_01",
+            "citicards_02",
+            "citicards_03",
+            "citicards_04",
+            "citicards_05",
+            "citicards_06"
+        ]  
+  },
+    { 
+    "id":13,
+    "title":"McQ Collection",
+    "client":"Alexander McQueen",
+    "agency":"CreateThe",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"'McQ Collection', a younger, edgier and more renegade than McQueens main collection. McQueen has taken inspiration from 1960s biker gangs and the rebellious teen spirit of that particular era.",
+    "url":"http://www.erik-id.com/sites/mcqueen/",
+    "cardImage":"mcqueen",
+        "slides": [
+            "mcqueen_01",
+            "mcqueen_02",
+            "mcqueen_03",
+            "mcqueen_04"
+        ]  
+  },
+    { 
+    "id":14,
+    "title":"Ikepod",
+    "client":"Ikepod",
+    "agency":"CreateThe",
+    "platform":"Flash, HTML",
+    "intro":"",
+    "description":"After a several year hiatus, designer Marc Newson launches a new line of Ikepod watches. Redesigned in an ellipse shape using better movements and precious metals during its construction. This flagship portal presents the rich engineering history and takes the user through an interactive presentation of the line of Ikepod watches.",
+    "url":"http://www.erik-id.com/sites/ikepod/",
+    "cardImage":"ikepod",
+        "slides": [
+            "ikepod_01",
+            "ikepod_02",
+            "ikepod_03",
+            "ikepod_04"
+        ]  
+  }
+
+    
+]}
