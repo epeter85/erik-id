@@ -1289,6 +1289,21 @@ function createMainCarousel() {
         imagesLoaded: true
     });
     
+     var flkty = $('.main-carousel').data('flickity');
+    
+    $('.main-carousel').on( 'cellSelect', function() {
+
+        switch(flkty.selectedIndex) {
+            case 0:
+                $('#mainLogo > #caption').css('color', 'white');
+                break;
+            default:
+                $('#mainLogo > #caption').css('color', 'black');
+               
+        }
+    })
+
+    
 }
 
 
