@@ -26,6 +26,15 @@ body {
     
 }
 
+.close-button{
+    position: absolute;
+    top:.25em;
+    right:.5em;
+    color: $dark-gray;
+    font-family: "wacky_font";
+    font-size: 2em;
+}
+
 a {
     color: $dark-gray;
     font-family: "wacky_font";

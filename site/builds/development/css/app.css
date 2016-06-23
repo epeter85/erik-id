@@ -1988,6 +1988,14 @@ html {
   overflow-y: hidden;
   padding-top: 10px; }
 
+.close-button {
+  position: absolute;
+  top: .25em;
+  right: .5em;
+  color: #484848;
+  font-family: "wacky_font";
+  font-size: 2em; }
+
 a {
   color: #484848;
   font-family: "wacky_font";
