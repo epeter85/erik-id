@@ -1468,7 +1468,7 @@ $(function () {
         for (index = 0; index < data.projects.length; ++index) {
             projectsArray.push(data.projects[index])
         }
-        
+
        // $('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
         $('.thumb-container').click(cardDetailsHandler);

@@ -2459,6 +2459,7 @@ p {
   margin-top: 3em;
   margin-left: 0;
   margin-right: 0;
+  text-align: center;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -2471,6 +2472,8 @@ p {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+  #work #projects li {
+    display: inline-block; }
   #work #projects li:nth-of-type(1),
   #work #projects li:nth-of-type(2),
   #work #projects li:nth-of-type(3),

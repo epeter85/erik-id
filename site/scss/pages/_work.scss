@@ -8,14 +8,21 @@
     p {
         text-align: center;
     }
-
-    
     
     #projects {
+        
         list-style-type: none;
         margin-top: 3em;
         margin-left: 0;
         margin-right: 0;
+
+        text-align: center;
+        
+        li {
+            
+            display: inline-block;
+        }
+        
         display: flex;
         flex-direction: row; 
         justify-content: space-around;
