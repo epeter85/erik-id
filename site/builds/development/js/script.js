@@ -803,6 +803,10 @@ function loadPageImages() {
         document.getElementById($id).appendChild(preloadPathArray[index]);
     }
     
+    //strip height to Flickity Viewport styling
+    //older browser issue
+    $('.main-carousel .flickity-viewport').css('height', '');
+    
     
     //add thumb images to dom
     var _img = document.getElementsByClassName("thumb-container");
