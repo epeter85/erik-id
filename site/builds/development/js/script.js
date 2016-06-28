@@ -1078,6 +1078,8 @@ var overlayType;
         };
 
     function toggleOverlay(event, button) {
+        
+        
 
         if (classie.has(overlay, 'open')) {
             
@@ -1107,7 +1109,8 @@ var overlayType;
             
             overlayType = '';
             
-        } else if (!classie.has(overlay, 'close')) {
+        //} else if (!classie.has(overlay, 'close')) {
+        } else {
             
             //google tracking here
             
