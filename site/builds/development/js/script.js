@@ -952,9 +952,9 @@ $(window).load(function() {
         // 2 = two sizes SM + medium & up
         // 3 = three sizes SM + MD + LG
     
-        preloadArray = [{'name':'haagen_dazs', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
-                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
-                        {'name':'subway', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'haagen_dazs', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'mcdonalds', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'computers', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         /*{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},*/
@@ -1302,7 +1302,8 @@ function createMainCarousel() {
     $('.main-carousel').on( 'cellSelect', function() {
 
         switch(flkty.selectedIndex) {
-            case 1:
+            case 0:
+            case 2:
                 $('#mainLogo > #caption').css('color', 'white');
                 break;
             default:

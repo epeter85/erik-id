@@ -27,7 +27,8 @@ function createMainCarousel() {
     $('.main-carousel').on( 'cellSelect', function() {
 
         switch(flkty.selectedIndex) {
-            case 1:
+            case 0:
+            case 2:
                 $('#mainLogo > #caption').css('color', 'white');
                 break;
             default:
