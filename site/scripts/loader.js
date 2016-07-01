@@ -5,7 +5,7 @@ var mainSlidesArray = [];
 var formatArray = [];
 var preloadPathArray = [];
 var firstLoad = true;
-var numberHomeSlideImages = 3;
+var numberHomeSlideImages = 4;
 
 function preloadComplete(event) {
     
@@ -180,7 +180,8 @@ $(window).load(function() {
         // 2 = two sizes SM + medium & up
         // 3 = three sizes SM + MD + LG
     
-        preloadArray = [{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+        preloadArray = [{'name':'haagen_dazs', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
+                        {'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'subway', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         {'name':'computers', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
                         /*{'name':'pretender', 'sizes':'3', 'path':'images/main_carousel/', 'format':'.jpg'},
