@@ -1,7 +1,20 @@
-#skills {
-    //background-color: bisque;
-    #skills_image {
+#labs {
+    //display: flex;
+    @include breakpoint(medium up) {
+        padding-top: 5%;
+    }
+    h2 {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    
+    #labs_image {
+        
         //background-color: aqua;
+        
         img {
             height: auto;
             width: 415px;
@@ -11,9 +24,14 @@
             @include breakpoint(small down) {}
         }
     }
-    #skills_copy {
-         //background-color: aqua;
+    #labs_copy {
 
+        //background-color: aqua;
+  
+        p {
+            text-align: left;
+        }
+         
         @include breakpoint(medium only) {
             padding-top: 5%;
             //padding-right: 3%;
@@ -23,4 +41,7 @@
             padding-left: 8%;
         }
     }
+    
+        
+    margin-bottom: 5em;
 }
