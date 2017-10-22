@@ -87,11 +87,11 @@ gulp.task('js', function() {
     .pipe(connect.reload())
 });
 
-/*gulp.task('json', function() {
+gulp.task('json', function() {
   gulp.src('builds/development/js/*.json')
-    .pipe(gulpif(env === 'production', jsonminify()))
+    //.pipe(gulpif(env === 'production', jsonminify()))
     .pipe(gulpif(env === 'production', gulp.dest('builds/production/js')))
     .pipe(connect.reload())
-});*/
+});
 
-gulp.task('default', ['html', 'js', 'sass', 'connect', 'images', 'watch']);
+gulp.task('default', ['html', 'js', 'json', 'sass', 'connect', 'images', 'watch']);

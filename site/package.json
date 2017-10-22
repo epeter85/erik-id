@@ -33,6 +33,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "foundation-sites": "^6.4.4-rc1",
     "owl.carousel": "0.0.1"
   }
 }
