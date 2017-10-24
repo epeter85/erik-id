@@ -55,4 +55,20 @@ function menuButtonHandler(event) {
 
 }
 
+$(document).ready(function(){
+    
+	$('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+
+	});
+    
+    $(document).on('closed.zf.offcanvas', function() {
+        $('#nav-icon').toggleClass('open');
+    });
+    
+    
+});
+
+
+
 
