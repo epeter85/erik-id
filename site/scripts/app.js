@@ -8,7 +8,8 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 var targetAnchor;
 
 function scrollToAnchor() {
-    console.log('scrollToAnchor')
+    
+    //console.log('scrollToAnchor')
     
     var $target = $(targetAnchor);
 

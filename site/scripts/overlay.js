@@ -60,9 +60,22 @@ var overlayType;
         //} else if (!classie.has(overlay, 'close')) {
         } else {
             
-            //google tracking here
+            console.log(projectsArray[event.target.id])
+            //google tracking
+            //var id = projectsArray[event.target.id].title;
             
-            //console.log(projectsArray[event.target.id].title);
+            
+            if(typeof projectsArray[event.target.id] === 'undefined') {
+                    
+                    console.log('whats-this');
+                    ga('send', 'pageview', 'whats-this');
+
+               }else{
+                    console.log(projectsArray[event.target.id].title);
+                    ga('send', 'pageview', projectsArray[event.target.id].title);
+                  
+               }
+            
             
             $( "body" ).addClass( 'noscroll' );
             
