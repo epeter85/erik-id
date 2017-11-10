@@ -38,6 +38,22 @@ function cardDetailsHandler(event) {
 
 }
 
+function cardDetailsHandlerOver(event) {
+
+    event.preventDefault();
+    var details = $(this).find('.cardDetails');
+    details.fadeTo( 25 , 1);
+    $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+}
+
+function cardDetailsHandlerOut(event) {
+
+    event.preventDefault();
+    var details = $(this).find('.cardDetails');
+    details.fadeTo( 25 , 0);
+    $(this).find('.cardDetails .btn').off();
+}
+
 function menuButtonHandler(event) {
     
     event.preventDefault();

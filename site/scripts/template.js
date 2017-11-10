@@ -16,6 +16,8 @@ $(function () {
        // $('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
         $('.thumb-container').click(cardDetailsHandler);
+        $('.thumb-container').mouseover(cardDetailsHandlerOver);
+        $('.thumb-container').mouseout(cardDetailsHandlerOut);
         
        // $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
         //$('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);
