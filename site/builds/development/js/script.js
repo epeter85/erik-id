@@ -568,7 +568,7 @@
   };
 
   mustache.name = 'mustache.js';
-  mustache.version = '2.3.0';
+  mustache.version = '2.3.2';
   mustache.tags = [ '{{', '}}' ];
 
   // All high-level mustache.* functions use this writer.
@@ -722,7 +722,8 @@ Foundation.Interchange.SPECIAL_QUERIES['retina_large'] = 'only screen and (min-w
 var targetAnchor;
 
 function scrollToAnchor() {
-    console.log('scrollToAnchor')
+    
+    //console.log('scrollToAnchor')
     
     var $target = $(targetAnchor);
 
@@ -749,6 +750,22 @@ function cardDetailsHandler(event) {
         $(this).find('.cardDetails .btn').off();
     }
 
+}
+
+function cardDetailsHandlerOver(event) {
+
+    event.preventDefault();
+    var details = $(this).find('.cardDetails');
+    details.fadeTo( 25 , 1);
+    $(this).find('.cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
+}
+
+function cardDetailsHandlerOut(event) {
+
+    event.preventDefault();
+    var details = $(this).find('.cardDetails');
+    details.fadeTo( 25 , 0);
+    $(this).find('.cardDetails .btn').off();
 }
 
 function menuButtonHandler(event) {
@@ -1130,9 +1147,22 @@ var overlayType;
         //} else if (!classie.has(overlay, 'close')) {
         } else {
             
-            //google tracking here
+            console.log(projectsArray[event.target.id])
+            //google tracking
+            //var id = projectsArray[event.target.id].title;
             
-            //console.log(projectsArray[event.target.id].title);
+            
+            if(typeof projectsArray[event.target.id] === 'undefined') {
+                    
+                    console.log('whats-this');
+                    ga('send', 'pageview', 'whats-this');
+
+               }else{
+                    console.log(projectsArray[event.target.id].title);
+                    ga('send', 'pageview', projectsArray[event.target.id].title);
+                  
+               }
+            
             
             $( "body" ).addClass( 'noscroll' );
             
@@ -1494,6 +1524,8 @@ $(function () {
        // $('.thumb-container .cardDetails').hide();
         //add listeners to buttons after data is loaded and templates are executed
         $('.thumb-container').click(cardDetailsHandler);
+        //$('.thumb-container').mouseover(cardDetailsHandlerOver);
+        //$('.thumb-container').mouseout(cardDetailsHandlerOut);
         
        // $('#projects .thumb-container .cardDetails .btn').click({msg: 'detailsBtn'}, toggleOverlay);
         //$('#projects > li > .thumb-container > img').click({msg: 'detailsBtn'}, toggleOverlay);

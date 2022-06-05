@@ -7,11 +7,11 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     concat = require('gulp-concat');
 
-var $    = require('gulp-load-plugins')();
+var $ = require('gulp-load-plugins')();
 
 var sassPaths = [
-  'bower_components/foundation-sites/scss',
-  'bower_components/motion-ui/src',
+  'node_modules/foundation-sites/scss',
+  'node_modules/motion-ui/src',
    'sass/app.scss'
 ],
     env,
@@ -28,8 +28,8 @@ var sassPaths = [
     htmlSources = [outputDir + '*.html'],
     outputDir
     
-//env = process.env.NODE_ENV || 'development';
-env = process.env.NODE_ENV || 'production';
+env = process.env.NODE_ENV || 'development';
+//env = process.env.NODE_ENV || 'production';
 
 if (env==='development') {
   outputDir = 'builds/development/';

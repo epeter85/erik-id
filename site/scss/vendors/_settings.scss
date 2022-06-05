@@ -59,7 +59,7 @@ $white: #fefefe;
 $card-overlay: #c84229;
 $body-background: $white;
 $body-font-color: $dark-gray;
-$body-font-family: Arial, "Helvetica Neue", Helvetica, Roboto, sans-serif;
+$body-font-family: Arial, 'Helvetica Neue', Helvetica, Roboto, sans-serif;
 $body-antialiased: true;
 $text-direction: ltr;
 $global-margin: 1rem;
@@ -75,13 +75,13 @@ $rem-base: 16px;
 // --------------
 
 $breakpoints: (
-  small: 0,
-  medium: 700px,
-  large: 1024px,
-  //medium: 866px,
-  //large: 926px,
-  xlarge: 1334px,
-  xxlarge: 1440px,
+    small: 0,
+    medium: 700px,
+    large: 1024px,
+    //medium: 866px,
+    //large: 926px,
+    xlarge: 1334px,
+    xxlarge: 1440px,
 );
 $breakpoint-classes: (small medium large);
 
@@ -99,32 +99,32 @@ $block-grid-max: 6;
 $header-font-family: $headFont;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: Consolas, "Liberation Mono", Courier, monospace;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-sizes: (
-  small: (
-    'h1': 30,
-    'h2': 30,
-    'h3': 19,
-    'h4': 18,
-    'h5': 17,
-    'h6': 16,
-  ),
-  medium: (
-    'h1': 36,
-    'h2': 26,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
-  ),
-  large: (
-    'h1': 48,
-    'h2': 40,
-    'h3': 31,
-    'h4': 25,
-    'h5': 20,
-    'h6': 16,
-  ),
+    small: (
+        'h1': 30,
+        'h2': 30,
+        'h3': 19,
+        'h4': 18,
+        'h5': 17,
+        'h6': 16,
+    ),
+    medium: (
+        'h1': 36,
+        'h2': 26,
+        'h3': 31,
+        'h4': 25,
+        'h5': 20,
+        'h6': 16,
+    ),
+    large: (
+        'h1': 48,
+        'h2': 40,
+        'h3': 31,
+        'h4': 25,
+        'h5': 20,
+        'h6': 16,
+    ),
 );
 $header-color: inherit;
 $header-lineheight: 1.4;
@@ -243,10 +243,10 @@ $button-color: #fff;
 $button-color-alt: #000;
 $button-radius: $global-radius;
 $button-sizes: (
-  tiny: 0.6rem,
-  small: 0.75rem,
-  default: 0.9rem,
-  large: 1.25rem,
+    tiny: 0.6rem,
+    small: 0.75rem,
+    default: 0.9rem,
+    large: 1.25rem,
 );
 $button-opacity-disabled: 0.25;
 
@@ -297,9 +297,9 @@ $dropdown-font-size: 16rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
 $dropdown-sizes: (
-  tiny: 100px,
-  small: 200px,
-  large: 400px,
+    tiny: 100px,
+    small: 200px,
+    large: 400px,
 );
 
 // 17. Dropdown Menu
@@ -383,14 +383,16 @@ $menu-expand-max: 6;
 // 23. Off-canvas
 // --------------
 
-$offcanvas-size: 40%;
+// $offcanvas-sizes: (
+//   small: 40%
+// );
 $offcanvas-background: $white;
 $offcanvas-zindex: -1;
 $offcanvas-transition-length: 0.5s;
 $offcanvas-transition-timing: ease;
 $offcanvas-exit-background: rgba($white, 0.25);
 $maincontent-class: 'off-canvas-content';
-$maincontent-shadow: 0 0 10px rgba($black, 0.5);
+$offcanvas-shadow: 0 0 10px rgba($black, 0.5);
 
 // 24. Orbit
 // ---------
@@ -538,4 +540,3 @@ $topbar-padding: 0.5rem;
 $topbar-background: #eee;
 $topbar-link-color: #fff;
 $topbar-input-width: 200px;
-

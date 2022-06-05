@@ -34,7 +34,8 @@
   "private": true,
   "dependencies": {
     "bower": "^1.8.2",
-    "foundation-sites": "^6.4.4-rc1",
+    "foundation-sites": "^6.7.4",
+    "motion-ui": "^2.0.3",
     "owl.carousel": "0.0.1"
   }
 }
