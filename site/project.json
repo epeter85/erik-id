@@ -1,1 +1,34 @@
-{"name":"erik-id","directory":"/Users/erikpeterson/Desktop/GIT/erik-id/site/erik-id","type":"sites","template":"basic","version":1,"status":"success","output":["$ Creating erik-id in /Users/erikpeterson/Desktop/GIT/erik-id/site/erik-id","$ Finished creating erik-id project!","$ erik-id launching with sass watch.","$ [19:21:45] ","$ Using gulpfile ~/Desktop/GIT/erik-id/site/erik-id/gulpfile.js","$ ","$ [19:21:45] Starting 'sass'...","$ ","$ [19:21:46] Finished 'sass' after 455 ms","$ ","$ [19:21:46] Starting 'default'...","$ "],"running":true,"stopped":false,"ready":false,"pid":2895,"installing":false,"creating":false,"repo":"","docs":"http://foundation.zurb.com/docs/","showAdvanced":false,"built":false,"active":true,"errors":{"bower":false,"npm":false,"build":false,"run":false}}
+{
+    "name": "erik-id",
+    "directory": "/Users/erikpeterson/Desktop/GIT/erik-id/site/erik-id",
+    "type": "sites",
+    "template": "basic",
+    "version": 1,
+    "status": "success",
+    "output": [
+        "$ Creating erik-id in /Users/erikpeterson/Desktop/GIT/erik-id/site/erik-id",
+        "$ Finished creating erik-id project!",
+        "$ erik-id launching with sass watch.",
+        "$ [19:21:45] ",
+        "$ Using gulpfile ~/Desktop/GIT/erik-id/site/erik-id/gulpfile.js",
+        "$ ",
+        "$ [19:21:45] Starting 'sass'...",
+        "$ ",
+        "$ [19:21:46] Finished 'sass' after 455 ms",
+        "$ ",
+        "$ [19:21:46] Starting 'default'...",
+        "$ "
+    ],
+    "running": true,
+    "stopped": false,
+    "ready": false,
+    "pid": 2895,
+    "installing": false,
+    "creating": false,
+    "repo": "",
+    "docs": "http://foundation.zurb.com/docs/",
+    "showAdvanced": false,
+    "built": false,
+    "active": true,
+    "errors": { "bower": false, "npm": false, "build": false, "run": false }
+}
